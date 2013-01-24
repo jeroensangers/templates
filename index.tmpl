@@ -1,0 +1,53 @@
+<mt:SetVarBlock name="title"><$mt:WebsiteName encode_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="html_head">
+  <meta name="description" content="<$mt:WebsiteDescription$>" />
+  <meta name="keywords" content="gtd, productividad, formación, cursos, consultoría, charlas, gestión del tiempo, project management" />
+  <link rel="author" href="https://plus.google.com/116796415134324385364/" />
+  <link rel="publisher" href="https://plus.google.com/104901425910703095876/" />
+</mt:SetVarBlock>
+<$mt:Include module="Header" /$>
+
+  <div class="container">
+    <div class="row">
+      <article class="eightcol pitch">
+<mt:Pages tag="@home" lastn="1">
+        <h1><$mt:PageTitle$></h1>
+        <$mt:PageBody$>
+</mt:Pages>
+      </article>
+      <aside class="fourcol last">
+        <$mt:WidgetSet name="Main widgets"$>
+      </aside>
+    </div>
+  </div>
+
+  <section class="container offers">
+    <div class="row">
+<mt:Pages tag="@offer" sort_by="modified_on" lastn="3">
+      <article class="fourcol <mt:if name="__last__">last</mt:if>">
+        <h1 id="page-title" class="asset-name"><$mt:PageTitle$></h1>
+        <$mt:PageBody$>
+      </article>
+</mt:Pages>
+    </div>
+  </section>
+
+  <section class="container entries">
+<mt:var name="count" value="0">
+<mt:Entries include_blogs="3" lastn="10">
+  <mt:setvar name="count" op="add" value="1">
+  <mt:setvarblock name="odd"><mt:var name="count" op="mod" value="2"></mt:setvarblock>
+  <mt:if name="odd"><div class="row"></mt:if>
+    <article class="sixcol excerpt <mt:unless name="odd">last</mt:unless>">
+
+    <mt:setvarblock name="thumbnail"><mt:EntryAssets type="image" lastn="1"><mt:CroppedAsset label="Excerpt Thumbnail" blog_id="3"><img class="thumbnail" src="<$mt:AssetURL$>" alt="<$mt:AssetLabel encode_html="1"$>" /><mt:else><mt:setvarblock name="w"><mt:AssetProperty property="image_width"></mt:setvarblock><mt:setvarblock name="h"><mt:AssetProperty property="image_height"></mt:setvarblock><img width="100" height="100" src="<mt:if name="w" gt="$h"><mt:AssetThumbnailURL height="100" square="1"$><mt:else><mt:AssetThumbnailURL width="100" square="1"$></mt:if>" class="thumbnail <mt:if name="w" gt="$h">wide<mt:else>tall</mt:if>" alt="<$mt:AssetLabel encode_html="1"$>" /></mt:CroppedAsset></mt:EntryAssets></mt:setvarblock>
+
+  <mt:if name="thumbnail"><a href="<$mt:EntryPermalink$>"><$mt:var name="thumbnail"$></a></mt:if>
+      <h1><a href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" rel="bookmark"><$mt:EntryTitle encode_html="1"$></a></h1>
+      <p><$mt:EntryExcerpt words="25"$></p>
+    </article>
+  <mt:unless name="odd"></div></mt:unless>
+</mt:Entries>
+  </section>
+
+<$mt:Include module="Footer" /$>

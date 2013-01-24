@@ -1,0 +1,22 @@
+<mt:SetVarBlock name="title"><$mt:WebsiteName encode_html="1"$> – Blog</mt:SetVarBlock>
+<$mt:Include module="Header"$>
+
+<div class="container">
+  <div class="row">
+    <section class="eightcol">
+<mt:Entries include_blogs="3" tags="@featured" lastn="1">
+      <$mt:Include module="Featured Entry"$>
+</mt:Entries>
+      <h1 class="blog">Posts recientes en <$mt:WebsiteName$></h1>
+      <section class="entries">
+<mt:Entries include_blogs="3,15">
+        <$mt:Include module="Entry"$>
+</mt:Entries>
+      </section>
+    </section>
+    <aside class="fourcol last">
+      <$mt:WidgetSet name="Blog widgets"$>
+    </aside>
+  </div>
+</div>
+<$mt:Include module="Footer"$>
