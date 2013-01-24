@@ -1,0 +1,25 @@
+<mt:SetVarBlock name="title"><$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+<$mt:Include module="Header"$>
+
+<article class="container page">
+  <div class="row">
+    <div class="eightcol">
+      <h1><$mt:PageTitle$></h1>
+    </div>
+    <aside class="fourcol last">
+      <$mt:WidgetSet name="Pages widgets"$>
+    </aside>
+  </div>
+  <div class="row">
+    <div class="twelvecol last">
+      <$mt:PageBody$>
+<mt:If tag="PageMore" convert_breaks="0">
+      <div id="more">
+        <$mt:PageMore$>
+      </div>
+</mt:If>
+    </div>
+  </div>
+</article>
+
+<$mt:Include module="Footer"$>

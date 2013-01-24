@@ -1,0 +1,54 @@
+<mt:Ignore>
+<!-- Display comments for the entry/page or commenting form if entry/page is accepting comments -->
+</mt:Ignore>
+<mt:IfCommentsActive>
+
+<div id="comments" class="comments">
+    <mt:If name="comment_preview">
+    <$mt:Include module="Comment Form"$>
+    </mt:If>
+    <mt:Ignore>
+    <!-- Display comments -->
+    </mt:Ignore>
+    <mt:Comments lastn="$comments_per_page">
+        <mt:CommentsHeader>
+    <h2 class="comments-header"><$mt:EntryCommentCount singular="1 Comment" plural="# Comments" none="No Comments"$></h2>
+            <mt:If tag="EntryCommentCount" gt="$comments_per_page">
+    <ul id="top-comment-nav">
+        <li id="top-prev-comments">
+            <a href="javascript://" id="top-prev-comments-link" title="Previous">&lt;&lt;&nbsp;Previous</a>
+        </li>
+        <li id="top-num-comments">
+            <span id="top-current-comments"></span>
+        </li>
+        <li id="top-next-comments">
+            <a href="javascript://" id="top-next-comments-link" title="Next">Next&nbsp;&gt;&gt;</a>
+        </li>
+    </ul>
+            </mt:If>
+    <div id="comments-content" class="comments-content" style="clear: left;">
+        </mt:CommentsHeader>
+        <$mt:Include module="Comment Detail"$>
+        <mt:CommentsFooter>
+    </div>
+            <mt:If tag="EntryCommentCount" gt="$comments_per_page">
+                <mt:Ignore>The data is modified by the paginate script</mt:Ignore>
+    <ul id="comment-nav">
+        <li id="prev-comments">
+            <a href="javascript://" id="prev-comments-link" title="Previous">&lt;&lt;&nbsp;Previous</a>
+        </li>
+        <li id="num-comments">
+            <span id="current-comments"></span>
+        </li>
+        <li id="next-comments">
+            <a href="javascript://" id="next-comments-link" title="Next">Next&nbsp;&gt;&gt;</a>
+        </li>
+    </ul>
+            </mt:If>
+        </mt:CommentsFooter>
+    </mt:Comments>
+    <mt:Unless name="comment_preview">
+    <$mt:Include module="Comment Form"$>
+    </mt:Unless>
+</div>
+</mt:IfCommentsActive>

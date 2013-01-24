@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<!-- meta -->
+  <meta charset="<$mt:PublishCharset$>" />
+  <title><$mt:Var name="title"$></title>
+<mt:BlogParentWebsite>
+  <meta name="generator" content="<$mt:ProductName version="1"$>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="fb:page_id" content="206967137441" />
+  <$mt:CCLicenseRDF$>
+  <$mt:Var name="html_head"$>
+<!-- rss -->
+  <link rel="alternate" type="application/atom+xml" title="Entradas recientes" href="<$mt:Link template="feed_recent"$>" />
+<!-- icons -->
+  <link rel="shortcut icon" href="http://canasto.es/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- css -->
+  <!--[if lte IE 9]><link rel="stylesheet" href="<$mt:Link template="Stylesheet - 1140px grid for IE"$>" type="text/css" media="screen" /><![endif]-->
+  <link rel="stylesheet" href="<$mt:Link template="Stylesheet - 1140px grid"$>" />
+  <link rel="stylesheet" href="<$mt:Link template="Stylesheet - El Canasto"$>" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600|Bree+Serif" />
+<!-- javascript -->
+  <script type="text/javascript" src="<$mt:Link template="JavaScript - Enable media queries"$>"></script>
+  <script type="text/javascript" src="<$mt:Link template="JavaScript"$>"></script>
+  <!-- Google Analytics tracking code -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-189077-6']);
+    _gaq.push(['_setDomainName', '.canasto.es']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- Google Analytics Social button tracking -->
+  <script type="text/javascript" src="http://canasto.es/js/ga_social_tracking.js"></script>
+  <!– Load Twitter JS-API asynchronously –>
+  <script>
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      // Setup a callback to track once the script loads.
+      twitterWidgets.onload = _ga.trackTwitter;
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+  <!– LinkedIn Share Button tracking–>
+  <script type=”text/javascript”>
+    function LinkedInShare() {
+      _gaq.push(['_trackSocial', 'LinkedIn', 'Share']);
+    }
+  </script>
+</mt:BlogParentWebsite>
+</head>
+
+<body>
+
+  <div class="container" id="header">
+    <div class="row">
+      <header class="fourcol">
+<mt:BlogParentWebsite>
+        <a href="<$mt:WebsiteURL$>" title="<$mt:WebsiteName encode_html="1"$>: Inicio"><img src="http://canasto.es/img/logo.png"width=350 height=64 alt="<$mt:WebsiteName encode_html="1"$>" /></a>
+      </header>
+      <nav class="eightcol last">
+        <ul>
+          <li><a href="<$mt:Link template="Blog Index"$>">Blog</a></li>
+<mt:Pages tag="@topnav">
+          <li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+</mt:Pages>
+<mt:Pages tag="@about">
+          <li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+</mt:Pages>
+<mt:Pages tag="@contact">
+          <li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+</mt:Pages>
+        </ul>
+      </nav>
+</mt:BlogParentWebsite>
+    </div>
+  </div>

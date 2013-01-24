@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mt:Ignore>
+Canonical sitemap.xml template v0.8
+### START SETUP
+Possible values for the frequency variables are:
+
+always
+hourly
+daily
+weekly
+monthly
+yearly
+never
+
+"always" should be used to describe documents that change each time they are accessed.
+"never" should be used to describe archived URLs.
+</mt:Ignore>
+<$mt:SetVar name="home-frequency" value="daily"$>
+<$mt:SetVar name="category-frequency" value="weekly"$>
+<$mt:SetVar name="current-monthly-frequency" value="daily"$>
+<$mt:SetVar name="past-monthly-frequency" value="monthly"$>
+<$mt:SetVar name="current-weekly-frequency" value="daily"$>
+<$mt:SetVar name="past-weekly-frequency" value="never"$>
+<$mt:SetVar name="current-daily-frequency" value="hourly"$>
+<$mt:SetVar name="past-daily-frequency" value="never"$>
+<$mt:SetVar name="recent-entry-frequency" value="hourly"$>
+<$mt:SetVar name="past-entry-frequency" value="monthly"$>
+<$mt:SetVar name="page-frequency" value="weekly"$>
+<mt:Ignore>
+Values for priority range from 0.0 to 1.0 and reflect the relative importance of pages within your site.
+Do not set these all to a high value, as that's no different from setting them all to 0.0. 
+This does not affect how your pages are compared to other sites'.
+</mt:Ignore>
+<$mt:SetVar name="home-priority" value="1.0"$>
+<$mt:SetVar name="category-priority" value="0.8"$>
+<$mt:SetVar name="monthly-priority" value="0.6"$>
+<$mt:SetVar name="weekly-priority" value="0.4"$>
+<$mt:SetVar name="daily-priority" value="0.2"$>
+<$mt:SetVar name="entry-priority" value="1.0"$>
+<$mt:SetVar name="page-priority" value="1.0"$>
+<mt:Ignore>### END SETUP</mt:Ignore>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <mt:Ignore>### START PAGE ARCHIVES ###</mt:Ignore>
+  <mt:IfArchiveTypeEnabled archive_type="Page">
+    <mt:Pages folder="NOT (includes OR error)">
+      <url>
+        <loc><$mt:PagePermalink encode_xml="1"$></loc>
+        <lastmod><$mt:PageModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></lastmod>
+        <changefreq><$mt:GetVar name="page-frequency"$></changefreq>
+        <priority><$mt:GetVar name="page-priority"$></priority>
+     </url>
+    </mt:Pages>
+  </mt:IfArchiveTypeEnabled>
+  <mt:Ignore>### END PAGE ARCHIVES ###</mt:Ignore>
+
+  <mt:Blogs include_blogs="3,15">
+    <url>
+      <mt:Ignore>### This is your blog's homepage</mt:Ignore>
+      <loc><$mt:BlogURL encode_xml="1"$></loc>
+      <changefreq><$mt:GetVar name="home-frequency"$></changefreq>
+      <priority><$mt:GetVar name="home-priority"$></priority>
+    </url>
+
+    <mt:Ignore>### START CATEGORY ARCHIVES</mt:Ignore>
+    <mt:IfArchiveTypeEnabled archive_type="Category">
+      <mt:Categories>
+        <url>
+          <loc><$mt:CategoryArchiveLink encode_xml="1"$></loc>
+          <lastmod><mt:Entries lastn="1"><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></mt:Entries></lastmod>
+          <changefreq><$mt:GetVar name="category-frequency"$></changefreq>
+          <priority><$mt:GetVar name="category-priority"$></priority>
+        </url>
+      </mt:Categories>
+    </mt:IfArchiveTypeEnabled>
+    <mt:Ignore>### END CATEGORY ARCHIVES</mt:Ignore>
+    
+    <mt:Ignore>### START MONTHLY ARCHIVES</mt:Ignore>
+    <mt:IfArchiveTypeEnabled archive_type="Monthly">
+      <mt:ArchiveList archive_type="Monthly" lastn="1">
+        <url><mt:Ignore> ### The current month is still being updated.</mt:Ignore>
+          <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+          <lastmod><mt:Entries lastn="1"><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></mt:Entries></lastmod>
+          <changefreq><$mt:GetVar name="current-monthly-frequency"$></changefreq>
+          <priority><$mt:GetVar name="monthly-priority"$></priority>
+        </url>
+      </mt:ArchiveList>
+      <mt:ArchiveList archive_type="Monthly" lastn="9999" offset="1">
+        <url><mt:Ignore> ### Past months are just archived.</mt:Ignore>
+          <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+          <lastmod><mt:Entries lastn="1"><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></mt:Entries></lastmod>
+          <changefreq><$mt:GetVar name="past-monthly-frequency"$></changefreq>
+          <priority><$mt:GetVar name="monthly-priority"$></priority>
+        </url>
+      </mt:ArchiveList>
+    </mt:IfArchiveTypeEnabled>
+    <mt:Ignore>### END MONTHLY ARCHIVES</mt:Ignore>
+
+    <mt:Ignore>### START WEEKLY ARCHIVES</mt:Ignore>
+    <mt:IfArchiveTypeEnabled archive_type="Weekly">
+      <mt:ArchiveList archive_type="Weekly" lastn="1">
+        <url><mt:Ignore> ### The current week is still being updated.</mt:Ignore>
+          <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+          <lastmod><mt:Entries lastn="1"><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></mt:Entries></lastmod>
+          <changefreq><$mt:GetVar name="current-weekly-frequency"$></changefreq>
+          <priority><$mt:GetVar name="weekly-priority"$></priority>
+        </url>
+      </mt:ArchiveList>
+      <mt:ArchiveList archive_type="Weekly" lastn="9999" offset="1">
+        <url><mt:Ignore> ### Past weeks are just archived.</mt:Ignore>
+          <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+          <lastmod><mt:Entries lastn="1"><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></mt:Entries></lastmod>
+          <changefreq><$mt:GetVar name="past-weekly-frequency"$></changefreq>
+          <priority><$mt:GetVar name="weekly-priority"$></priority>
+        </url>
+      </mt:ArchiveList>
+    </mt:IfArchiveTypeEnabled>
+    <mt:Ignore>### END WEEKLY ARCHIVES</mt:Ignore>
+    
+    <mt:Ignore>### START DAILY ARCHIVES</mt:Ignore>
+    <mt:IfArchiveTypeEnabled archive_type="Daily">
+      <mt:ArchiveList archive_type="Daily" lastn="1">
+        <url><mt:Ignore> ### The current day is still being updated.</mt:Ignore>
+          <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+          <lastmod><mt:Entries lastn="1"><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></mt:Entries></lastmod>
+          <changefreq><$mt:GetVar name="current-daily-frequency"$></changefreq>
+          <priority><$mt:GetVar name="daily-priority"$></priority>
+        </url>
+      </mt:ArchiveList>
+      <mt:ArchiveList archive_type="Daily" lastn="9999" offset="1">
+        <url><mt:Ignore> ### Past days are just archived.</mt:Ignore>
+          <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+          <lastmod><mt:Entries lastn="1"><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></mt:Entries></lastmod>
+          <changefreq><$mt:GetVar name="past-daily-frequency"$></changefreq>
+          <priority><$mt:GetVar name="daily-priority"$></priority>
+        </url>
+      </mt:ArchiveList>
+    </mt:IfArchiveTypeEnabled>
+    <mt:Ignore>### END DAILY ARCHIVES</mt:Ignore>
+
+    <mt:Ignore>### START INDIVIDUAL ARCHIVES</mt:Ignore>
+    <mt:IfArchiveTypeEnabled archive_type="Individual">
+      <mt:Entries lastn="10">
+        <url><mt:Ignore> ### The recent items you post are more likely to be active(comments, etc) than older ones.</mt:Ignore>
+          <loc><$mt:EntryPermalink encode_xml="1"$></loc>
+          <lastmod><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></lastmod>
+          <changefreq><$mt:GetVar name="recent-entry-frequency"$></changefreq>
+          <priority><$mt:GetVar name="entry-priority"$></priority>
+        </url>
+      </mt:Entries>
+      <mt:Entries lastn="999999" offset="10">
+        <url><mt:Ignore> ### And the rest of them.</mt:Ignore>
+          <loc><$mt:EntryPermalink encode_xml="1"$></loc>
+          <lastmod><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></lastmod>
+          <changefreq><$mt:GetVar name="past-entry-frequency"$></changefreq>
+          <priority><$mt:GetVar name="entry-priority"$></priority>
+        </url>
+      </mt:Entries>
+    </mt:IfArchiveTypeEnabled>
+    <mt:Ignore>### END INDIVIDUAL ARCHIVES</mt:Ignore>
+
+    <mt:Ignore>### START PAGE ARCHIVES ###</mt:Ignore>
+    <mt:IfArchiveTypeEnabled archive_type="Page">
+      <mt:Pages>
+        <url>
+          <loc><$mt:PagePermalink encode_xml="1"$></loc>
+          <lastmod><$mt:PageModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></lastmod>
+          <changefreq><$mt:GetVar name="page-frequency"$></changefreq>
+          <priority><$mt:GetVar name="page-priority"$></priority>
+       </url>
+      </mt:Pages>
+    </mt:IfArchiveTypeEnabled>
+    <mt:Ignore>### END PAGE ARCHIVES ###</mt:Ignore>
+  </mt:Blogs>
+</urlset>

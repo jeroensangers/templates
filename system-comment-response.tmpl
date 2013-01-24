@@ -1,0 +1,29 @@
+<$mt:Var name="page_layout" value="layout-wm"$>
+<mt:If name="comment_confirmation">
+    <$mt:Var name="page_title" value="Confirmación..."$>
+    <$mt:Var name="message" value="<p>¡El comentario ha sido publicado!</p>"$>
+<mt:Else name="comment_pending">
+    <$mt:Var name="page_title" value="Gracias por el comentario."$>
+    <$mt:Var name="message" value="<p>Hemos recibido el comentario en la cola de moderación para su verificación.</p>"$>
+<mt:Else name="comment_error">
+    <$mt:Var name="page_title" value="Error"$>
+<mt:SetVarBlock name="message"><p>El envío del comentario ha fallado por la siguiente razón: <$mt:ErrorMessage$></p></mt:SetVarBlock>
+</mt:If>
+<mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$>: <$mt:Var name="page_title"$></mt:SetVarBlock>
+<mt:SetVarBlock name="html_head">
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var user = <$mt:UserSessionState$>;
+    var is_preview = true;
+    /* ]]> */
+    </script>
+</mt:SetVarBlock>
+
+<$mt:Include module="Header"$>
+
+<h1 id="page-title"><$mt:Var name="page_title"$></h1>
+<$mt:Var name="message"$>
+<p>Volver a la <a href="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:EntryLink$></mt:If>">entrada original</a>.</p>
+
+<$mt:Include module="Footer"$>
+
