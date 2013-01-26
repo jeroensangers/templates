@@ -1,0 +1,11 @@
+<li id="comment-<$mt:CommentID$>" class="comment <mt:IfCommenterIsEntryAuthor>entry-author</mt:IfCommenterIsEntryAuthor>">
+  <div class="meta">
+    <img src="<$MTGravatar size="90" rating="G" default="http://canasto.es/img/default-userpic.jpg"$>" class="gravatar" />
+    <span class="vcard author"><$mt:CommentAuthorLink$></span>
+    | <a href="<$mt:EntryPermalink$>#comment-<$mt:CommentID$>"><abbr title="<$MTCommentDate format_name="iso8601"$>"><$MTCommentDate format="%x"$></abbr></a>
+  </div>
+  <$mt:CommentBody$>
+<mt:IfCommentsAccepted>
+  <div class="replybutton"><$mt:CommentReplyToLink$></div>
+</mt:IfCommentsAccepted>
+</li>
