@@ -5,6 +5,6 @@
 </mt:If>
   <h1 class="blog-<$mt:BlogID$>"><a href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" rel="bookmark"><$mt:EntryTitle encode_html="1"$></a></h1>
 <mt:If tag="BlogID" eq="3">
-  <p><$mt:EntryExcerpt words="25"$></p>
+  <p><$mt:EntryExcerpt words="25" smarty_pants="1"$></p>
 </mt:If>
 </article>

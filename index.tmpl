@@ -44,7 +44,7 @@
 
   <mt:if name="thumbnail"><a href="<$mt:EntryPermalink$>"><$mt:var name="thumbnail"$></a></mt:if>
       <h1><a href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" rel="bookmark"><$mt:EntryTitle encode_html="1"$></a></h1>
-      <p><$mt:EntryExcerpt words="25"$></p>
+      <p><$mt:EntryExcerpt words="25" smarty_pants="1"$></p>
     </article>
   <mt:unless name="odd"></div></mt:unless>
 </mt:Entries>
