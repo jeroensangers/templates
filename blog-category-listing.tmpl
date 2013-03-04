@@ -1,4 +1,8 @@
 <mt:SetVarBlock name="title">Posts sobre <$MTArchiveTitle$> en <$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="html_head">
+  <meta name="description" content="Archivo: Todos los posts sobre <$MTArchiveTitle$> en <$mt:BlogName encode_html="1"$>" />
+  <link rel="canonical" href="<$mt:ArchiveLink$>"/>
+</mt:SetVarBlock>
 <$mt:Include module="Header" parent="1"$>
 
 <div class="container">

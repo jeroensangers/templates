@@ -1,4 +1,9 @@
 <mt:SetVarBlock name="title"><$mt:WebsiteName encode_html="1"$> – Blog</mt:SetVarBlock>
+<mt:SetVarBlock name="html_head">
+  <meta name="description" content="Últimos artículos en <$mt:WebsiteName$>" />
+  <meta name="keywords" content="blog, bitácora, gtd, productividad, formación, cursos, consultoría, charlas, gestión del tiempo, project management" />
+    <link rel="canonical" href="<$mt:WebsiteURL$>blog/"/>
+</mt:SetVarBlock>
 <$mt:Include module="Header"$>
 
 <div class="container">

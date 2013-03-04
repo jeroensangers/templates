@@ -1,4 +1,11 @@
 <mt:SetVarBlock name="title"><$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="html_head">
+  <meta name="description" content="<$mt:PageExcerpt$>" />
+  <mt:PageIfTagged>
+  <meta name="keywords" content="<mt:PageTags glue=", "><$mt:TagName$></mt:PageTags>" />
+  </mt:PageIfTagged>
+  <link rel="canonical" href="<$mt:PagePermalink$>"/>
+</mt:SetVarBlock>
 <$mt:Include module="Header"$>
 
 <article class="container page">
