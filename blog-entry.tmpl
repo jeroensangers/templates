@@ -18,16 +18,17 @@
 
 <div class="container">
   <div class="row">
-    <article class="eightcol">
-      <h1><$mt:EntryTitle encode_html="1"$></h1>
-      <p class="byline">Por <span class="author vcard"><a class="url fn n" href="<$mt:EntryAuthorURL$>" title="<$mt:EntryAuthorDisplayName encode_html="1"$>"><$mt:EntryAuthorDisplayName$></a></span> <span class="text">el</span> <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
-      <$mt:EntryBody$>
-      <$mt:EntryMore$>
-
+    <article class="eightcol hentry">
+      <h1 class="entry-title"><$mt:EntryTitle encode_html="1"$></h1>
+      <p class="byline">Por <span class="author vcard"><a class="url fn n" rel="author" href="<$mt:EntryAuthorURL$>" title="<$mt:EntryAuthorDisplayName encode_html="1"$>"><$mt:EntryAuthorDisplayName$></a></span> <span class="text">el</span> <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
+      <div class="entry-content">
+	      <$mt:EntryBody$>
+  	    <$mt:EntryMore$>
+			</div>
 <mt:IfNonEmpty tag="authordatabio">
       <div class="author-profile vcard">
         <img src="<mt:If tag="AuthorUserpicURL"><$mt:AuthorUserpicURL$><mt:Else><$mt:StaticWebPath$>images/default-userpic-90.jpg</mt:If>" width="90" height="90" alt="<$mt:AuthorDisplayName encode_html="1"$>" />
-        <h2><a href="<$mt:AuthorURL$>"><$mt:AuthorDisplayName$></a></h2>
+        <h2><a class="url fn n" rel="author" href="<$mt:AuthorURL$>"><$mt:AuthorDisplayName$></a></h2>
         <p><$mt:authordatabio$></p>
       </div>
 </mt:IfNonEmpty>
