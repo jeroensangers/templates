@@ -56,6 +56,7 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
+<mt:Unless name="NoSocial">
 	<mt:Ignore><!-- Google Analytics Social button tracking --></mt:Ignore>
 	<script type="text/javascript" src="http://canasto.es/js/ga_social_tracking.js"></script>
 	<mt:Ignore><!– Load Twitter JS-API asynchronously –></mt:Ignore>
@@ -70,6 +71,7 @@
 			document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
 		})();
 	</script>
+<mt:Unless>
 </mt:BlogParentWebsite>
 </head>
 
