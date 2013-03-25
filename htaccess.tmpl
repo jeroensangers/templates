@@ -96,9 +96,9 @@
 	RewriteRule ^(.*) http://canasto.es/ [L,R=permanent]
 
 <mt:Ignore># Redirect feed request to feedBurner</mt:Ignore>
-	RewriteRule feed(\/)?$ http://feeds.canasto.es/canasto [R,L]
+	RewriteRule feed(\/)?$ http://feeds.uri.lv/canasto [R,L]
 	RewriteCond %{HTTP_USER_AGENT} !(FeedBurner|FeedValidator|uri\.lv) [NC]
-	RewriteRule ^feed\/index\.xml$ http://feeds.canasto.es/canasto [R,L]
+	RewriteRule ^feed\/index\.xml$ http://feeds.uri.lv/canasto [R,L]
 	RewriteCond %{HTTP_USER_AGENT} !(FeedBurner|FeedValidator|uri\.lv) [NC]
 	RewriteRule ^feed\/comentarios\.xml$ http://feeds.uri.lv/canasto-comentarios [R,L]
 </IfModule>
