@@ -1,15 +1,13 @@
 <mt:Unless name="NoSocial">
 <section class="socialmedia">
-  <div class="sharebutton twitter">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="ElCanasto" data-lang="es">Tweet</a>
-  </div>
+	<div class="sharebutton twitter">
+		<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="ElCanasto" data-lang="es">Tweet</a>
+	</div>
 
-  <div class="sharebutton facebook">
-    <fb:like <mt:If name="main_index"><mt:Unless tag="BlogID" eq="15">href="https://www.facebook.com/blog.canasto" </mt:Unless></mt:If>send="false" layout="box_count" show_faces="false"></fb:like>
-  </div>
+	<div class="sharebutton facebook fb-like" <mt:If name="main_index"><mt:Unless tag="BlogID" eq="15">data-href="https://www.facebook.com/blog.canasto" </mt:Unless></mt:If>data-send="false" data-layout="box_count" data-width="450" data-show-faces="false"></div>
 
-  <div class="sharebutton plusone">
-    <g:plusone size="tall"></g:plusone>
-  </div>
+	<div class="sharebutton plusone">
+		<g:plusone size="tall"></g:plusone>
+	</div>
 </section>
 </mt:Unless>
