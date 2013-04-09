@@ -9,7 +9,7 @@
 	<meta name="generator" content="<$mt:ProductName version="1"$>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta property="fb:page_id" content="206967137441" />
-	<link rel="profile" href="http://microformats.org/profile/specs http://microformats.org/profile/hatom" />
+	<link rel="profile" href="http://microformats.org/profile/hatom" />
 	<$mt:CCLicenseRDF$>
 	<$mt:Var name="html_head"$>
 <mt:Ignore><!-- rss --></mt:Ignore>
@@ -24,26 +24,6 @@
 <mt:Ignore><!-- javascript --></mt:Ignore>
 	<script type="text/javascript" data-cfasync="true" src="<$mt:Link template="JavaScript - Enable media queries"$>"></script>
 	<script type="text/javascript" src="<$mt:Link template="JavaScript"$>"></script>
-	<mt:Ignore><!-- Ad rotator -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script data-cfasync="true">
-		$(document).ready(function() {
-			$(".ad").hide();
-			var elements = $(".ad");
-			var elementCount = elements.size();
-			var elementsToShow = 1;
-			var alreadyChoosen = ",";
-			var i = 0;
-			while (i < elementsToShow) {
-				var rand = Math.floor(Math.random() * elementCount);
-				if (alreadyChoosen.indexOf("," + rand + ",") < 0) {
-					alreadyChoosen += rand + ",";
-					elements.eq(rand).show();
-					++i;
-				}
-			}
-		});
-	</script></mt:Ignore>
 	<mt:Ignore><!-- Google Analytics tracking code --></mt:Ignore>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -81,7 +61,7 @@
 		<div class="row">
 			<header class="fourcol">
 <mt:BlogParentWebsite>
-				<a rel="home" href="<$mt:WebsiteURL$>" title="<$mt:WebsiteName encode_html="1"$>: Inicio"><img src="http://canasto.es/img/logo.png"width=350 height=64 alt="<$mt:WebsiteName encode_html="1"$>" /></a>
+				<a rel="home" href="<$mt:WebsiteURL$>" title="<$mt:WebsiteName encode_html="1"$>: Inicio"><img src="http://canasto.es/img/logo.png" width=350 height=64 alt="<$mt:WebsiteName encode_html="1"$>" /></a>
 			</header>
 			<nav class="eightcol last">
 				<ul>
