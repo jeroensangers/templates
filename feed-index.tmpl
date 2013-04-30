@@ -11,9 +11,9 @@
 	<entry>
 		<title><mt:If tag="BlogID" eq="3">✓ <mt:Else tag="BlogID" eq="15">∞ </mt:If><$mt:EntryTitle remove_html="1" encode_xml="1"$><mt:If tag="BlogID" eq="15"> (link)</mt:If></title>
 <mt:If tag="EntryPostType" eq="link">
-		<link rel="alternate" type="text/html" href="<$mt:EntryLinkURL encode_xml="1"$>?utm_campaign=linkblog&utm_medium=feed&utm_source=canasto.es" />
+		<link rel="alternate" type="text/html" href="<$mt:EntryLinkURL encode_xml="1"$>?utm_campaign=linkblog&amp;utm_medium=feed&amp;utm_source=canasto.es" />
 <mt:Else>
-		<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>?utm_campaign=blog&utm_medium=feed&utm_source=canasto.es" />
+		<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>?utm_campaign=blog&amp;utm_medium=feed&amp;utm_source=canasto.es" />
 </mt:If>
 		<id><$mt:EntryAtomID$></id>
 		<published><$mt:EntryDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></published>
