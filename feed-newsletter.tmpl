@@ -11,9 +11,9 @@
 	<entry>
 		<title><mt:If tag="BlogID" eq="15">Link: </mt:If><$mt:EntryTitle remove_html="1" encode_xml="1"$></title>
 <mt:If tag="EntryPostType" eq="link">
-		<link rel="alternate" type="text/html" href="<$mt:EntryLinkURL encode_xml="1"$> />
+		<link rel="alternate" type="text/html" href="<$mt:EntryLinkURL encode_xml="1"$>" />
 <mt:Else>
-		<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$> />
+		<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>" />
 </mt:If>
 		<id><$mt:EntryAtomID$></id>
 		<published><$mt:EntryDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></published>
