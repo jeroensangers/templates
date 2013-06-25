@@ -96,10 +96,10 @@
 	RewriteCond %{HTTP_HOST} ^(www\.)?canasto\.ai\-no\.com [NC]
 	RewriteRule ^(.*) http://canasto.es/ [L,R=permanent]
 
-<mt:Ignore># Redirect feed request to feedBurner</mt:Ignore>
-	RewriteCond %{HTTP_USER_AGENT} !(FeedBurner|FeedValidator|uri\.lv) [NC]
+<mt:Ignore># Redirect feed request to FeedPress</mt:Ignore>
+	RewriteCond %{HTTP_USER_AGENT} !(FeedBurner|FeedValidator|uri\.lv|FeedPress) [NC]
 	RewriteRule ^feed\/index\.xml$ http://feeds.canasto.es/canasto [R=permanent,L]
-	RewriteCond %{HTTP_USER_AGENT} !(FeedBurner|FeedValidator|uri\.lv) [NC]
+	RewriteCond %{HTTP_USER_AGENT} !(FeedBurner|FeedValidator|uri\.lv|FeedPress) [NC]
 	RewriteRule ^feed\/comentarios\.xml$ http://feeds.canasto.es/canasto-comentarios [R=permanent,L]
 </IfModule>
 
