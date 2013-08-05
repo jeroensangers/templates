@@ -18,7 +18,7 @@
 		<summary><$mt:CommentBody words="40" remove_html="1" encode_xml="1"$></summary>
 		<author>
 			<name><$mt:CommentAuthor encode_xml="1"$></name>
-			<mt:IfNonEmpty tag="mt:CommentAuthorURL"><uri><$mt:CommentAuthorURL encode_xml="1"$></uri></mt:IfNonEmpty>
+			<mt:Ignore><MTIfNonEmpty tag="MTCommentAuthorURL"><uri><$MTCommentAuthorURL encode_xml="1"$></uri></MTIfNonEmpty></mt:Ignore>
 		</author>
 		<content type="html" xml:lang="<$mt:BlogLanguage ietf="1"$>" xml:base="<$mt:BlogURL encode_xml="1"$>">
 			<$mt:CommentBody encode_xml="1"$>
