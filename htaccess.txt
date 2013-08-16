@@ -153,15 +153,15 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 	RewriteRule "(^|/)\." - [F]
 </IfModule>
 
-<mt:Ignore>Maintenance mode on/off
+<mt:Ignore># Maintenance mode on/off
 <IfModule mod_rewrite.c>
- RewriteEngine On
- RewriteCond %{REQUEST_URI} !^/mantenimiento.html$
- RewriteCond %{REQUEST_URI} !^/assets/mantenimiento.jpg$
- RewriteCond %{REMOTE_HOST} !^85\.58\.55\.164
- RewriteRule .* - [R=503,L]
- <IfModule mod_headers.c>
- Header set Retry-After: 3600
- </IfModule>
+	RewriteEngine On
+	RewriteCond %{REQUEST_URI} !^/mantenimiento.html$
+	RewriteCond %{REQUEST_URI} !^/assets/mantenimiento.jpg$
+	RewriteCond %{REMOTE_HOST} !^85\.58\.55\.164
+	RewriteRule .* - [R=503,L]
+	<IfModule mod_headers.c>
+		Header set Retry-After: 3600
+	</IfModule>
 </IfModule>
 </mt:Ignore>
