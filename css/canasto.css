@@ -9,18 +9,17 @@ Last Updated: <$mt:Date format="%Y.%m.%d"$>
 
 @font-face {
 	font-family: 'Mono Social Icons Font';
-		src: url('/Users/jeroen/Documents/Temas/El Canasto/templates/font/MonoSocialIconsFont-1.10.eot');
-		src: url('/Users/jeroen/Documents/Temas/El Canasto/templates/font/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-				 url('/Users/jeroen/Documents/Temas/El Canasto/templates/font/MonoSocialIconsFont-1.10.woff') format('woff'),
-				 url('/Users/jeroen/Documents/Temas/El Canasto/templates/font/MonoSocialIconsFont-1.10.ttf') format('truetype'),
-				 url('/Users/jeroen/Documents/Temas/El Canasto/templates/font/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-		src: url('/Users/jeroen/Documents/Temas/El Canasto/templates/font/MonoSocialIconsFont-1.10.ttf') format('truetype');
+		src: url('/templates/font/MonoSocialIconsFont-1.10.eot');
+		src: url('/templates/font/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+				 url('/templates/font/MonoSocialIconsFont-1.10.woff') format('woff'),
+				 url('/templates/font/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+				 url('/templates/font/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+		src: url('/templates/font/MonoSocialIconsFont-1.10.ttf') format('truetype');
 		font-weight: normal;
 		font-style: normal;
 }
 body {
-	/* background: #f3f5f6 url(/templates/img/bg.png) 0 0; */
-	background: #f3f5f6 url(http://canasto.es/img/bg.png) 0 0;
+	background: #f3f5f6 url(/templates/img/bg.png) 0 0;
 	font-family: open-sans, sans-serif;
 	font-weight: 300;
 }
@@ -128,8 +127,7 @@ div.aprendemas {
 	margin-bottom: 0;
 }
 h3.blog-15 {
-	/* background: url(/templates/img/link.png) no-repeat 16px top */
-	background: url(http://canasto.es/img/link.png) no-repeat 16px 10px;
+	background: url(/templates/img/link.png) no-repeat 16px top;
 	padding-left: 2.5em;
 	font-family: open-sans, sans-serif;
 	font-weight: 300;
