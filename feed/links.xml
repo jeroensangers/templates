@@ -1,37 +1,36 @@
 <$mt:HTTPContentType type="application/atom+xml"$><?xml version="1.0" encoding="<$mt:PublishCharset$>"?>
 <$mt:Var name="blogid" value="15"$>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title><$mt:BlogName remove_html="1" encode_xml="1"$></title>
-    <link rel="alternate" type="text/html" href="<$mt:BlogURL encode_xml="1"$>" />
-    <link rel="self" type="application/atom+xml" href="<$mt:Link template="Feed - Recent Links"$>" />
-    <id>tag:<$mt:BlogHost exclude_port="1" encode_xml="1"$>,<$mt:TemplateCreatedOn format="%Y-%m-%d"$>:<$mt:BlogRelativeURL encode_xml="1"$>/<$mt:Var name="15"$></id>
-    <updated><mt:Entries include_blogs="15" lastn="1"><$mt:EntryModifiedDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></mt:Entries></updated>
-    <mt:If tag="BlogDescription"><subtitle><$mt:BlogDescription remove_html="1" encode_xml="1"$></subtitle></mt:If>
-    <rights>Todos los derechos reservados © Jeroen Sangers 2006 – <mt:Entries include_blogs="3,15" lastn="1"><$mt:EntryDate format='%Y'$></mt:Entries></rights>
+	<title><$mt:BlogName remove_html="1" encode_xml="1"$></title>
+	<link rel="alternate" type="text/html" href="<$mt:BlogURL encode_xml="1"$>" />
+	<link rel="self" type="application/atom+xml" href="<$mt:Link template="Feed - Recent Links"$>" />
+	<id>tag:<$mt:BlogHost exclude_port="1" encode_xml="1"$>,<$mt:TemplateCreatedOn format="%Y-%m-%d"$>:<$mt:BlogRelativeURL encode_xml="1"$>/<$mt:Var name="15"$></id>
+	<updated><mt:Entries include_blogs="15" lastn="1"><$mt:EntryModifiedDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></mt:Entries></updated>
+	<mt:If tag="BlogDescription"><subtitle><$mt:BlogDescription remove_html="1" encode_xml="1"$></subtitle></mt:If>
+	<rights>Todos los derechos reservados © Jeroen Sangers 2006 – <mt:Entries include_blogs="3,15" lastn="1"><$mt:EntryDate format='%Y'$></mt:Entries></rights>
 <mt:Entries include_blogs="15" lastn="15">
-<entry>
-    <title><$mt:EntryTitle remove_html="1" encode_xml="1"$></title>
-    <link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>" />
-    <id><$mt:EntryAtomID$></id>
-
-    <published><$mt:EntryDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></published>
-    <updated><$mt:EntryModifiedDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></updated>
-
-    <summary><$mt:EntryExcerpt remove_html="1" encode_xml="1"$></summary>
-    <author>
-        <name><$mt:EntryAuthorDisplayName encode_xml="1"$></name>
-        <mt:If tag="EntryAuthorURL"><uri><$mt:EntryAuthorURL encode_xml="1"$></uri></mt:If>
-    </author>
-    <mt:EntryCategories>
-        <category term="<$mt:CategoryLabel encode_xml="1"$>" scheme="http://www.sixapart.com/ns/types#category" />
-    </mt:EntryCategories>
-    <mt:EntryIfTagged><mt:EntryTags><category term="<$mt:TagName normalize="1" encode_xml="1"$>" label="<$mt:TagName encode_xml="1"$>" scheme="http://www.sixapart.com/ns/types#tag" />
-    </mt:EntryTags></mt:EntryIfTagged>
-    <content type="html" xml:lang="<$mt:BlogLanguage ietf="1"$>" xml:base="<$mt:BlogURL encode_xml="1"$>">
-        <$mt:EntryBody encode_xml="1"$>
-        <$mt:EntryMore encode_xml="1"$>
+	<entry>
+		<title><$mt:EntryTitle remove_html="1" encode_xml="1"$></title>
+		<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>" />
+		<id><$mt:EntryAtomID$></id>
+		<published><$mt:EntryDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></published>
+		<updated><$mt:EntryModifiedDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></updated>
+		<summary><$mt:EntryExcerpt remove_html="1" encode_xml="1"$></summary>
+		<author>
+			<name><$mt:EntryAuthorDisplayName encode_xml="1"$></name>
+			<mt:If tag="EntryAuthorURL"><uri><$mt:EntryAuthorURL encode_xml="1"$></uri></mt:If>
+		</author>
+		<mt:EntryCategories>
+			<category term="<$mt:CategoryLabel encode_xml="1"$>" scheme="http://www.sixapart.com/ns/types#category" />
+		</mt:EntryCategories>
+		<mt:EntryIfTagged><mt:EntryTags>
+			<category term="<$mt:TagName normalize="1" encode_xml="1"$>" label="<$mt:TagName encode_xml="1"$>" scheme="http://www.sixapart.com/ns/types#tag" />
+		</mt:EntryTags></mt:EntryIfTagged>
+		<content type="html" xml:lang="<$mt:BlogLanguage ietf="1"$>" xml:base="<$mt:BlogURL encode_xml="1"$>">
+			<$mt:EntryBody encode_xml="1"$>
+			<$mt:EntryMore encode_xml="1"$>
 				<![CDATA[<p style="font-style:italic;">&infin; Lea el artículo original en <a href="<$mt:EntryLinkURL encode_xml="1"$>"><$mt:EntryLinkURL$></a></p>]]>
-    </content>
-</entry>
+		</content>
+	</entry>
 </mt:Entries>
 </feed>

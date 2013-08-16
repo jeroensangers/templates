@@ -34,9 +34,9 @@
 			<$mt:EntryMore encode_xml="1"$>
 			<mt:If tag="BlogID" eq="15"><![CDATA[<p style="font-style:italic;"><a href="<$mt:EntryPermalink encode_xml="1"$>">&infin; Lea el artículo en El Canasto</a></p>]]></mt:If>
 			<mt:IfNonEmpty tag="authordatabio">
-        <![CDATA[<img src="<mt:If tag="AuthorUserpicURL"><$mt:AuthorUserpicURL$><mt:Else><$mt:StaticWebPath$>images/default-userpic-90.jpg</mt:If>" width="90" height="90" alt="<$mt:AuthorDisplayName encode_html="1"$>" style="float:left;margin:0 10px 10px 0;border:4px solid #ffffff" />
-        <h2><a class="url fn n" rel="author" href="<$mt:AuthorURL$>"><$mt:AuthorDisplayName$></a></h2>
-        <p><$mt:authordatabio$></p>]]>
+				<![CDATA[<img src="<mt:If tag="AuthorUserpicURL"><$mt:AuthorUserpicURL$><mt:Else><$mt:StaticWebPath$>images/default-userpic-90.jpg</mt:If>" width="90" height="90" alt="<$mt:AuthorDisplayName encode_html="1"$>" style="float:left;margin:0 10px 10px 0;border:4px solid #ffffff" />
+					<h2><a class="url fn n" rel="author" href="<$mt:AuthorURL$>"><$mt:AuthorDisplayName$></a></h2>
+					<p><$mt:authordatabio$></p>]]>
 			</mt:IfNonEmpty>
 		</content>
 	</entry>

@@ -1,27 +1,27 @@
 <mt:SetVarBlock name="title"><$mt:WebsiteName encode_html="1"$> – Blog</mt:SetVarBlock>
 <mt:SetVarBlock name="html_head">
-  <meta name="description" content="Últimos artículos en <$mt:WebsiteName$>" />
-  <meta name="keywords" content="blog, bitácora, gtd, productividad, formación, cursos, consultoría, charlas, gestión del tiempo, project management" />
-    <link rel="canonical" href="<$mt:WebsiteURL$>blog/"/>
+	<meta name="description" content="Últimos artículos en <$mt:WebsiteName$>" />
+	<meta name="keywords" content="blog, bitácora, gtd, productividad, formación, cursos, consultoría, charlas, gestión del tiempo, project management" />
+	<link rel="canonical" href="<$mt:WebsiteURL$>blog/" />
 </mt:SetVarBlock>
 <$mt:Include module="Header"$>
-
-<div class="container">
-  <div class="row">
-    <section class="eightcol">
+<div class="row">
+	<div class="large-8 columns">
 <mt:Entries include_blogs="3" tags="@featured" lastn="1">
-      <$mt:Include module="Featured Entry"$>
+		<$mt:Include module="Featured Entry"$>
 </mt:Entries>
-      <h1 class="blog">Posts recientes en <$mt:WebsiteName$></h1>
-      <section class="entries">
+		<h1>Posts recientes en <$mt:WebsiteName$></h1>
+		<section class="entries">
+<$mt:Var name="columns" value="12"$>
 <mt:Entries include_blogs="3,15">
-        <$mt:Include module="Entry"$>
+			<div class="row">
+				<$mt:Include module="Entry"$>
+			</div>
 </mt:Entries>
-      </section>
-    </section>
-    <aside class="fourcol last">
-      <$mt:WidgetSet name="Blog widgets"$>
-    </aside>
-  </div>
+		</section>
+	</div>
+	<aside class="large-4 columns">
+		<$mt:WidgetSet name="Blog widgets"$>
+	</aside>
 </div>
 <$mt:Include module="Footer"$>

@@ -1,28 +1,35 @@
 <mt:IfCommentsActive>
-<section class="comments">
-   <h2><$MTEntryCommentCount singular="1 comentario" plural="# comentarios" none="No hay comentarios"$> en &#8220;<$mt:EntryTitle encode_html="1"$>&#8221;</h2>
+<section class="comments row">
+	<div class="large-12 columns">
+		<h2><$MTEntryCommentCount singular="1 comentario" plural="# comentarios" none="No hay comentarios"$> en &#8220;<$mt:EntryTitle encode_html="1"$>&#8221;</h2>
+<mt:If name="comment_preview">
+		<$mt:Include module="Comment Form" parent="1"$>
+</mt:If>
 <mt:Comments>
-  <mt:CommentsHeader>
-    <ol class="comment-list">
-  </mt:CommentsHeader>
-  <mt:IfCommentParent>
-  <mt:Else> <mt:Ignore><!-- If comment doesn't have a top-level-parent --></mt:Ignore>
-    <$mt:Include module="Comment"$>
-    <mt:CommentReplies> <mt:Ignore><!-- Loop through the reply comments --></mt:Ignore>
-      <mt:CommentsHeader>
-        <ol class="comment-list">
-      </mt:CommentsHeader>
-      <$mt:Include module="Comment"$>
-      <$mt:CommentRepliesRecurse$> <mt:Ignore><!-- For each reply comment, recursively display any reply comments --></mt:Ignore>
-      <mt:CommentsFooter>
-        </ol>
-      </mt:CommentsFooter>
-    </mt:CommentReplies>
-  </mt:IfCommentParent>
-  <mt:CommentsFooter>
-    </ol>
-  </mt:CommentsFooter>
+	<mt:CommentsHeader>
+			<ol class="comment-list">
+	</mt:CommentsHeader>
+	<mt:IfCommentParent>
+	<mt:Else> <mt:Ignore><!-- If comment doesn't have a top-level-parent --></mt:Ignore>
+		<$mt:Include module="Comment"$>
+		<mt:CommentReplies> <mt:Ignore><!-- Loop through the reply comments --></mt:Ignore>
+			<mt:CommentsHeader>
+				<ol class="comment-list">
+			</mt:CommentsHeader>
+			<$mt:Include module="Comment"$>
+			<$mt:CommentRepliesRecurse$> <mt:Ignore><!-- For each reply comment, recursively display any reply comments --></mt:Ignore>
+			<mt:CommentsFooter>
+				</ol></li>
+			</mt:CommentsFooter>
+		</mt:CommentReplies>
+	</mt:IfCommentParent>
+	<mt:CommentsFooter>
+		</ol>
+	</mt:CommentsFooter>
 </mt:Comments>
-<$mt:Include module="Comment Form" parent="1"$>
+<mt:Unless name="comment_preview">
+	<$mt:Include module="Comment Form" parent="1"$>
+</mt:Unless>
+	</div>
 </section>
 </mt:IfCommentsActive>

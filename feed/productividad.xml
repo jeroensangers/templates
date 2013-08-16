@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DATA>
-  <COPYRIGHT>Todos los derechos reservados 2006-2009 | Jeroen Sangers</COPYRIGHT>
+	<COPYRIGHT>Todos los derechos reservados 2006-2009 | Jeroen Sangers</COPYRIGHT>
 <mt:Entries category="Productividad" lastn=9999>
-  <ARTICLE>
-    <URL><$mt:EntryPermalink encode_xml="1"$></URL>
-    <ID><$mt:EntryID$></ID>
-    <BODYTEXT><$mt:EntryBody encode_xml="1"$>
-      <$mt:EntryMore encode_xml="1"$>
-      <$mt:authordatabio encode_xml="1"$>
-    </BODYTEXT>
-    <TITLE><$mt:EntryTitle remove_html="1" encode_xml="1"$></TITLE>
-    <PUBDATE><$mt:EntryDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></PUBDATE>
-    <AUTHORNAME><$mt:EntryAuthorDisplayName encode_xml="1"$></AUTHORNAME>
-  <mt:EntryIfTagged>
-    <KEYWORDS><mt:EntryTags glue=', '><$mt:TagName$></MTEntryTags></KEYWORDS>
-  </mt:EntryIfTagged>
-  </ARTICLE>
+	<ARTICLE>
+		<URL><$mt:EntryPermalink encode_xml="1"$></URL>
+		<ID><$mt:EntryID$></ID>
+		<BODYTEXT>
+			<$mt:EntryBody encode_xml="1"$>
+			<$mt:EntryMore encode_xml="1"$>
+	<mt:IfNonEmpty tag="authordatabio">
+			<$mt:authordatabio encode_xml="1"$>
+	</mt:IfNonEmpty>
+		</BODYTEXT>
+		<TITLE><$mt:EntryTitle remove_html="1" encode_xml="1"$></TITLE>
+		<PUBDATE><$mt:EntryDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></PUBDATE>
+		<AUTHORNAME><$mt:EntryAuthorDisplayName encode_xml="1"$></AUTHORNAME>
+	<mt:EntryIfTagged>
+		<KEYWORDS><mt:EntryTags glue=', '><$mt:TagName$></MTEntryTags></KEYWORDS>
+	</mt:EntryIfTagged>
+	</ARTICLE>
 </mt:Entries>
 </DATA>
