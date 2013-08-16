@@ -140,6 +140,7 @@ ErrorDocument 403 /error/403/
 ErrorDocument 404 /error/404/
 ErrorDocument 410 /error/410/
 ErrorDocument 500 /error/500/
+ErrorDocument 503 /mantenimiento.html
 
 <mt:Ignore># UTF-8 encoding</mt:Ignore>
 AddDefaultCharset utf-8
@@ -150,4 +151,15 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 	RewriteCond %{SCRIPT_FILENAME} -d [OR]
 	RewriteCond %{SCRIPT_FILENAME} -f
 	RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+<mt:Ignore>Maintenance mode on</mt:Ignore>
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteCond %{REQUEST_URI} !^/mantenimiento.html$
+ RewriteCond %{REQUEST_URI} !^/assets/mantenimiento.jpg$
+ RewriteRule .* - [R=503,L]
+ <IfModule mod_headers.c>
+ Header set Retry-After: 3600
+ </IfModule>
 </IfModule>
