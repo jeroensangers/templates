@@ -1,58 +1,68 @@
 <mt:if tag="EntryHTMLTitle" ne="">
-<mt:SetVarBlock name="title"><$mt:EntryHTMLTitle remove_html="1"$></mt:SetVarBlock>
+	<mt:SetVarBlock name="title"><$mt:EntryHTMLTitle remove_html="1"$></mt:SetVarBlock>
 <mt:else>
-<mt:SetVarBlock name="title"><$mt:EntryTitle encode_html="1"$></mt:SetVarBlock>
+	<mt:SetVarBlock name="title"><$mt:EntryTitle encode_html="1"$></mt:SetVarBlock>
 </mt:if>
 <mt:SetVarBlock name="html_head">
-  <meta name="description" content="<$mt:EntryExcerpt$>" />
-  <mt:EntryIfTagged>
-  <meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
-  </mt:EntryIfTagged>
-  <link rel="canonical" href="<$mt:EntryPermalink$>"/>
-  <$mt:EntryTrackbackData comment_wrap="0"$>
-  <mt:If tag="AuthorDataGoogle">
-  <link rel="author" href="<mt:AuthorDataGoogle>" />
-  </mt:If>
+	<meta name="description" content="<$mt:EntryExcerpt$>" />
+	<mt:EntryIfTagged>
+		<meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
+	</mt:EntryIfTagged>
+	<link rel="canonical" href="<$mt:EntryPermalink$>" />
+	<$mt:EntryTrackbackData comment_wrap="0"$>
+	<mt:If tag="AuthorDataGoogle">
+		<link rel="author" href="<mt:AuthorDataGoogle>" />
+	</mt:If>
 </mt:SetVarBlock>
 <$mt:Include module="Header" parent="1"$>
-
-<div class="container">
-  <div class="row">
-    <article class="eightcol hentry">
-      <h1 class="entry-title"><$mt:EntryTitle encode_html="1"$></h1>
-      <p class="byline">Por <span class="author vcard"><a class="url fn n" rel="author" href="<$mt:EntryAuthorURL$>" title="<$mt:EntryAuthorDisplayName encode_html="1"$>"><$mt:EntryAuthorDisplayName$></a></span> <span class="text">el</span> <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
-      <div class="entry-content">
-	      <$mt:EntryBody$>
-  	    <$mt:EntryMore$>
+<div class="row">
+	<div class="large-8 columns">
+		<article class="hentry">
+			<h1 class="entry-title"><$mt:EntryTitle encode_html="1"$></h1>
+			<p class="byline">Por <span class="author vcard"><a class="url fn n" rel="author" href="<$mt:EntryAuthorURL$>" title="<$mt:EntryAuthorDisplayName encode_html="1"$>"><$mt:EntryAuthorDisplayName$></a></span> <span class="text">el</span> <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
+			<div class="entry-content">
+				<$mt:EntryBody$>
+<mt:If tag="EntryMore" convert_breaks="0">
+				<div id="more">
+					<$mt:EntryMore$>
+				</div>
+</mt:If>
 			</div>
 <mt:IfNonEmpty tag="authordatabio">
-      <div class="author-profile vcard">
-        <img src="<mt:If tag="AuthorUserpicURL"><$mt:AuthorUserpicURL$><mt:Else><$mt:StaticWebPath$>images/default-userpic-90.jpg</mt:If>" width="90" height="90" alt="<$mt:AuthorDisplayName encode_html="1"$>" />
-        <h2><a class="url fn n" rel="author" href="<$mt:AuthorURL$>"><$mt:AuthorDisplayName$></a></h2>
-        <p><$mt:authordatabio$></p>
-      </div>
+			<div class="row">
+				<div class="small-12 columns author-profile vcard panel radius">
+					<div class="row">
+						<div class="small-3 columns">
+							<img src="<mt:If tag="AuthorUserpicURL"><$mt:AuthorUserpicURL$><mt:Else><$mt:StaticWebPath$>images/default-userpic-90.jpg</mt:If>" width="90" height="90" alt="<$mt:AuthorDisplayName encode_html="1"$>" class="th" />
+						</div>
+						<div class="small-9 columns">
+							<h3><a class="url fn n" rel="author" href="<$mt:AuthorURL$>"><$mt:AuthorDisplayName$></a></h3>
+							<p><$mt:authordatabio$></p>
+						</div>
+					</div>
+				</div>
+			</div>
 </mt:IfNonEmpty>
-
+		</article>
 <mt:EntryIfTagged>
-      <div class="related-entries">
-        <h3>Posts relacionados</h3>
-        <ul>
-  <mt:RelatedEntries weight="idf" lastn="5">
-          <li><a href="<$mt:EntryPermalink$>"><mt:EntryTitle /></a></li>
-  </mt:RelatedEntries>
-        </ul>
-      </div>
+		<div class="row">
+			<div class="small-12 columns related-entries panel radius">
+				<h3>Artículos relacionados</h3>
+				<ul>
+	<mt:RelatedEntries weight="idf" lastn="5">
+					<li><a href="<$mt:EntryPermalink$>"><mt:EntryTitle /></a></li>
+	</mt:RelatedEntries>
+				</ul>
+			</div>
+		</div>
 </mt:EntryIfTagged>
-
-      <mt:Include module="Commenting"&>
-    </article>
-    <aside class="fourcol last">
+<$mt:Include module="Commenting"$ />
+	</div>
+	<aside class="large-4 columns">
 <mt:BlogParentWebsite> 
-  <$mt:WebsiteID setvar="website_id"$> 
+	<$mt:WebsiteID setvar="website_id"$> 
 </mt:BlogParentWebsite> 
-      <$mt:WidgetSet name="Blog widgets" blog_id="$website_id"$>
-    </aside>
-  </div>
+		<$mt:WidgetSet name="Blog widgets" blog_id="$website_id"$>
+	</aside>
 </div>
-
 <$mt:Include module="Footer" parent="1"$>

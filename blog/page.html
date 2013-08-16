@@ -1,36 +1,24 @@
 <mt:SetVarBlock name="title"><$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></mt:SetVarBlock>
 <mt:SetVarBlock name="html_head">
-  <meta name="description" content="<$mt:PageExcerpt$>" />
-  <mt:PageIfTagged>
-  <meta name="keywords" content="<mt:PageTags glue=", "><$mt:TagName$></mt:PageTags>" />
-  </mt:PageIfTagged>
-  <link rel="canonical" href="<$mt:PagePermalink$>"/>
+	<meta name="description" content="<$mt:PageExcerpt$>" />
+	<mt:PageIfTagged>
+		<meta name="keywords" content="canasto, <mt:PageTags glue=", "><$mt:TagName$></mt:PageTags>" />
+	</mt:PageIfTagged>
+	<link rel="canonical" href="<$mt:PagePermalink$>" />
 </mt:SetVarBlock>
 <$mt:Include module="Header" parent="1"$>
-
-<article class="container page">
-  <div class="row">
-    <div class="eightcol">
-      <h1><$mt:PageTitle$></h1>
-    </div>
-    <div class="fourcol last">
-<mt:BlogParentWebsite> 
-  <$mt:WebsiteID setvar="website_id"$> 
-</mt:BlogParentWebsite> 
-      <$mt:WidgetSet name="Pages widgets" blog_id="$website_id"$>
-    </div>
-  </div>
-  <div class="row">
-    <div class="twelvecol last">
-      <$mt:PageBody$>
+<article class="page">
+	<div class="row">
+		<div class="large-12 columns">
+			<h1><$mt:PageTitle$></h1>
+			<$mt:PageBody$>
 <mt:If tag="PageMore" convert_breaks="0">
-      <div id="more">
-        <$mt:PageMore$>
-      </div>
+			<div id="more">
+				<$mt:PageMore$>
+			</div>
 </mt:If>
-    <mt:Include module="Commenting"&>
-    </div>
-  </div>
+		</div>
+	</div>
 </article>
-
+<$mt:Include module="Commenting" parent="1"$>
 <$mt:Include module="Footer" parent="1"$>

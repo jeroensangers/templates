@@ -1,11 +1,18 @@
-<li id="comment-<$mt:CommentID$>" class="comment <mt:IfCommenterIsEntryAuthor>entry-author</mt:IfCommenterIsEntryAuthor>">
-  <div class="meta">
-    <img src="<$MTGravatar size="90" rating="G" default="http://canasto.es/img/default-userpic.jpg"$>" class="gravatar" />
-    <span class="vcard author"><$mt:CommentAuthorLink$></span>
-    | <a href="<$mt:EntryPermalink$>#comment-<$mt:CommentID$>"><abbr title="<$MTCommentDate format_name="iso8601"$>"><$MTCommentDate format="%x"$></abbr></a>
-  </div>
-  <$mt:CommentBody$>
+<li id="comment-<$mt:CommentID$>" class="comment panel radius<mt:IfCommenterIsEntryAuthor> callout</mt:IfCommenterIsEntryAuthor>">
+	<div class="row">
+		<div class="small-3 columns meta">
+			<img src="<$MTGravatar size="90" rating="G" default="http://canasto.es/templates/img/default-userpic.jpg"$>" alt="<$mt:CommentAuthor$>" class="gravatar th" />
+			<p><span class="vcard author"><$mt:CommentAuthorLink$></span><br />
+			el <a href="<$mt:EntryPermalink$>#comment-<$mt:CommentID$>"><abbr title="<$MTCommentDate format_name="iso8601"$>"><$MTCommentDate format="%x"$></abbr></a></p>
+		</div>
+		<div class="small-9 columns">
+			<$mt:CommentBody$>
 <mt:IfCommentsAccepted>
-  <div class="replybutton"><$mt:CommentReplyToLink$></div>
+			<div class="reply button radius<mt:IfCommenterIsEntryAuthor> secondary</mt:IfCommenterIsEntryAuthor>"><$mt:CommentReplyToLink$></div>
 </mt:IfCommentsAccepted>
+		</div>
+	</div>
+<mt:IfCommentReplies>
+<mt:Else>
 </li>
+</mt:IfCommentReplies>

@@ -1,60 +1,86 @@
 <MTIfCommentsAccepted>
-    <h2 class="comments-open-header">Escribir un comentario</h2>
-    <div id="comment-greeting"></div>
-    <form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
-      <input type="hidden" name="static" value="1" />
-      <input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
-      <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
-      <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id" />
-      <input type="hidden" name="armor" value="1" />
-      <input type="hidden" name="preview" value="" />
-      <input type="hidden" name="sid" value="" />
-      <div id="comments-open-data">
-        <div id="comment-form-name">
-          <label for="comment-author">Nombre</label>
-          <input id="comment-author" name="author" size="30" value="" onfocus="mtCommentFormOnFocus()" />
-        </div>
-        <div id="comment-form-email">
-          <label for="comment-email">Mail</label>
-          <input id="comment-email" name="email" size="30" value="" onfocus="mtCommentFormOnFocus()" />
-        </div>
-        <div id="comment-form-url">
-          <label for="comment-url">URL</label>
-          <input id="comment-url" name="url" size="30" value="" onfocus="mtCommentFormOnFocus()" />
-        </div>
-        <div id="comment-form-remember-me">
-          <input type="checkbox" id="comment-bake-cookie" name="bakecookie" onclick="mtRememberMeOnClick(this)" value="1" accesskey="r" />
-          <label for="comment-bake-cookie">¿Recordar datos personales?</label>
-        </div>
-      </div>
-      <div id="comment-form-reply" style="display:none">
-        <input type="checkbox" id="comment-reply" name="comment_reply" value="" onclick="mtSetCommentParentID()" />
-        <label for="comment-reply" id="comment-reply-label"></label>
-      </div>
-      <div id="comment-form-subscribe">
-        <input type="checkbox" id="comment-subscribe" name="subscribe" />
-        <label for="comment-subscribe" id="comment-subscribe-label">Notifí­came por correo si hay nuevas respuestas</label>
-       </div>
-      <div id="comments-open-text">
-        <textarea id="comment-text" name="text" rows="15" cols="60" onfocus="mtCommentFormOnFocus()"></textarea>
-      <p><label for="comment-text"><mt:IfAllowCommentHTML>Usa etiquetas html (a href,b,i,br/,p,strong,em,ul,ol,li,blockquote,pre) para dar estilo.<br /></mt:IfAllowCommentHTML>Regístrate en <a href="http://gravatar.com/">Gravatar</a> para configurar tu avatar.</label></p>
-      </div>
-      <div id="comments-open-captcha"></div>
-      <div id="comments-open-footer">
+	<h2 class="comments-open-header">Deja un comentario</h2>
+	<div id="comment-greeting"></div>
+	<form data-abide method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments-form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+		<input type="hidden" name="static" value="1" />
+		<input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
+		<input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
+		<input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id" />
+		<input type="hidden" name="armor" value="1" />
+		<input type="hidden" name="preview" value="" />
+		<input type="hidden" name="sid" value="" />
+		<div id="comments-open-data">
+			<div id="comment-form-name" class="row">
+				<div class="small-12 columns">
+					<label for="comment-author">Nombre <small>obligatorio</small></label>
+					<input id="comment-author" name="author" type="text" value="" required onfocus="mtCommentFormOnFocus()" />
+					<small class="error">El campo Nombre es obligatorio.</small>
+				</div>
+			</div>
+			<div class="row">
+				<div id="comment-form-email" class="large-6 columns">
+					<label for="comment-email">Email <small>obligatorio</small></label>
+					<input id="comment-email" name="email" type="email" value="" required onfocus="mtCommentFormOnFocus()" />
+					<small class="error">Es obligatorio especificar una dirección de e-mail. Esta dirección no será visible para los visitantes.</small>
+				</div>
+				<div id="comment-form-url" class="large-6 columns">
+					<label for="comment-url">Página web</label>
+					<input id="comment-url" name="url" type="url" value="" onfocus="mtCommentFormOnFocus()" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns">
+					<div id="comment-form-remember-me">
+						<label for="comment-bake-cookie">
+							<input type="checkbox" id="comment-bake-cookie" name="bakecookie" onclick="mtRememberMeOnClick(this)" value="1" accesskey="r" />
+							¿Recordar datos personales?
+						</label>
+					</div>
+					<div id="comment-form-reply" style="display:none">
+						<label for="comment-reply">
+							<input type="checkbox" id="comment-reply" name="comment_reply" value="" onclick="mtSetCommentParentID()" />
+							<span id="comment-reply-label"></span>
+						</label>
+					</div>
+					<div id="comment-form-subscribe">
+						<label for="comment-subscribe" id="comment-subscribe-label">
+							<input type="checkbox" id="comment-subscribe" name="subscribe" />
+							Notifícame por correo si hay nuevas respuestas
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="comments-open-text" class="row">
+			<div class="small-12 columns">
+				<textarea id="comment-text" name="text" rows="15" required onfocus="mtCommentFormOnFocus()"></textarea>
+				<small class="error">¡No olvides escribir tu comentario!</small>
+				<p>
+					<label for="comment-text">
+						Usa etiquetas HTML (<code>a href</code>,<code>b</code>,<code>i</code>,<code>br/</code>,<code>p</code>,<code>strong</code>,<code>em</code>,<code>ul</code>,<code>ol</code>,<code>li</code>,<code>blockquote</code>,<code>pre</code>) para dar estilo.<br />
+					Regístrate en <a href="http://gravatar.com/">Gravatar</a> para configurar tu avatar.
+					</label>
+				</p>
+			</div>
+		</div>
+		<div id="comments-open-captcha"></div>
+		<div id="comments-open-footer" class="row">
+			<div class="small-12 columns">
 <mt:Ignore>
-        <input type="submit" accesskey="v" name="preview_button" id="comment-preview" value="Vista previa" onclick="this.form.preview.value='1';" />
+				<input type="submit" accesskey="v" name="preview_button" id="comment-preview" value="Vista previa" onclick="this.form.preview.value='1';" />
 </mt:Ignore>
-        <input type="submit" accesskey="s" name="post" id="comment-submit" value="Enviar" />
-        <input name="reset" type="reset" id="reset" value="Borrar" />
+				<button type="submit" accesskey="s" name="post" id="comment-submit">Enviar</button>
+				<button name="reset" type="reset" id="reset">Borrar</button>
 <mt:If name="comment_preview">
-        <input type="button" name="cancel" id="comment-cancel" value="Cancel" onclick="window.location='<$mt:EntryPermalink$>'" />
+				<button name="cancel" id="comment-cancel" onclick="window.location='<$mt:EntryPermalink$>'">Cancel</button>
 </mt:If>
-      </div>
-    </form>
-    <script type="text/javascript">
-    <!--
-    mtAttachEvent("load", mtEntryOnLoad);
-    mtAttachEvent("unload", mtEntryOnUnload);
-    //-->
-    </script>
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+		<!--
+			mtAttachEvent("load", mtEntryOnLoad);
+			mtAttachEvent("unload", mtEntryOnUnload);
+		//-->
+	</script>
 </MTIfCommentsAccepted>

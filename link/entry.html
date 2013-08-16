@@ -1,59 +1,54 @@
 <mt:SetVarBlock name="title">Link: <$mt:EntryTitle encode_html="1"$></mt:SetVarBlock>
 <mt:SetVarBlock name="html_head">
-  <mt:EntryIfTagged>
-  <meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
-  </mt:EntryIfTagged>
-  <link rel="canonical" href="<$mt:EntryPermalink$>"/>
-  <$mt:EntryTrackbackData$>
+	<mt:EntryIfTagged>
+		<meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
+	</mt:EntryIfTagged>
+	<link rel="canonical" href="<$mt:EntryPermalink$>" />
+	<$mt:EntryTrackbackData$>
 </mt:SetVarBlock>
 <$mt:Include module="Header" parent="1"$>
-
-<div class="container">
-  <div class="row">
-    <article class="eightcol hentry">
+<div class="row">
+	<div class="large-8 columns">
+		<article class="hentry">
 <mt:If tag="EntryPostType" eq="link">
-      <h1><a href="<$mt:EntryLinkURL$>" class="entry-title">&infin; <$mt:EntryTitle encode_html="1"$></a></h1>
+			<h1><a href="<$mt:EntryLinkURL$>" class="entry-title">&infin; <$mt:EntryTitle encode_html="1"$></a></h1>
 <mt:Else>
-      <h1 class="entry-title"><$mt:EntryTitle encode_html="1"$></h1>
+			<h1 class="entry-title"><$mt:EntryTitle encode_html="1"$></h1>
 </mt:If>
-      <p class="byline">Comentarios por <span class="author vcard"><a class="url fn n" href="<$mt:EntryAuthorURL$>" title="<$mt:EntryAuthorDisplayName encode_html="1"$>"><$mt:EntryAuthorDisplayName$></a></span> <span class="text">el</span> <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
-      <div class="entry-content">
-	      <$mt:EntryBody$>
-	      <$mt:EntryMore$>
+			<p class="byline">Comentarios por <span class="author vcard"><a class="url fn n" rel="author" href="<$mt:EntryAuthorURL$>" title="<$mt:EntryAuthorDisplayName encode_html="1"$>"><$mt:EntryAuthorDisplayName$></a></span> <span class="text">el</span> <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
+			<div class="entry-content">
+				<$mt:EntryBody$>
+<mt:If tag="EntryMore" convert_breaks="0">
+				<div id="more">
+					<$mt:EntryMore$>
+				</div>
+</mt:If>
 			</div>
-
 <mt:If tag="EntryPostType" eq="link">
-      <p class="link">&infin; Lea el artículo original en <a href="<$mt:EntryLinkURL$>"><$mt:EntryLinkURL$></a></p>
+			<p class="link">&infin; Lea el artículo original en <a href="<$mt:EntryLinkURL$>"><$mt:EntryLinkURL$></a></p>
 </mt:If>
-
 <mt:IfNonEmpty tag="authordatabio">
-      <div class="author-profile vcard">
-        <img src="<mt:If tag="AuthorUserpicURL"><$mt:AuthorUserpicURL$><mt:Else><$mt:StaticWebPath$>images/default-userpic-90.jpg</mt:If>" width="90" height="90" alt="<$mt:AuthorDisplayName encode_html="1"$>" />
-        <h2><a class="url fn n" rel="author" href="<$mt:AuthorURL$>"><$mt:AuthorDisplayName$></a></h2>
-        <p><$mt:authordatabio$></p>
-      </div>
+			<div class="row">
+				<div class="small-12 columns author-profile vcard panel radius">
+					<div class="row">
+						<div class="small-3 columns">
+							<img src="<mt:If tag="AuthorUserpicURL"><$mt:AuthorUserpicURL$><mt:Else><$mt:StaticWebPath$>images/default-userpic-90.jpg</mt:If>" width="90" height="90" alt="<$mt:AuthorDisplayName encode_html="1"$>" class="th" />
+						</div>
+						<div class="small-9 columns">
+							<h3><a class="url fn n" rel="author" href="<$mt:AuthorURL$>"><$mt:AuthorDisplayName$></a></h3>
+							<p><$mt:authordatabio$></p>
+						</div>
+					</div>
+				</div>
+			</div>
 </mt:IfNonEmpty>
-
-<mt:Ignore>
-<mt:EntryIfTagged>
-      <div class="related-entries">
-        <h3>Posts relacionados</h3>
-        <ul>
-  <mt:RelatedEntries weight="idf" lastn="5">
-          <li><a href="<$mt:EntryPermalink$>"><mt:EntryTitle /></a></li>
-  </mt:RelatedEntries>
-        </ul>
-      </div>
-</mt:EntryIfTagged>
-</mt:Ignore>
-    </article>
-    <aside class="fourcol last">
+		</article>
+	</div>
+	<aside class="large-4 columns">
 <mt:BlogParentWebsite> 
-  <$mt:WebsiteID setvar="website_id"$> 
+	<$mt:WebsiteID setvar="website_id"$> 
 </mt:BlogParentWebsite> 
-      <$mt:WidgetSet name="Blog widgets" blog_id="$website_id"$>
-    </aside>
-  </div>
+		<$mt:WidgetSet name="Blog widgets" blog_id="$website_id"$>
+	</aside>
 </div>
-
 <$mt:Include module="Footer" parent="1"$>

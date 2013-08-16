@@ -1,29 +1,29 @@
 <mt:If name="comment_confirmation">
-    <$mt:Var name="short" value="¡Éxito!"$>
-    <$mt:Var name="page_title" value="Confirmación..."$>
-    <$mt:Var name="message" value="<p>Muchas gracias por participar. <strong>Hemos recibido su comentario</strong>. Nota que puede tardar hasta diez minutos para que tu comentario será visible en la página.</p>"$>
+	<$mt:Var name="short" value="¡Éxito!"$>
+	<$mt:Var name="page_title" value="Confirmación..."$>
+	<$mt:Var name="message" value="<p>Muchas gracias por participar. <strong>Hemos recibido su comentario</strong>. Nota que puede tardar hasta diez minutos para que tu comentario será visible en la página.</p>"$>
 <mt:Else name="comment_pending">
-    <$mt:Var name="short" value="¡Gracias!"$>
-    <$mt:Var name="page_title" value="Muchas gracias por el comentario."$>
-    <$mt:Var name="message" value="<p>Su comentario aparezca en el blog después de la verificación por el moderador.</p>"$>
+	<$mt:Var name="short" value="¡Gracias!"$>
+	<$mt:Var name="page_title" value="Muchas gracias por el comentario."$>
+	<$mt:Var name="message" value="<p>Su comentario aparezca en el blog después de la verificación por el moderador.</p>"$>
 <mt:Else name="comment_error">
-    <$mt:Var name="short" value="Error"$>
-    <$mt:Var name="page_title" value="Error al recibir el comentario"$>
-    <mt:SetVarBlock name="message"><p>No hemos podido procesar su comentario por las siguientas razones: <$mt:ErrorMessage$></p></mt:SetVarBlock>
+	<$mt:Var name="short" value="Error"$>
+	<$mt:Var name="page_title" value="Error al recibir el comentario"$>
+	<mt:SetVarBlock name="message">
+		<p>No hemos podido procesar su comentario por las siguientas razones: <$mt:ErrorMessage$></p>
+	</mt:SetVarBlock>
 </mt:If>
 <mt:SetVarBlock name="title"><$mt:var name="page_title"$></mt:SetVarBlock>
 <$mt:Include module="Header" parent="1"$>
-<article class="container page">
-  <div class="row">
-    <div class="twelvecol">
-      <h1><mt:Var name="short" /></h1>
-      <mt:If name="message"><mt:Var name="message" /></mt:If>
-      <mt:If name="comment_error">
-        <p>Regrese a <a href="javascript:history.back()">su comentario</a>.</p>
-      <mt:Else>
-        <p>Volver a <MTCommentEntry><a href="<$MTEntryPermalink$>" rel="bookmark"><$MTEntryTitle$></a></MTCommentEntry>.</p>
-      </mt:If>
-    </div>
-  </div>
+<article class="row">
+	<div class="small-12 columns">
+		<h1><mt:Var name="short" /></h1>
+		<mt:If name="message"><mt:Var name="message" /></mt:If>
+<mt:If name="comment_error">
+		<p>Regrese a <a href="javascript:history.back()">su comentario</a>.</p>
+<mt:Else>
+		<p>Volver a <mt:CommentEntry><a href="<$mt:EntryPermalink$>" rel="bookmark"><$mt:EntryTitle$></a></mt:CommentEntry>.</p>
+</mt:If>
+	</div>
 </article>
 <$mt:Include module="Footer" parent="1"$>

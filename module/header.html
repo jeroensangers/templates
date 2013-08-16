@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
 <head>
 <mt:Ignore><!-- meta --></mt:Ignore>
 	<meta charset="<$mt:PublishCharset$>" />
@@ -8,7 +8,6 @@
 <mt:BlogParentWebsite>
 	<meta name="generator" content="<$mt:ProductName version="1"$>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta property="fb:page_id" content="206967137441" />
 	<link rel="profile" href="http://microformats.org/profile/hatom" />
 	<$mt:CCLicenseRDF$>
 	<$mt:Var name="html_head"$>
@@ -18,13 +17,14 @@
 	<link rel="shortcut icon" href="http://canasto.es/favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" sizes="300x300" href="http://canasto.es/apple-touch-icon.png">
 <mt:Ignore><!-- css --></mt:Ignore>
-	<!--[if lte IE 9]><link rel="stylesheet" href="<$mt:Link template="Stylesheet - 1140px grid for IE"$>" type="text/css" media="screen" /><![endif]-->
+	<link rel="stylesheet" href="<$mt:Link template="Stylesheet - Normalize"$>" />
+	<link rel="stylesheet" href="<$mt:Link template="Stylesheet - Foundation"$>" />
 	<link rel="stylesheet" href="<$mt:Link template="Stylesheet - El Canasto"$>" />
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600|Bree+Serif" />
 <mt:Ignore><!-- javascript --></mt:Ignore>
-	<script type="text/javascript" data-cfasync="true" src="<$mt:Link template="JavaScript - Enable media queries"$>"></script>
+	<script src="http://use.edgefonts.net/open-sans:n3,i3,n6,i6;bree-serif:n4.js"></script>
 	<script type="text/javascript" src="<$mt:Link template="JavaScript"$>"></script>
-	<mt:Ignore><!-- Google Analytics tracking code --></mt:Ignore>
+	<script type="text/javascript" data-cfasync="true" src="<$mt:Link template="JavaScript - Modernizr"$>"></script>
+<mt:Ignore><!-- Google Analytics tracking code --></mt:Ignore>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-189077-6']);
@@ -36,47 +36,34 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
-<mt:Unless name="NoSocial">
-	<mt:Ignore><!-- Google Analytics Social button tracking --></mt:Ignore>
-	<script type="text/javascript" src="http://canasto.es/js/ga_social_tracking.js"></script>
-	<mt:Ignore><!– Load Twitter JS-API asynchronously –></mt:Ignore>
-	<script data-cfasync="true">
-		(function(){
-			var twitterWidgets = document.createElement('script');
-			twitterWidgets.type = 'text/javascript';
-			twitterWidgets.async = true;
-			twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-			// Setup a callback to track once the script loads.
-			twitterWidgets.onload = _ga.trackTwitter;
-			document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-		})();
-	</script>
-</mt:Unless>
 </mt:BlogParentWebsite>
 </head>
-
 <body>
-
-	<div class="container" id="header">
-		<div class="row">
-			<header class="fourcol">
+	<nav class="top-bar">
 <mt:BlogParentWebsite>
-				<a rel="home" href="<$mt:WebsiteURL$>" title="<$mt:WebsiteName encode_html="1"$>: Inicio"><img src="http://canasto.es/img/logo.png" width="350" height="59" alt="<$mt:WebsiteName encode_html="1"$>" /></a>
-			</header>
-			<nav class="eightcol last">
-				<ul>
-					<li><a href="<$mt:Link template="Blog Index"$>">Blog</a></li>
+		<ul class="title-area">
+			<li class="name">
+				<h1><a rel="home" href="<$mt:WebsiteURL$>" title="<$mt:WebsiteName encode_html="1"$>: Inicio"><img src="http://canasto.es/templates/img/elcanasto.png" width="235" height="40" alt="<$mt:WebsiteName encode_html="1"$>" /></a></h1>
+			</li>
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menú</span></a></li>
+		</ul>
+		<section class="top-bar-section">
+			<ul class="right">
+				<li class="divider"></li>
+				<li><a href="<$mt:Link template="Blog Index"$>">Blog</a></li>
 <mt:Pages tag="@topnav">
-					<li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+				<li class="divider"></li>
+				<li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
 </mt:Pages>
 <mt:Pages tag="@about">
-					<li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+				<li class="divider"></li>
+				<li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
 </mt:Pages>
 <mt:Pages tag="@contact">
-					<li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+				<li class="divider"></li>
+				<li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
 </mt:Pages>
-				</ul>
-			</nav>
+			</ul>
+		</section>
 </mt:BlogParentWebsite>
-		</div>
-	</div>
+	</nav>

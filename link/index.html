@@ -1,31 +1,24 @@
 <mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$></mt:SetVarBlock>
 <mt:SetVarBlock name="html_head">
-  <meta name="description" content="Enlaces a contenido externo relacionado a la productividad personal" />
-  <meta name="keywords" content="links, enlaces, gtd, productividad, formación, cursos, consultoría, charlas, gestión del tiempo, project management" />
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<$mt:Link template="rsd"$>" />
-  <link rel="canonical" href="<$mt:BlogURL$>"/>
+	<meta name="description" content="Enlaces a contenido externo relacionado a la productividad personal" />
+	<meta name="keywords" content="links, enlaces, gtd, productividad, formación, cursos, consultoría, charlas, gestión del tiempo, project management" />
+	<link rel="canonical" href="<$mt:BlogURL$>" />
 </mt:SetVarBlock>
 <$mt:Var name="NoSocial" value="true"$>
 <$mt:Include module="Header" parent="1"$>
-
-<div class="container">
-  <div class="row">
-    <div class="eightcol">
-      <h1><$mt:BlogName encode_html="1"$></h1>
-      <p><strong>Links</strong> es una selección de articulos interesantes sobre la <em>productividad personal</em> y temas relacionados, publicados en otros lugares. Cada link viene acompañada de mis comentarios.</p>
-      <section class="entries">
+<div class="row">
+	<section class="large-8 columns entries">
+		<h1><$mt:BlogName encode_html="1"$></h1>
+		<p><strong>Links</strong> es una selección de articulos interesantes sobre la <em>productividad personal</em> y temas relacionados, publicados en otros lugares. Cada link viene acompañada de mis comentarios.</p>
 <mt:Entries>
-        <$mt:Include module="Entry" parent="1"$>
+		<$mt:Include module="Entry" parent="1"$>
 </mt:Entries>
-      </section>
-    </div>
-    <aside class="fourcol last">
+	</section>
+	<aside class="large-4 columns">
 <mt:BlogParentWebsite> 
-  <$mt:WebsiteID setvar="website_id"$> 
+	<$mt:WebsiteID setvar="website_id"$> 
 </mt:BlogParentWebsite> 
-      <$mt:WidgetSet name="Blog widgets" blog_id="$website_id"$>
-    </aside>
-  </div>
+		<$mt:WidgetSet name="Blog widgets" blog_id="$website_id"$>
+	</aside>
 </div>
-
 <$mt:Include module="Footer" parent="1"$>

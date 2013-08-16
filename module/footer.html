@@ -1,9 +1,8 @@
-	<footer class="container">
+	<footer>
 		<div class="row search">
-			<div class="twelvecol last">
-				<form method="get" action="http://duckduckgo.com/">
+			<div class="small-12 columns">
+				<form data-abide method="get" action="http://duckduckgo.com/">
 					<input type="hidden" name="sites" value="canasto.es">
-					<input size="40" type="search" name="q" id="search" tabindex="7" placeholder="Buscar en El Canasto..." />
 					<input type="hidden" name="kl" value="es-es" />
 					<input type="hidden" name="kj" value="d" />
 					<input type="hidden" name="kt" value="h" />
@@ -13,43 +12,42 @@
 					<input type="hidden" name="k9" value="#AD6CEB" />
 					<input type="hidden" name="kq" value="n" />
 					<input type="hidden" name="k4" value="-1" />
-					<input class="search-submit button" name="submit" type="submit" id="search-submit" tabindex="8" value="Buscar" />
+					<div class="row collapse">
+						<div class="small-11 columns">
+							<input type="search" name="q" id="search" tabindex="7" placeholder="Buscar en El Canasto..." class="radius" required />
+						</div>
+						<div class="small-1 column">
+							<input class="button secondary postfix radius" name="submit" type="submit" id="search-submit" tabindex="8" value="Buscar" />
+						</div>
+					</div>
 				</form>
+			</div>		
+		</div>
+		<div class="row cite">
+			<div class="small-12 columns">
+				<blockquote class="text-center">Piensa como una persona de acción y actúa como una persona de pensamiento.<cite>Henri Bergson</cite></blockquote>
 			</div>
 		</div>
-		<div class="row copyright">
-			<div class="twelvecol last">
-				<a href="<$MTBlogCCLicenseURL$>">Todos los derechos reservados</a> &copy; Jeroen Sangers 2006 – <mt:Entries include_blogs="3,15" lastn="1"><$mt:EntryDate format='%Y'$></mt:Entries> | <a href="http://canasto.es/aviso-legal/">Aviso legal</a>
+		<div class="bottom">
+			<div class="row">
+				<div class="large-8 columns copyright">
+					<p><a href="<$MTBlogCCLicenseURL$>">Todos los derechos reservados</a> &copy; Jeroen Sangers 2006 &ndash; <mt:Entries include_blogs="3,15" lastn="1"><$mt:EntryDate format='%Y'$></mt:Entries> | <a href="http://canasto.es/aviso-legal/">Aviso legal</a></p>
+				</div>
+				<div class="large-4 columns socialmedia">
+					<p class="text-right"><a href="http://eepurl.com/cT5-2" class="symbol" title="Suscríbete al newsletter">roundedemail</a> <a href="<mt:BlogParentWebsite><$mt:Link template="feed_recent"$></mt:BlogParentWebsite>" class="symbol" title="Suscríbete al feed">roundedrss</a> <a href="http://twitter.com/ElCanasto" class="symbol" title="Sigue @ElCanasto en Twitter">roundedtwitterbird</a> <a href="http://facebook.com/blog.canasto" class="symbol" title="Sigue El Canasto en Facebook">roundedfacebook</a> <a href="http://plus.google.com/104901425910703095876/" class="symbol"title="Sigue El Canasto en Google+">roundedgoogleplus</a> <a href="http://itunes.apple.com/es/podcast/2-minutos-de-productividad/id368375193" class="symbol" title="Suscríbete a los vídeos de 2 Minutos de Productividad">roundedpodcast</a></p>
+				</div>
 			</div>
 		</div>
-		<div style="display: none;"><a href="http://mt.ai-no.com/approachinvestment.cgi">piedmont-secondrate</a></div>
+		<div class="hide"><a href="http://mt.ai-no.com/approachinvestment.cgi">piedmont-secondrate</a></div>
 	</footer>
-<mt:Unless name="NoSocial">
-<mt:Ignore><!-- Facebook Scripts --></mt:Ignore>
-	<div id="fb-root"></div>
-	<script data-cfasync="true">(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=117771895047419";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<script type="text/javascript">_ga.trackFacebook();</script>
-<mt:Ignore><!-- Twitter Scripts --></mt:Ignore>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	<mt:Ignore><!-- Google+ Scripts --></mt:Ignore>
-	<script type="text/javascript">
-		window.___gcfg = {lang: 'es'};
-		(function() {
-			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			po.src = 'https://apis.google.com/js/plusone.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		})();
+	<script>
+		document.write('<script src=' +
+			('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+			'.js><\/script>')
 	</script>
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-</mt:Unless>
+	<script type="text/javascript" data-cfasync="true" src="<$mt:Link template="JavaScript - Foundation"$>"></script>
+	<script>
+		$(document).foundation();
+	</script>
 </body>
-
 </html>

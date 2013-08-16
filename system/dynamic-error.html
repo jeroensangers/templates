@@ -1,12 +1,12 @@
 <mt:SetVarBlock name="page_title">Página No Encontrado</mt:SetVarBlock>
 <mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$>: <$mt:Var name="page_title"$></mt:SetVarBlock>
-
-<$mt:Include module="Header" body_class="mt-dynamic-error"$>
-
-<h1 id="page-title"><$mt:Var name="page_title"$></h1>
-<blockquote>
-    <strong><$mt:ErrorMessage$></strong>
-</blockquote>
-
-<$mt:Include module="Footer"$>
-
+<$mt:Include module="Header" parent="1"$>
+<article class="row">
+	<div class="small-12 columns">
+		<h1 id="page-title"><$mt:Var name="page_title"$></h1>
+		<blockquote>
+			<p><strong><$mt:ErrorMessage$></strong></p>
+		</blockquote>
+	</div>
+</article>
+<$mt:Include module="Footer" parent="1"$>
