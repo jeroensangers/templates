@@ -53,15 +53,15 @@
 				<li><a href="<$mt:Link template="Blog Index"$>">Blog</a></li>
 <mt:Pages tag="@topnav">
 				<li class="divider"></li>
-				<li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+				<li><a href="<$mt:PagePermalink$>"<mt:If name="PageID" eq="<$mt:PageID$>"> class="active"</mt:If>><$mt:PageTitle$></a></li>
 </mt:Pages>
 <mt:Pages tag="@about">
 				<li class="divider"></li>
-				<li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+				<li><a href="<$mt:PagePermalink$>"<mt:If name="PageID" eq="<$mt:PageID$>"> class="active"</mt:If>><$mt:PageTitle$></a></li>
 </mt:Pages>
 <mt:Pages tag="@contact">
 				<li class="divider"></li>
-				<li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+				<li><a href="<$mt:PagePermalink$>"<mt:If name="PageID" eq="<$mt:PageID$>"> class="active"</mt:If>><$mt:PageTitle$></a></li>
 </mt:Pages>
 			</ul>
 		</section>
