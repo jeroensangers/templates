@@ -53,15 +53,15 @@
 				<li<mt:If name="IsBlog"> class="active"</mt:If>><a href="<$mt:Link template="Blog Index"$>">Blog</a></li>
 <mt:Pages tag="@topnav">
 				<li class="divider"></li>
-				<li<mt:If name="PID" eq="<$mt:PageID$>"> class="active"</mt:If>><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+				<li<mt:If tag="PageID" eq="$PID"> class="active"</mt:If>><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
 </mt:Pages>
 <mt:Pages tag="@about">
 				<li class="divider"></li>
-				<li<mt:If name="PID" eq="<$mt:PageID$>"> class="active"</mt:If>><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+				<li<mt:If tag="PageID" eq="$PID"> class="active"</mt:If>><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
 </mt:Pages>
 <mt:Pages tag="@contact">
 				<li class="divider"></li>
-				<li<mt:If name="PID" eq="<$mt:PageID$>"> class="active"</mt:If>><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+				<li<mt:If tag="PageID" eq="$PID"> class="active"</mt:If>><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
 </mt:Pages>
 			</ul>
 		</section>
