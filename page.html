@@ -6,7 +6,9 @@
 	</mt:PageIfTagged>
 	<link rel="canonical" href="<$mt:PagePermalink$>" />
 </mt:SetVarBlock>
-<$mt:Var name="PID" value"<$mt:PageID$>"$>
+<mt:SetVarBlock name="PID">
+	<$mt:PageID$>
+</mt:SetVarBlock>
 <$mt:Include module="Header"$>
 <article class="page">
 	<div class="row">

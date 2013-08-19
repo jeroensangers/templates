@@ -17,7 +17,9 @@
 	</mt:If>
 </mt:SetVarBlock>
 <mt:IfCategory>
-	<$mt:Var name="CatID" value="<mt:EntryPrimaryCategory><$mt:CategoryID$></mt:EntryPrimaryCategory>"$>
+	<mt:SetVarBlock name="CatID">
+		<mt:EntryPrimaryCategory><$mt:CategoryID$></mt:EntryPrimaryCategory>
+	</mt:SetVarBlock>
 </mt:IfCategory>
 <$mt:Include module="Header" parent="1"$>
 <div class="row">
