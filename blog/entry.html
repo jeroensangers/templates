@@ -9,6 +9,8 @@
 		<meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
 	</mt:EntryIfTagged>
 	<link rel="canonical" href="<$mt:EntryPermalink$>" />
+	<mt:EntryPrevious><link rel="prev bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryPrevious>
+	<mt:EntryNext><link rel="next bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryNext>
 	<$mt:EntryTrackbackData comment_wrap="0"$>
 	<mt:If tag="AuthorDataGoogle">
 		<link rel="author" href="<mt:AuthorDataGoogle>" />
@@ -37,7 +39,7 @@
 						</div>
 						<div class="small-9 columns">
 							<h3><a class="url fn n" rel="author" href="<$mt:AuthorURL$>"><$mt:AuthorDisplayName$></a></h3>
-							<p><$mt:authordatabio$></p>
+							<$mt:authordatabio$>
 						</div>
 					</div>
 				</div>
