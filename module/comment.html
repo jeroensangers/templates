@@ -1,11 +1,12 @@
 <li id="comment-<$mt:CommentID$>" class="comment panel radius<mt:IfCommenterIsEntryAuthor> callout</mt:IfCommenterIsEntryAuthor>">
 	<div class="row">
-		<div class="small-3 columns meta">
+		<div class="large-3 columns meta">
 			<img src="<$MTGravatar size="90" rating="G" default="http://canasto.es/templates/img/default-userpic.jpg"$>" alt="<$mt:CommentAuthor$>" class="gravatar th" />
 			<p><span class="vcard author"><$mt:CommentAuthorLink$></span><br />
 			el <a href="<$mt:EntryPermalink$>#comment-<$mt:CommentID$>"><abbr title="<$MTCommentDate format_name="iso8601"$>"><$MTCommentDate format="%x"$></abbr></a></p>
+			<hr class="show-for-small" />
 		</div>
-		<div class="small-9 columns">
+		<div class="large-9 columns">
 			<$mt:CommentBody$>
 <mt:IfCommentsAccepted>
 			<div class="reply button radius<mt:IfCommenterIsEntryAuthor> secondary</mt:IfCommenterIsEntryAuthor>"><$mt:CommentReplyToLink$></div>
