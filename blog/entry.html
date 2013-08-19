@@ -16,6 +16,9 @@
 		<link rel="author" href="<mt:AuthorDataGoogle>" />
 	</mt:If>
 </mt:SetVarBlock>
+<mt:IfCategory>
+	<$mt:Var name="CatID" value="<mt:EntryPrimaryCategory><$mt:CategoryID$></mt:EntryPrimaryCategory>"$>
+</mt:IfCategory>
 <$mt:Include module="Header" parent="1"$>
 <div class="row">
 	<div class="large-8 columns">
