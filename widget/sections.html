@@ -3,7 +3,7 @@
 	<ul class="side-nav">
 	<!-- <$mt:Var name="CatID"$> -->
 <mt:Categories include_blogs="3">
-		<li<mt:If name="CatID" eq="<$mt:CategoryID$>"> class="active"</mt:If>>
+		<li<mt:If name="CatID" eq="<$mt:CategoryID$>"> class="active"</mt:If>><!-- <$mt:CategoryID$> -->
 			<a href="<$mt:CategoryArchiveLink$>" title="<$mt:CategoryLabel encode_html="1"$>"><$mt:CategoryLabel$></a>
 		</li>
 </mt:Categories>
