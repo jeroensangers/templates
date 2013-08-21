@@ -149,6 +149,9 @@ h3.blog-15 {
 .panel.callout a {
 	color: white;
 }
+.panel.callout .panel a {
+	color: #acb911;
+}
 .panel.callout p a {
 	text-decoration: underline;
 }
