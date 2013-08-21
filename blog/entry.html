@@ -1,7 +1,7 @@
 <mt:if tag="EntryHTMLTitle" ne="">
-	<mt:SetVarBlock name="title"><$mt:EntryHTMLTitle remove_html="1"$></mt:SetVarBlock>
+	<mt:SetVarBlock name="title"><$mt:EntryHTMLTitle smarty_pants="1" remove_html="1"$></mt:SetVarBlock>
 <mt:else>
-	<mt:SetVarBlock name="title"><$mt:EntryTitle encode_html="1"$></mt:SetVarBlock>
+	<mt:SetVarBlock name="title"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></mt:SetVarBlock>
 </mt:if>
 <mt:SetVarBlock name="html_head">
 	<meta name="description" content="<$mt:EntryExcerpt$>" />
@@ -26,7 +26,7 @@
 <div class="row">
 	<div class="large-8 columns">
 		<article class="hentry">
-			<h1 class="entry-title"><$mt:EntryTitle encode_html="1"$></h1>
+			<h1 class="entry-title"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></h1>
 			<p class="byline">Por <span itemscope itemtype="http://schema.org/Person" class="author vcard"><a class="url fn n" rel="author" itemprop="url" href="<$mt:EntryAuthorURL$>" title="<$mt:EntryAuthorDisplayName encode_html="1"$>"><pan itemprop="name"><$mt:EntryAuthorDisplayName$></span></a></span> <span class="text">el</span> <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
 			<div class="entry-content">
 				<$mt:EntryBody$>
@@ -45,7 +45,7 @@
 						</div>
 						<div class="small-9 columns">
 							<h3><a class="url fn n" itemprop="url" rel="author" href="<$mt:AuthorURL$>"><pan itemprop="name"><$mt:AuthorDisplayName$></span></a></h3>
-							<pan itemprop="description"><$mt:authordatabio$></span>
+							<pan itemprop="description"><$mt:authordatabio smarty_pants="1"$></span>
 						</div>
 					</div>
 				</div>
@@ -58,7 +58,7 @@
 				<h3>Artículos relacionados</h3>
 				<ul>
 	<mt:RelatedEntries weight="idf" lastn="5">
-					<li><a href="<$mt:EntryPermalink$>"><mt:EntryTitle /></a></li>
+					<li><a href="<$mt:EntryPermalink$>"><$mt:EntryTitle smarty_pants="1"$></a></li>
 	</mt:RelatedEntries>
 				</ul>
 			</div>
