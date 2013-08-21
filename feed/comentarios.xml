@@ -10,7 +10,7 @@
 <mt:Comments sort_order="descend" lastn="25">
 <mt:CommentEntry>
 	<entry>
-		<title>Comentario de <$mt:CommentAuthor$> en <$mt:EntryTitle smarty_pants="1" remove_html="1" encode_xml="1"$></title>
+		<title>Comentario de <$mt:CommentAuthor$> en <$mt:EntryTitle remove_html="1" encode_xml="1"$></title>
 		<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>#comment-<$mt:CommentID$>" />
 		<id><$mt:EntryAtomID$>#<$mt:CommentID$></id>
 		<published><$mt:CommentDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></published>

@@ -9,7 +9,7 @@
 	<rights>Todos los derechos reservados © Jeroen Sangers 2006 – <mt:Entries include_blogs="3,15" lastn="1"><$mt:EntryDate format='%Y'$></mt:Entries></rights>
 <mt:Entries include_blogs="3" lastn="15">
 	<entry>
-		<title><$mt:EntryTitle smarty_pants="1" remove_html="1" encode_xml="1"$></title>
+		<title><$mt:EntryTitle remove_html="1" encode_xml="1"$></title>
 		<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>" />
 		<id><$mt:EntryAtomID$></id>
 		<published><$mt:EntryDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></published>
