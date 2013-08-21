@@ -9,7 +9,7 @@
 	<rights>Todos los derechos reservados © Jeroen Sangers 2006 – <mt:Entries include_blogs="3,15" lastn="1"><$mt:EntryDate format='%Y'$></mt:Entries></rights>
 <mt:Entries include_blogs="3,15" lastn="25">
 	<entry>
-		<title><mt:If tag="BlogID" eq="3">✓ <mt:Else tag="BlogID" eq="15">∞ </mt:If><$mt:EntryTitle remove_html="1" encode_xml="1"$><mt:If tag="BlogID" eq="15"> (link)</mt:If></title>
+		<title><mt:If tag="BlogID" eq="3">✓ <mt:Else tag="BlogID" eq="15">∞ </mt:If><$mt:EntryTitle smarty_pants="1" remove_html="1" encode_xml="1"$><mt:If tag="BlogID" eq="15"> (link)</mt:If></title>
 <mt:If tag="EntryPostType" eq="link">
 		<link rel="alternate" type="text/html" href="<$mt:EntryLinkURL encode_xml="1"$>?utm_campaign=linkblog&amp;utm_medium=feed&amp;utm_source=canasto.es" />
 <mt:Else>
