@@ -101,6 +101,8 @@
 	RewriteRule ^feed\/index\.xml$ http://feeds.canasto.es/canasto [R=permanent,L]
 	RewriteCond %{HTTP_USER_AGENT} !(FeedBurner|FeedValidator|uri\.lv|FeedPress) [NC]
 	RewriteRule ^feed\/comentarios\.xml$ http://feeds.canasto.es/canasto-comentarios [R=permanent,L]
+	RewriteCond %{HTTP_USER_AGENT} !(FeedBurner|FeedValidator|uri\.lv|FeedPress) [NC]
+	RewriteRule ^2-minutos-productividad\/index\.xml$ http://feeds.canasto.es/2minutos [R=permanent,L]
 </IfModule>
 
 <mt:Ignore># Compress static data</mt:Ignore>
