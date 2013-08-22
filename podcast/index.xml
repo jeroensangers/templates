@@ -8,7 +8,7 @@
 	<mt:If tag="WebsiteDescription">
 		<itunes:subtitle><$mt:WebsiteDescription smartypants="1" encode_xml="1"$></itunes:subtitle>
 	</mt:If>
-<mt:BlogParentWebsite>
+</mt:BlogParentWebsite>
 <mt:If tag="BlogDescription">
 		<description><$mt:BlogDescription smartypants="1" remove_html="1" encode_xml="1"$></description>
 		<itunes:summary><$mt:BlogDescription smartypants="1" remove_html="1" encode_xml="1"$></itunes:summary>
@@ -80,7 +80,6 @@
 	<mt:If tag="EntryDataEnclosureurl"><mt:If tag="EntryDataEnclosureSize"><mt:If tag="EntryDataEnclosureMimeType">
     	<enclosure url="<$mt:EntryDataEnclosureurl$>" length="<$mt:EntryDataEnclosureSize$>" type="<$mt:EntryDataEnclosureMimeType$>" />
 	</mt:If></mt:If></mt:If>
-  </mt:EntryAssets>
   		<content type="html" xml:lang="<$mt:BlogLanguage ietf="1"$>" xml:base="<$mt:BlogURL encode_xml="1"$>">
   			<$mt:EntryBody smartpants="1" encode_xml="1"$>
   			<$mt:EntryMore smartpants="1" encode_xml="1"$>
