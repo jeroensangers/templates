@@ -60,7 +60,7 @@
 <mt:Ignore>
 			<updated><$mt:EntryModifiedDate utc="1" format_name="rfc822"$></updated>
 </mt:Ignore>
-			<description><$mt:EntryBody smartypants="1" encode_xml="1"$></description>
+			<description><$mt:EntryBody smartypants="1" remove_html="1" encode_xml="1"$></description>
 <mt:Ignore>
 			<summary><$mt:EntryMore smartypants="1" remove_html="1" encode_xml="1"$></summary>
 </mt:Ignore>
