@@ -4,6 +4,11 @@
 		<meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
 	</mt:EntryIfTagged>
 	<link rel="canonical" href="<$mt:EntryPermalink$>" />
+	<mt:If tag="AuthorDataGoogle">
+		<link rel="author" href="<mt:AuthorDataGoogle>" />
+	<mt:Else>
+		<link rel="author" href="http://plus.google.com/116796415134324385364/" />
+	</mt:If>
 	<$mt:EntryTrackbackData$>
 </mt:SetVarBlock>
 <$mt:Include module="Header" parent="1"$>
