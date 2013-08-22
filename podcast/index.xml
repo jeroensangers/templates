@@ -3,7 +3,6 @@
 	<channel>
 		<title><$mt:BlogName smartypants="1" remove_html="1" encode_xml="1"$></title>
 		<link><$mt:BlogURL encode_xml="1"$></link>
-		<itunes:new-feed-url><$mt:Link template="Sindicación - Entradas recientes" encode_xml="1"$></itunes:new-feed-url>
 <mt:BlogParentWebsite>
 	<mt:If tag="WebsiteDescription">
 		<itunes:subtitle><$mt:WebsiteDescription smartypants="1" encode_xml="1"$></itunes:subtitle>
@@ -26,15 +25,16 @@
 <mt:Entries lastn="1">
 		<itunes:author><$mt:EntryAuthorDisplayName remove_html="1" encode_xml="1"$></itunes:author>
 		<itunes:owner>
-			<itunes:email><$mt:EntryAuthorEmail$></itunes:email>
 			<itunes:name><$mt:EntryAuthorDisplayName remove_html="1" encode_xml="1"$></itunes:name>
+			<itunes:email><$mt:EntryAuthorEmail$></itunes:email>
 		</itunes:owner>
 		<lastBuildDate><$mt:EntryModifiedDate utc="1" format_name="rfc822"$></lastBuildDate>
-		<pubDate><$mt:EntryCreatedDate utc="1" format_name="rfc822"$></pubDate>
+		<pubDate><$mt:EntryDate utc="1" format_name="rfc822"$></pubDate>
 </mt:Entries>
-		<itunes:keywords>productividad, gtd, gettingthingsdone, canasto, productivity, 2minutos, timemanagement, gestiondeltiempo</itunes:keywords>
+		<itunes:keywords>productividad, gtd, getting things done, el canasto, productivity, 2 minutos, time management, gestión del tiempo</itunes:keywords>
 		<itunes:category text="Business">
 			<itunes:category text="Careers" />
+		<itunes:category text="Business" />
 		</itunes:category>
 		<itunes:category text="Education">
 			<itunes:category text="Training" />
@@ -45,22 +45,23 @@
 		<itunes:category text="Health">
 			<itunes:category text="Self-Help" />
 		</itunes:category>
-		<itunes:category text="Business" />
-		<copyright>&#x2117; &amp; &#xA9; <$MTDate format="%Y"$> Jacobus Bernardus SANGERS</copyright>
+		<copyright>&#x2117; &amp; &#xA9; <$MTDate format="%Y"$> Jeroen Sangers</copyright>
 <mt:BlogIfCCLicense>
 		<creativeCommons:license><$mt:BlogCCLicenseURL encode_xml="1"$></creativeCommons:license>
 </mt:BlogIfCCLicense>
 <mt:Entries>
 		<item>
 			<guid isPermaLink="false"><$mt:EntryAtomID$></guid>
+<mt:Ignore>
 			<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>" />
+</mt:Ignore>
 			<title><$mt:EntryTitle smartypants="1" remove_html="1" encode_xml="1"$></title>
 			<pubDate><$mt:EntryDate utc="1" format_name="rfc822"$></pubDate>
 			<updated><$mt:EntryModifiedDate utc="1" format_name="rfc822"$></updated>
 			<description><$mt:EntryBody smartypants="1" encode_xml="1"$></description>
 			<summary><$mt:EntryMore smartypants="1" remove_html="1" encode_xml="1"$></summary>
-			<itunes:subtitle><$mt:EntryBody smartypants="1" encode_xml="1"$></itunes:subtitle>
-			<itunes:summary><$mt:EntryMore smartypants="1" encode_xml="1"$></itunes:summary>
+			<itunes:subtitle><$mt:EntryBody smartypants="1" remove_html="1" encode_xml="1"$></itunes:subtitle>
+			<itunes:summary><$mt:EntryMore smartypants="1" remove_html="1" encode_xml="1"$></itunes:summary>
 	<mt:EntryIfTagged>
 		<mt:EntryTags>
 			<category><$mt:TagName normalize="1" encode_xml="1"$></category>
