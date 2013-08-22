@@ -79,7 +79,7 @@
 	<mt:BlogIfCCLicense>
 			<creativeCommons:license><$mt:BlogCCLicenseURL encode_xml="1"$></creativeCommons:license>
 	</mt:BlogIfCCLicense>
-			<author><$mt:EntryAuthorEmail encode_xml="1"$></author>
+			<author><$mt:EntryAuthorEmail encode_xml="1"$> (<$mt:EntryAuthorDisplayName remove_html="1" encode_xml="1"$>)</author>
 			<itunes:author><$mt:EntryAuthorDisplayName remove_html="1" encode_xml="1"$></itunes:author> 
 			<itunes:explicit>clean</itunes:explicit>
 	<mt:If tag="EntryDataEnclosureurl"><mt:If tag="EntryDataEnclosureSize"><mt:If tag="EntryDataEnclosureMimeType">
