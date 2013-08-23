@@ -1,0 +1,96 @@
+<$mt:HTTPContentType type="application/rss+xml"$><?xml version="1.0" encoding="<$mt:PublishCharset$>"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:atom="http://www.w3.org/2005/Atom/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+	<channel>
+		<title><$mt:BlogName smartypants="1" remove_html="1" encode_xml="1"$></title>
+		<link><$mt:BlogURL encode_xml="1"$></link>
+<mt:BlogParentWebsite>
+	<mt:If tag="WebsiteDescription">
+		<itunes:subtitle><$mt:WebsiteDescription smartypants="1" encode_xml="1"$></itunes:subtitle>
+	</mt:If>
+</mt:BlogParentWebsite>
+<mt:If tag="BlogDescription">
+		<description><$mt:BlogDescription smartypants="1" remove_html="1" encode_xml="1"$></description>
+		<itunes:summary><$mt:BlogDescription smartypants="1" remove_html="1" encode_xml="1"$></itunes:summary>
+		<itunes:new-feed-url><$mt:Link template="Sindicación - Entradas recientes" encode_xml="1"$></itunes:new-feed-url>
+		<atom:link href="<$mt:Link template="Sindicación - Entradas recientes" encode_xml="1"$>" rel="self" type="application/rss+xml" />
+</mt:If>
+		<itunes:image href="http://canasto.es/templates/img/2minutos.jpg" />
+		<image> 
+			<link><$mt:BlogURL encode_xml="1"$></link>
+			<url>http://canasto.es/templates/img/2minutos.jpg</url>
+			<title><$mt:BlogName remove_html="1" encode_xml="1"$></title>
+		</image>
+		<itunes:explicit>clean</itunes:explicit>
+		<itunes:block>no</itunes:block>
+		<language><$MTBlogLanguage ietf="1"$></language>
+		<generator><$mt:ProductName version="1"$></generator>
+<mt:Entries lastn="1">
+		<itunes:author><$mt:EntryAuthorDisplayName remove_html="1" encode_xml="1"$></itunes:author>
+		<itunes:owner>
+			<itunes:name><$mt:EntryAuthorDisplayName remove_html="1" encode_xml="1"$></itunes:name>
+			<itunes:email><$mt:EntryAuthorEmail$></itunes:email>
+		</itunes:owner>
+		<lastBuildDate><$mt:EntryModifiedDate utc="1" format_name="rfc822"$></lastBuildDate>
+		<pubDate><$mt:EntryDate utc="1" format_name="rfc822"$></pubDate>
+</mt:Entries>
+		<itunes:keywords>productividad, gtd, getting things done, el canasto, productivity, 2 minutos, time management, gestión del tiempo, Jeroen Sangers</itunes:keywords>
+		<itunes:category text="Business">
+			<itunes:category text="Careers" />
+		</itunes:category>
+		<itunes:category text="Business" />
+		<itunes:category text="Education">
+			<itunes:category text="Training" />
+		</itunes:category>
+		<itunes:category text="Technology">
+			<itunes:category text="Software How-To" />
+		</itunes:category>
+		<itunes:category text="Health">
+			<itunes:category text="Self-Help" />
+		</itunes:category>
+		<copyright>&#x2117; &amp; &#xA9; <$MTDate format="%Y"$> Jeroen Sangers</copyright>
+<mt:BlogIfCCLicense>
+		<creativeCommons:license><$mt:BlogCCLicenseURL encode_xml="1"$></creativeCommons:license>
+</mt:BlogIfCCLicense>
+<mt:Entries>
+		<item>
+			<guid isPermaLink="false"><$mt:EntryAtomID$></guid>
+<mt:Ignore>
+			<link><$mt:EntryPermalink encode_xml="1"$>"</link>
+</mt:Ignore>
+			<title><$mt:EntryTitle smartypants="1" remove_html="1" encode_xml="1"$></title>
+			<pubDate><$mt:EntryDate utc="1" format_name="rfc822"$></pubDate>
+<mt:Ignore>
+			<updated><$mt:EntryModifiedDate utc="1" format_name="rfc822"$></updated>
+</mt:Ignore>
+			<description><$mt:EntryBody smartypants="1" remove_html="1" encode_xml="1"$></description>
+<mt:Ignore>
+			<summary><$mt:EntryMore smartypants="1" remove_html="1" encode_xml="1"$></summary>
+</mt:Ignore>
+			<itunes:subtitle><$mt:EntryBody smartypants="1" remove_html="1" encode_xml="1"$></itunes:subtitle>
+			<itunes:summary><$mt:EntryMore smartypants="1" remove_html="1" encode_xml="1"$></itunes:summary>
+	<mt:EntryIfTagged>
+		<mt:EntryTags>
+			<category><$mt:TagName normalize="1" encode_xml="1"$></category>
+		</mt:EntryTags>
+			<itunes:keywords><mt:EntryTags glue=", "><$mt:TagName normalize="1" encode_xml="1"$></mt:EntryTags></itunes:keywords>
+	</mt:EntryIfTagged>
+	<mt:If tag="EntryDataDuration">
+			<itunes:duration><$mt:EntryDataDuration$></itunes:duration>
+	</mt:If>
+			<itunes:image href="http://canasto.es/templates/img/2minutos.jpg" />
+	<mt:BlogIfCCLicense>
+			<creativeCommons:license><$mt:BlogCCLicenseURL encode_xml="1"$></creativeCommons:license>
+	</mt:BlogIfCCLicense>
+			<author><$mt:EntryAuthorEmail encode_xml="1"$> (<$mt:EntryAuthorDisplayName remove_html="1" encode_xml="1"$>)</author>
+			<itunes:author><$mt:EntryAuthorDisplayName remove_html="1" encode_xml="1"$></itunes:author> 
+			<itunes:explicit>clean</itunes:explicit>
+	<mt:If tag="EntryDataEnclosureurl"><mt:If tag="EntryDataEnclosureSize"><mt:If tag="EntryDataEnclosureMimeType">
+    	<enclosure url="<$mt:EntryDataEnclosureurl$>" length="<$mt:EntryDataEnclosureSize$>" type="<$mt:EntryDataEnclosureMimeType$>" />
+	</mt:If></mt:If></mt:If>
+			<content:encoded>
+				<$mt:EntryMore smartypants="1" encode_xml="1"$>
+			</content:encoded>
+		</item>
+</mt:Entries>
+	</channel>
+</rss>
