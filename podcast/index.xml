@@ -1,5 +1,5 @@
 <$mt:HTTPContentType type="application/rss+xml"$><?xml version="1.0" encoding="<$mt:PublishCharset$>"?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:atom="http://www.w3.org/2005/Atom/ xmlns:content="http://purl.org/rss/1.0/modules/content/"">
 	<channel>
 		<title><$mt:BlogName smartypants="1" remove_html="1" encode_xml="1"$></title>
 		<link><$mt:BlogURL encode_xml="1"$></link>
@@ -11,6 +11,8 @@
 <mt:If tag="BlogDescription">
 		<description><$mt:BlogDescription smartypants="1" remove_html="1" encode_xml="1"$></description>
 		<itunes:summary><$mt:BlogDescription smartypants="1" remove_html="1" encode_xml="1"$></itunes:summary>
+		<itunes:new-feed-url><$mt:Link template="Sindicación - Entradas recientes" encode_xml="1"$></itunes:new-feed-url>
+		<atom:link href="<$mt:Link template="Sindicación - Entradas recientes" encode_xml="1"$>" rel="self" type="application/rss+xml" />
 </mt:If>
 		<itunes:image href="http://canasto.es/templates/img/2minutos.jpg" />
 		<image> 
@@ -31,7 +33,7 @@
 		<lastBuildDate><$mt:EntryModifiedDate utc="1" format_name="rfc822"$></lastBuildDate>
 		<pubDate><$mt:EntryDate utc="1" format_name="rfc822"$></pubDate>
 </mt:Entries>
-		<itunes:keywords>productividad, gtd, getting things done, el canasto, productivity, 2 minutos, time management, gestión del tiempo</itunes:keywords>
+		<itunes:keywords>productividad, gtd, getting things done, el canasto, productivity, 2 minutos, time management, gestión del tiempo, Jeroen Sangers</itunes:keywords>
 		<itunes:category text="Business">
 			<itunes:category text="Careers" />
 		</itunes:category>
@@ -53,7 +55,7 @@
 		<item>
 			<guid isPermaLink="false"><$mt:EntryAtomID$></guid>
 <mt:Ignore>
-			<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>" />
+			<link><$mt:EntryPermalink encode_xml="1"$>"</link>
 </mt:Ignore>
 			<title><$mt:EntryTitle smartypants="1" remove_html="1" encode_xml="1"$></title>
 			<pubDate><$mt:EntryDate utc="1" format_name="rfc822"$></pubDate>
@@ -85,6 +87,9 @@
 	<mt:If tag="EntryDataEnclosureurl"><mt:If tag="EntryDataEnclosureSize"><mt:If tag="EntryDataEnclosureMimeType">
     	<enclosure url="<$mt:EntryDataEnclosureurl$>" length="<$mt:EntryDataEnclosureSize$>" type="<$mt:EntryDataEnclosureMimeType$>" />
 	</mt:If></mt:If></mt:If>
+			<content:encoded>
+				<$mt:EntryMore smartypants="1" encode_xml="1"$>
+			</content:encoded>
 		</item>
 </mt:Entries>
 	</channel>
