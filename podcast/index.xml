@@ -14,10 +14,10 @@
 		<itunes:new-feed-url><$mt:Link template="Sindicación - Entradas recientes" encode_xml="1"$></itunes:new-feed-url>
 		<atom:link href="<$mt:Link template="Sindicación - Entradas recientes" encode_xml="1"$>" rel="self" type="application/rss+xml" />
 </mt:If>
-		<itunes:image href="http://canasto.es/templates/img/2minutos.jpg" />
+		<itunes:image href="http://canasto.es/templates/img/2-minutos.jpg" />
 		<image> 
 			<link><$mt:BlogURL encode_xml="1"$></link>
-			<url>http://canasto.es/templates/img/2minutos.jpg</url>
+			<url>http://canasto.es/templates/img/2-minutos.jpg</url>
 			<title><$mt:BlogName remove_html="1" encode_xml="1"$></title>
 		</image>
 		<itunes:explicit>clean</itunes:explicit>
@@ -77,7 +77,7 @@
 	<mt:If tag="EntryDataDuration">
 			<itunes:duration><$mt:EntryDataDuration$></itunes:duration>
 	</mt:If>
-			<itunes:image href="http://canasto.es/templates/img/2minutos.jpg" />
+			<itunes:image href="http://canasto.es/templates/img/2-minutos.jpg" />
 	<mt:BlogIfCCLicense>
 			<creativeCommons:license><$mt:BlogCCLicenseURL encode_xml="1"$></creativeCommons:license>
 	</mt:BlogIfCCLicense>
