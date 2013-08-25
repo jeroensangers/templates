@@ -46,7 +46,7 @@
 		<itunes:category text="Health">
 			<itunes:category text="Self-Help" />
 		</itunes:category>
-		<copyright>&#x2117; &amp; &#xA9; <$MTDate format="%Y"$> Jeroen Sangers</copyright>
+		<copyright>&#xA9; <$MTDate format="%Y"$> Jeroen Sangers</copyright>
 <mt:BlogIfCCLicense>
 		<creativeCommons:license><$mt:BlogCCLicenseURL encode_xml="1"$></creativeCommons:license>
 </mt:BlogIfCCLicense>
