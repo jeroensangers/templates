@@ -40,14 +40,16 @@
 			</div>
 <mt:IfNonEmpty tag="authordatabio">
 			<div class="row">
-				<div class="small-12 columns author-profile vcard panel callout radius">
-					<div class="row" itemscope itemtype="http://schema.org/Person">
-						<div class="small-3 columns">
-							<img itemprop="image" src="<mt:If tag="AuthorUserpicURL"><$mt:AuthorUserpicURL$><mt:Else><$mt:StaticWebPath$>images/default-userpic-90.jpg</mt:If>" width="90" height="90" alt="<$mt:AuthorDisplayName encode_html="1"$>" class="th" />
-						</div>
-						<div class="small-9 columns">
-							<h3><a class="url fn n" itemprop="url" rel="author" href="<$mt:AuthorURL$>"><pan itemprop="name"><$mt:AuthorDisplayName$></span></a></h3>
-							<pan itemprop="description"><$mt:authordatabio smarty_pants="1"$></span>
+				<div class="small-12 columns author-profile vcard">
+					<div class="panel callout radius">
+						<div class="row" itemscope itemtype="http://schema.org/Person">
+							<div class="small-3 columns">
+								<img itemprop="image" src="<mt:If tag="AuthorUserpicURL"><$mt:AuthorUserpicURL$><mt:Else><$mt:StaticWebPath$>images/default-userpic-90.jpg</mt:If>" width="90" height="90" alt="<$mt:AuthorDisplayName encode_html="1"$>" class="th" />
+							</div>
+							<div class="small-9 columns">
+								<h3><a class="url fn n" itemprop="url" rel="author" href="<$mt:AuthorURL$>"><span itemprop="name"><$mt:AuthorDisplayName$></span></a></h3>
+								<span itemprop="description"><$mt:authordatabio smarty_pants="1"$></span>
+							</div>
 						</div>
 					</div>
 				</div>
