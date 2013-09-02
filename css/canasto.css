@@ -85,6 +85,15 @@ footer blockquote p {
 footer blockquote cite {
 	font-size: 0.9em;
 }
+.callout1 {
+	background: rgba(116,72,157,0.4);
+}
+.callout2 {
+	background: rgba(241,120,174,0.5);
+}
+.callout3 {
+	background: rgba(38,85,181,0.4);
+}
 .symbol,
 a.symbol:before {
 	font-family: 'Mono Social Icons Font';
