@@ -1543,3 +1543,16 @@ function mtInitCommenter () {
 }
 </mt:IfRegistrationAllowed>
 </mt:IfBlog>
+<mt:Ignore>
+/***
+ * Function to track outbound links in Google Analytics
+ */
+</mt:Ignore>
+function trackOutboundLink(link, category, action) {
+	try { 
+		_gaq.push(['_trackEvent', category , action]); 
+	} catch(err){}
+	setTimeout(function() {
+		document.location.href = link.href;
+	}, 100);
+}
