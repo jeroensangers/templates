@@ -184,7 +184,8 @@ color:
 .side-nav li.active > a:first-child {
 	font-weight: 600;
 }
-.related-entries ul {
+.panel ul,
+.panel ol {
 	margin-left: 1.25em;
 }
 ol.comment-list {
