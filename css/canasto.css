@@ -43,6 +43,12 @@ blockquote p {
 	color: #74489d;
 	font-style: italic;
 }
+q {
+	font-style: italic;
+}
+q em {
+	font-style: normal;
+}
 textarea {
 	height: auto;
 }
