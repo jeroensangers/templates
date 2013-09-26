@@ -91,6 +91,9 @@ footer blockquote p {
 footer blockquote cite {
 	font-size: 0.9em;
 }
+.top-bar {
+	margin-bottom: 1.875em;
+}
 .callout1 {
 	background: rgba(116,72,157,0.4);
 }
