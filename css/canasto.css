@@ -19,7 +19,7 @@ Last Updated: <$mt:Date format="%Y.%m.%d"$>
 		src: url('/templates/font/MonoSocialIconsFont-1.10.ttf') format('truetype');
 }
 body {
-	background: #f3f5f6 url(/templates/img/bg.png) 0 0;
+	background-color: #f3f5f6;
 	font-weight: 300;
 	font-family: open-sans, sans-serif;
 }
