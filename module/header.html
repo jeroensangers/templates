@@ -25,7 +25,7 @@
 	<script type="text/javascript" src="<$mt:Link template="JavaScript"$>"></script>
 	<script type="text/javascript" data-cfasync="true" src="<$mt:Link template="JavaScript - Modernizr"$>"></script>
 <mt:Ignore><!-- MailChimp Goal tracking code --></mt:Ignore>
-	<script type="text/javascript">
+	<script type="text/plain" class="cc-onconsent-analytics">
 		var $mcGoal = {'settings':{'uuid':'a38a1e6762ea6c14efb3f2f13','dc':'us1'}};
 		(function() {
 			var sp = document.createElement('script'); sp.type = 'text/javascript'; sp.async = true; sp.defer = true;
@@ -34,7 +34,7 @@
 		})(); 
 	</script>
 <mt:Ignore><!-- Google Analytics tracking code --></mt:Ignore>
-	<script type="text/javascript">
+	<script type="text/plain" class="cc-onconsent-analytics">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-189077-6']);
 		_gaq.push(['_setDomainName', '.canasto.es']);
@@ -44,6 +44,58 @@
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
+	</script>
+<mt:Ignore><!-- Cookie consent code --></mt:Ignore>
+	<link rel="stylesheet" type="text/css" href="http://assets.cookieconsent.silktide.com/1.0.10/style.min.css"/>
+	<script type="text/javascript" src="http://assets.cookieconsent.silktide.com/1.0.10/plugin.min.js"></script>
+	<script type="text/javascript">
+	// <![CDATA[
+		cc.initialise({
+			cookies: {
+			analytics: {}
+		},
+		settings: {
+			consenttype: "implicit",
+			bannerPosition: "bottom",
+			hideprivacysettingstab: true
+		},
+		strings: {
+			socialDefaultDescription: 'Facebook, Twitter y otras redes sociales necesitan saber quién eres para funcionar correctamente',
+			analyticsDefaultDescription: 'Medimos el uso que haces de este sitio para mejorar tu experiencia',
+			advertisingDefaultTitle: 'Publicidad',
+			advertisingDefaultDescription: 'Elegimos automáticamente los mejores anuncios para ti basado en tu comportamiento e intereses del pasado.',
+			necessaryDefaultTitle: 'Estrictamente necesaria',
+			necessaryDefaultDescription: 'Algunas cookies en este sitio web son estrictamente necesarias y no se pueden desactivar.',
+			notificationTitle: 'Tu experiencia en El Canasto se mejorará si permite el uso de cookies',
+			notificationTitleImplicit: 'Utilizamos cookies para poder ofrecer la mejor experiencia en El Canasto',
+			customCookie: 'Esta web utiliza un tipo especial de cookie que necesita la aprobación específica',
+			seeDetails: 'ver más detalles',
+			seeDetailsImplicit: 'cambiar la configuración',
+			hideDetails: 'ocultar los detalles',
+			allowCookies: 'Permitir cookies',
+			allowCookiesImplicit: 'Cerrar',
+			allowForAllSites: 'Permitir en todos los sitios',
+			savePreference: 'Guardar preferencias',
+			saveForAllSites: 'Guardar para todos los sitios',
+			privacySettings: 'Configuración de privacidad',
+			privacySettingsDialogTitleA: 'configuración de privacidad',
+			privacySettingsDialogTitleB: 'para este sitio web',
+			privacySettingsDialogSubtitle: 'Algunas características de este sitio web es necesario su consentimiento para recordar quién eres.',
+			changeForAllSitesLink: 'Cambiar la configuración de todos los sitios web',
+			preferenceUseGlobal: 'Usar configuración global',
+			preferenceConsent: 'Doy mi consentimiento',
+			preferenceDecline: 'Me niego',
+			notUsingCookies: 'Este sitio web no utiliza cookies.',
+			allSitesSettingsDialogTitleA: 'Configuración de privacidad',
+			allSitesSettingsDialogTitleB: 'para todos los sitios web',
+			allSitesSettingsDialogSubtitle: 'Puedes dar tu consentimiento a estas cookies para todos los sitios web que utilizan este plugin.',
+			backToSiteSettings: 'Regreso a la configuración del sitio web',
+			preferenceAsk: 'Preguntarme cada vez',
+			preferenceAlways: 'Permitir siempre',
+			preferenceNever: 'Permitir nunca'
+		}
+	});
+	// ]]>
 	</script>
 </mt:BlogParentWebsite>
 </head>
