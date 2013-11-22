@@ -3,6 +3,7 @@
 	<ul class="side-nav">
 <mt:Categories include_blogs="3">
 		<li<mt:If tag="CategoryID" eq="$CatID"> class="active"</mt:If>>
+		<!-- <mt:EntryPrimaryCategory><$mt:CategoryID$></mt:EntryPrimaryCategory> - <$mt:Var name="CatID"$> -->
 			<a href="<$mt:CategoryArchiveLink$>" title="<$mt:CategoryLabel encode_html="1"$>"><$mt:CategoryLabel$></a>
 		</li>
 </mt:Categories>
