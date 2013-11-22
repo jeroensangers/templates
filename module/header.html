@@ -91,20 +91,16 @@
 				<li class="divider"></li>
 				<li class="has-dropdown"><a href="#">Formación</a>
 					<ul class="dropdown">
-						<li><a href="http://canasto.es/servicios/curso-in-company/">Curso In-Company</a></li>
-						<li><a href="http://canasto.es/servicios/videocursos/">Videocursos</a></li>
+						<li<mt:If tag="PageID" eq="5255"> class="active"</mt:If>><a href="http://canasto.es/servicios/curso-in-company/">Curso In-Company</a></li>
+						<li<mt:If tag="PageID" eq="5256"> class="active"</mt:If>><a href="http://canasto.es/servicios/videocursos/">Videocursos</a></li>
 					</ul>
 				</li>
 				<li class="divider"></li>
 				<li><a href="http://canasto.es/2-minutos-productividad/">Vídeos</a></li>
-<mt:Pages tag="@about">
 				<li class="divider"></li>
-				<li<mt:If tag="PageID" eq="$PID"> class="active"</mt:If>><a href="<$mt:PagePermalink$>"><$mt:PageTitle smarty_pants="1"$></a></li>
-</mt:Pages>
-<mt:Pages tag="@contact">
+				<li<mt:If tag="PageID" eq="3944"> class="active"</mt:If>><a href="http://canasto.es/acerca-de-el-canasto/">Acerda de&hellip;</a></li>
 				<li class="divider"></li>
-				<li<mt:If tag="PageID" eq="$PID"> class="active"</mt:If>><a href="<$mt:PagePermalink$>"><$mt:PageTitle smarty_pants="1"$></a></li>
-</mt:Pages>
+				<li<mt:If tag="PageID" eq="3943"> class="active"</mt:If>><a href="http://canasto.es/contacto/">Contacto</a></li>
 			</ul>
 		</section>
 </mt:BlogParentWebsite>
