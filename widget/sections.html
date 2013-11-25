@@ -2,9 +2,8 @@
 	<h3>Secciones</h3>
 	<ul class="side-nav">
 <mt:Categories include_blogs="3">
-		<li>
+		<li<mt:If tag="CategoryID" eq="$CatID"> class="active"</mt:If>>
 			<a href="<$mt:CategoryArchiveLink$>" title="<$mt:CategoryLabel encode_html="1"$>"><$mt:CategoryLabel$></a>
-			<!-- Debug info: CategoryID=<$mt:CategoryID$>, CatID=<$mt:Var name="CatID"$> -->
 		</li>
 </mt:Categories>
 		<li<mt:If tag="BlogID" eq="15"> class="active"</mt:If>><a href="http://canasto.es/links/">Links</a></li>
