@@ -19,9 +19,7 @@
 	</mt:If>
 </mt:SetVarBlock>
 <mt:IfCategory>
-	<mt:SetVarBlock name="CatID">
-		<mt:EntryPrimaryCategory><$mt:CategoryID$></mt:EntryPrimaryCategory>
-	</mt:SetVarBlock>
+	<mt:SetVarBlock name="CatID"><mt:EntryPrimaryCategory><$mt:CategoryID$></mt:EntryPrimaryCategory></mt:SetVarBlock>
 </mt:IfCategory>
 <$mt:Var name="IsBlog" value="true"$>
 <$mt:Include module="Header" parent="1"$>
