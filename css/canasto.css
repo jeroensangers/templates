@@ -34,13 +34,18 @@ p {
 p.center {
 	text-align: center;
 }
+a,
+a:hover,
+a:focus {
+	color: 74489D;
+}
 strong,
 b {
 	font-weight: 600;
 }
 blockquote,
 blockquote p {
-	color: #74489d;
+	color: #194BA0;
 	font-style: italic;
 }
 q {
