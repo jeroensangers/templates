@@ -172,15 +172,6 @@ h3.blog-15 {
 	font-weight: 300;
 	font-size: 1em; 
 }
-.panel.callout a {
-	color: white;
-}
-.panel.callout .panel a {
-	color: #acb911;
-}
-.panel.callout p a {
-	text-decoration: underline;
-}
 .callout .panel h1,
 .callout .panel h2,
 .callout .panel h3,
