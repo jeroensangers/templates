@@ -2235,7 +2235,7 @@ p.lead {
 
 .subheader {
   line-height: 1.4;
-  color: #c0a7d7;
+  color: #d4e042;
   font-weight: 300;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem; }
@@ -2292,14 +2292,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: bree-serif, sans-serif;
   font-weight: 300;
   font-style: normal;
-  color: #74489d;
+  color: #6e7613;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
   line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
-    color: #c0a7d7;
+    color: #d4e042;
     line-height: 0; }
 
 h1 {
@@ -2423,17 +2423,17 @@ blockquote {
   blockquote cite {
     display: block;
     font-size: 0.8125rem;
-    color: #a784c7; }
+    color: #c0ce21; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a,
     blockquote cite a:visited {
-      color: #a784c7; }
+      color: #c0ce21; }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #c0a7d7; }
+  color: #d4e042; }
 
 /* Microformats */
 .vcard {
