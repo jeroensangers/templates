@@ -77,6 +77,12 @@ footer a:active,
 .panel.callout .reply a:active {
 	color: #ffffff;
 }
+.orbit-caption a,
+.orbit-caption a:hover,
+.orbit-caption a:focus,
+.orbit-caption a:active {
+	color: #acb911;
+}
 article a:hover,
 article a:active,
 footer a:hover,
