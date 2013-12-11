@@ -70,7 +70,11 @@ footer a:active,
 .reply a,
 .reply a:hover,
 .reply a:focus,
-.reply a:active {
+.reply a:active,
+.panel.callout .reply a,
+.panel.callout .reply a:hover,
+.panel.callout .reply a:focus,
+.panel.callout .reply a:active {
 	color: #ffffff;
 }
 article a:hover,
