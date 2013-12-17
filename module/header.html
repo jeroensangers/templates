@@ -86,14 +86,21 @@
 			<ul class="right">
 				<li class="divider"></li>
 				<li<mt:If name="IsBlog"> class="active"</mt:If>><a href="<$mt:Link template="Blog Index"$>">Blog</a></li>
+<mt:Ignore>
 				<li class="divider"></li>
 				<li<mt:If tag="PageID" eq="3948"> class="active"</mt:If>><a href="http://canasto.es/servicios/consultoria/">Consultoría</a></li>
+</mt:Ignore>
 				<li class="divider"></li>
-				<li class="has-dropdown"><a href="#">Formación</a>
+<mt:Ignore>
+			<li class="has-dropdown"><a href="#">Formación</a>
 					<ul class="dropdown">
-						<li<mt:If tag="PageID" eq="5255"> class="active"</mt:If>><a href="http://canasto.es/servicios/curso-in-company/">Curso In-Company</a></li>
-						<li<mt:If tag="PageID" eq="5256"> class="active"</mt:If>><a href="http://canasto.es/servicios/videocursos/">Videocursos</a></li>
+</mt:Ignore>
+				<li<mt:If tag="PageID" eq="5255"> class="active"</mt:If>><a href="http://canasto.es/servicios/curso-in-company/">Curso In-Company</a></li>
+				<li class="divider"></li>
+				<li<mt:If tag="PageID" eq="5256"> class="active"</mt:If>><a href="http://canasto.es/servicios/videocursos/">Videocursos</a></li>
+<mt:Ignore>
 					</ul>
+</mt:Ignore>
 				</li>
 				<li class="divider"></li>
 				<li><a href="http://canasto.es/2-minutos-productividad/">Vídeos</a></li>
