@@ -29,8 +29,8 @@
 			<itunes:name><$mt:EntryAuthorDisplayName remove_html="1" encode_xml="1"$></itunes:name>
 			<itunes:email><$mt:EntryAuthorEmail$></itunes:email>
 		</itunes:owner>
-		<lastBuildDate><$mt:EntryModifiedDate utc="1" format="%a, %d %b %Y %H:%M:%S -0000"$></lastBuildDate>
-		<pubDate><$mt:EntryDate utc="1" format="%a, %d %b %Y %H:%M:%S -0000"$></pubDate>
+		<lastBuildDate><$mt:EntryModifiedDate utc="1" language="en" format="%a, %d %b %Y %H:%M:%S -0000"$></lastBuildDate>
+		<pubDate><$mt:EntryDate utc="1" language="en" format="%a, %d %b %Y %H:%M:%S -0000"$></pubDate>
 </mt:Entries>
 		<itunes:keywords>productividad, gtd, getting things done, el canasto, productivity, 2 minutos, time management, gestión del tiempo, Jeroen Sangers</itunes:keywords>
 		<itunes:category text="Business">
@@ -57,9 +57,9 @@
 			<link><$mt:EntryPermalink encode_xml="1"$>"</link>
 </mt:Ignore>
 			<title><$mt:EntryTitle smartypants="1" remove_html="1" encode_xml="1"$></title>
-			<pubDate><$mt:EntryDate utc="1" format="%a, %d %b %Y %H:%M:%S -0000"$></pubDate>
+			<pubDate><$mt:EntryDate utc="1" language="en" format="%a, %d %b %Y %H:%M:%S -0000"$></pubDate>
 <mt:Ignore>
-			<updated><$mt:EntryModifiedDate utc="1" format="%a, %d %b %Y %H:%M:%S -0000"$></updated>
+			<updated><$mt:EntryModifiedDate utc="1" language="en" format="%a, %d %b %Y %H:%M:%S -0000"$></updated>
 </mt:Ignore>
 			<description><$mt:EntryBody smartypants="1" remove_html="1" encode_xml="1"$></description>
 <mt:Ignore>
