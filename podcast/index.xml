@@ -3,6 +3,7 @@
 	<channel>
 		<title><$mt:BlogName smartypants="1" remove_html="1" encode_xml="1"$></title>
 		<link><$mt:BlogURL encode_xml="1"$></link>
+		<atom:link href="<$mt:Link template="Sindicación - Entradas recientes" encode_xml="1"$>" rel="self" type="application/rss+xml" />
 <mt:BlogParentWebsite>
 	<mt:If tag="WebsiteDescription">
 		<itunes:subtitle><$mt:WebsiteDescription smartypants="1" encode_xml="1"$></itunes:subtitle>
