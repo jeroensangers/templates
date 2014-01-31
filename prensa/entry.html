@@ -1,4 +1,4 @@
-<mt:SetVarBlock name="title"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$>: <$mt:EntryTitle smarty_pants="1" remove_html="1"$></mt:SetVarBlock>
 <mt:SetVarBlock name="html_head">
 	<mt:EntryIfTagged>
 		<meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
