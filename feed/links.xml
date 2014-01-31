@@ -8,9 +8,9 @@
 	<updated><mt:Entries include_blogs="15" lastn="1"><$mt:EntryModifiedDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></mt:Entries></updated>
 	<mt:If tag="BlogDescription"><subtitle><$mt:BlogDescription remove_html="1" encode_xml="1"$></subtitle></mt:If>
 	<rights>Todos los derechos reservados © Jeroen Sangers 2006 – <mt:Entries include_blogs="3,15" lastn="1"><$mt:EntryDate format='%Y'$></mt:Entries></rights>
-<mt:Entries include_blogs="15" lastn="15">
+<mt:Entries include_blogs="15,32" lastn="15">
 	<entry>
-		<title><$mt:EntryTitle smarty_pants="1" remove_html="1" encode_xml="1"$></title>
+		<title><mt:If tag="BlogID" eq="32">En los medios: </mt:If><$mt:EntryTitle smarty_pants="1" remove_html="1" encode_xml="1"$></title>
 		<link rel="alternate" type="text/html" href="<$mt:EntryPermalink encode_xml="1"$>" />
 		<id><$mt:EntryAtomID$></id>
 		<published><$mt:EntryDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></published>
@@ -29,7 +29,19 @@
 		<content type="html" xml:lang="<$mt:BlogLanguage ietf="1"$>" xml:base="<$mt:BlogURL encode_xml="1"$>">
 			<$mt:EntryBody encode_xml="1"$>
 			<$mt:EntryMore encode_xml="1"$>
+			<mt:If tag="BlogID" eq="15">
 				<![CDATA[<p style="font-style:italic;">&infin; Lea el artículo original en <a href="<$mt:EntryLinkURL encode_xml="1"$>"><$mt:EntryLinkURL$></a></p>]]>
+			</mt:If>
+			<mt:If tag="BlogID" eq="32">
+				<![CDATA[<ul>
+					<mt:If tag="EntryDataDownload">
+						<li>Descarga &ldquo;<a href="<mt:EntryDataDownloadAsset><mt:AssetURL /></mt:EntryDataDownloadAsset>"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></a>&rdquo;</li>
+					</mt:If>
+					<mt:If tag="EntryDataAddress">
+						<li>Visita <a href="<$mt:EntryDataAddress$>"><$mt:EntryDataMedium$></a></li>
+					</mt:If>
+				</ul>]]>
+			</mt:If>
 		</content>
 	</entry>
 </mt:Entries>
