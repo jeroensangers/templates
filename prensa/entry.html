@@ -19,11 +19,24 @@
 			<h1 class="entry-title"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></h1>
 			<p class="byline">Medio: <mt:If tag="EntryDataAddress"><a href="<$mt:EntryDataAddress$>"></mt:If><$mt:EntryDataMedium$><mt:If tag="EntryDataAddress"></a></mt:If> &middot; Fecha: <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
 			<div class="entry-content">
+				<mt:If tag="EntryDataImage">
+					<mt:EntryDataImageAsset>
+						<img class="th radius press" src="<mt:AssetThumbnailURL width="150" />" alt="<$mt:AssetLabel encode_html="1"$>" />
+					</mt:EntryDataImageAsset>
+				</mt:If>
 				<$mt:EntryBody$>
 <mt:If tag="EntryMore" convert_breaks="0">
 				<div id="more">
 					<$mt:EntryMore$>
 				</div>
+				<ul>
+					<mt:If tag="EntryDataDownload">
+						<li>Descarga &ldquo;<a href="<mt:EntryDataDownloadAsset><mt:AssetURL /></mt:EntryDataDownloadAsset>"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></a>&rdquo;</li>
+					</mt:If>
+					<mt:If tag="EntryDataAddress">
+						<li>Visita <a href="<$mt:EntryDataAddress$>"><$mt:EntryDataMedium$></a></li>
+					</mt:If>
+				</ul>
 </mt:If>
 			</div>
 		</article>
