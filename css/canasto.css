@@ -152,7 +152,7 @@ div.aprendemas {
 	height: 125px;
 	line-height: 1.125;
 }
-.press img {
+img.press {
 	float: right;
 	margin: 5px 0 20px 20px;
 }
