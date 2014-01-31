@@ -15,10 +15,11 @@
 		</mt:EntryDataImageAsset>
 	</mt:If>
 </mt:if>
-<mt:If tag="BlogID" like="(3|32)">
+<mt:If tag="BlogID" eq="3">
 	<p><$mt:EntryExcerpt words="25" smarty_pants="1"$></p>
 </mt:if>
 <mt:If tag="BlogID" eq="32">
+	<p><$mt:EntryBody$></p>
 	<ul>
 	<mt:If tag="EntryDataDownload">
 		<li>Descarga &ldquo;<a href="<mt:EntryDataDownloadAsset><mt:AssetURL /></mt:EntryDataDownloadAsset>"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></a>&rdquo;</li>
