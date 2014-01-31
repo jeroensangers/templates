@@ -29,6 +29,7 @@
 				<div id="more">
 					<$mt:EntryMore$>
 				</div>
+</mt:If>
 				<ul>
 					<mt:If tag="EntryDataDownload">
 						<li>Descarga &ldquo;<a href="<mt:EntryDataDownloadAsset><mt:AssetURL /></mt:EntryDataDownloadAsset>"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></a>&rdquo;</li>
@@ -37,7 +38,6 @@
 						<li>Visita <a href="<$mt:EntryDataAddress$>"><$mt:EntryDataMedium$></a></li>
 					</mt:If>
 				</ul>
-</mt:If>
 			</div>
 		</article>
 	</div>

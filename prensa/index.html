@@ -5,14 +5,13 @@
 	<link rel="canonical" href="<$mt:BlogURL$>" />
 	<link rel="author" href="https://plus.google.com/+JeroenSangers/" />
 </mt:SetVarBlock>
-<$mt:Var name="NoSocial" value="true"$>
 <$mt:var name="IsAbout" value="true"$>
 <$mt:Var name="columns" value="12"$>
 <$mt:Include module="Header" parent="1"$>
 <div class="row">
 	<section class="large-8 columns entries">
 		<h1><$mt:BlogName encode_html="1"$></h1>
-<mt:Entries>
+<mt:Entries lastn="999">
 		<$mt:Include module="Entry" parent="1"$>
 </mt:Entries>
 	</section>
