@@ -4,7 +4,7 @@
 	<mt:setvarblock name="thumbnail"><mt:EntryAssets type="image" lastn="1"><mt:CroppedAsset label="Excerpt Thumbnail" blog_id="3"><img class="th radius" src="<$mt:AssetURL$>" width="100" height="100" alt="<$mt:AssetLabel encode_html="1"$>" /><mt:else><mt:setvarblock name="w"><mt:AssetProperty property="image_width"></mt:setvarblock><mt:setvarblock name="h"><mt:AssetProperty property="image_height"></mt:setvarblock><img width="100" height="100" src="<mt:if name="w" gt="$h"><mt:AssetThumbnailURL height="100" square="1"$><mt:else><mt:AssetThumbnailURL width="100" square="1"$></mt:if>" class="th radius" alt="<$mt:AssetLabel encode_html="1"$>" /></mt:CroppedAsset></mt:EntryAssets></mt:setvarblock>
 	<mt:if name="thumbnail"><a href="<$mt:EntryPermalink$>"><$mt:var name="thumbnail"$></a></mt:if>
 </mt:if>
-<mt:If tag="BlogID" eq="3">
+<mt:If tag="BlogID" eq="32">
 	<mt:If tag="EntryDataImage">
 		<mt:EntryDataImageAsset>
 			<img class="th radius" src="<mt:AssetThumbnailURL width="150" />" alt="<$mt:AssetLabel encode_html="1"$>" />
