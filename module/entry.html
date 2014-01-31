@@ -5,7 +5,7 @@
 	<mt:if name="thumbnail"><a href="<$mt:EntryPermalink$>"><$mt:var name="thumbnail"$></a></mt:if>
 </mt:if>
 	<h3 class="blog-<$mt:BlogID$>"><a href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" rel="bookmark"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></a></h3>
-<mt:If tag="BlogID" eq="3">
+<mt:If tag="BlogID" like="(3|32)">
 	<p><$mt:EntryExcerpt words="25" smarty_pants="1"$></p>
 </mt:if>
 </article>

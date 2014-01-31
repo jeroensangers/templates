@@ -1,0 +1,38 @@
+<mt:SetVarBlock name="title"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="html_head">
+	<mt:EntryIfTagged>
+		<meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
+	</mt:EntryIfTagged>
+	<link rel="canonical" href="<$mt:EntryPermalink$>" />
+	<mt:If tag="AuthorDataGoogle">
+		<link rel="author" href="<mt:AuthorDataGoogle>" />
+	<mt:Else>
+		<link rel="author" href="https://plus.google.com/+JeroenSangers/" />
+	</mt:If>
+	<$mt:EntryTrackbackData$>
+</mt:SetVarBlock>
+<$mt:Var name="IsAbout" value="true"$>
+<$mt:Include module="Header" parent="1"$>
+<div class="row">
+	<div class="large-8 columns">
+		<article class="hentry">
+			<h1 class="entry-title"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></h1>
+			<p class="byline">Medio: <mt:If tag="EntryDataAddress"><a href="<$mt:EntryDataAddress$>"></mt:If><$mt:EntryDataMedium$><mt:If tag="EntryDataAddress"></a></mt:If> &middot; Fecha: <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
+			<div class="entry-content">
+				<$mt:EntryBody$>
+<mt:If tag="EntryMore" convert_breaks="0">
+				<div id="more">
+					<$mt:EntryMore$>
+				</div>
+</mt:If>
+			</div>
+		</article>
+	</div>
+	<aside class="large-4 columns">
+<mt:BlogParentWebsite> 
+	<$mt:WebsiteID setvar="website_id"$> 
+</mt:BlogParentWebsite> 
+		<$mt:WidgetSet name="Blog widgets" blog_id="$website_id"$>
+	</aside>
+</div>
+<$mt:Include module="Footer" parent="1"$>
