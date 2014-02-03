@@ -52,7 +52,7 @@ This does not affect how your pages are compared to other sites'.
 		</mt:Pages>
 	</mt:IfArchiveTypeEnabled>
 	<mt:Ignore>### END PAGE ARCHIVES ###</mt:Ignore>
-	<mt:Blogs include_blogs="3,15">
+	<mt:Blogs include_blogs="3,15,32">
 		<url>
 			<mt:Ignore>### This is your blog's homepage</mt:Ignore>
 			<loc><$mt:BlogURL encode_xml="1"$></loc>
