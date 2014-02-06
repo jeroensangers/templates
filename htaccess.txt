@@ -74,6 +74,10 @@
 	RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 	RewriteRule ^ http://%1%{REQUEST_URI} [R=permanent,L]
 
+<mt:Ignore># Redirect requests for canasto.ai-no.com</mt:Ignore>
+	RewriteCond %{HTTP_HOST} ^(www\.)?canasto\.ai\-no\.com [NC]
+	RewriteRule ^(.*) http://canasto.es/ [L,R=permanent]
+
 <mt:Ignore># Old files are gone – nothing is permanent</mt:Ignore>
 	RewriteRule ^acerca\-de\/ /acerca-de-el-canasto/ [R=permanent,L]
 	RewriteRule ^archivos\/ - [G,L]
@@ -92,10 +96,6 @@
 	RewriteRule ^wp-content\/uploads - [G,L]
 	RewriteRule ^(.*)/index.(php|html) /$1/ [R=permanent,L]
 
-<mt:Ignore># Redirect requests for canasto.ai-no.com</mt:Ignore>
-	RewriteCond %{HTTP_HOST} ^(www\.)?canasto\.ai\-no\.com [NC]
-	RewriteRule ^(.*) http://canasto.es/ [L,R=permanent]
-
 <mt:Ignore># Redirect feed request to FeedPress</mt:Ignore>
 	RewriteCond %{HTTP_USER_AGENT} !(FeedBurner|FeedValidator|uri\.lv|FeedPress) [NC]
 	RewriteRule ^feed\/index\.xml$ http://feeds.canasto.es/canasto [R=permanent,L]
@@ -106,6 +106,9 @@
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteRule ^(.*)/index.xml http://feeds.canasto.es/canasto [R=permanent,L]
 </IfModule>
+
+<mt:Ignore># Special redirects</mt:Ignore>
+	RewriteRule ^pago https://spacebox.io/s/R9o1fxc36A [L]
 
 <mt:Ignore># Compress static data</mt:Ignore>
 <IfModule mod_deflate.c>
