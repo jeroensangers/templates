@@ -31,7 +31,10 @@
 </mt:If>
 			</div>
 <mt:If tag="EntryPostType" eq="link">
-			<p class="link">&infin; Lea el artículo original en <a href="<$mt:EntryLinkURL$>"><$mt:EntryLinkURL$></a></p>
+			<p class="link">
+				<a class="embedly-card" href="<$mt:EntryLinkURL$>"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></a>
+				<script>!function(a){var b="embedly-platform",c="script";if(!a.getElementById(b)){var d=a.createElement(c);d.id=b,d.src=("https:"===document.location.protocol?"https":"http")+"://cdn.embedly.com/widgets/platform.js";var e=document.getElementsByTagName(c)[0];e.parentNode.insertBefore(d,e)}}(document);</script>
+			</p>
 </mt:If>
 <mt:IfNonEmpty tag="authordatabio">
 			<div class="row">
