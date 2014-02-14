@@ -30,7 +30,7 @@
 			<mt:If tag="BlogID" eq="32">
 				<mt:If tag="EntryDataImage">
 					<mt:EntryDataImageAsset>
-						<![CDATA[<img style="float: right; margin: 5px 0 20px 20px;"="th radius press" src="<mt:AssetThumbnailURL width="150" />" alt="<$mt:AssetLabel encode_html="1"$>" />]]>
+						<![CDATA[<img style="float: right; margin: 5px 0 20px 20px;" src="<mt:AssetThumbnailURL width="150" />" alt="<$mt:AssetLabel encode_html="1"$>" />]]>
 					</mt:EntryDataImageAsset>
 				</mt:If>
 			</mt:If>
