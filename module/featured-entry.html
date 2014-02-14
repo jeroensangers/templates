@@ -1,10 +1,10 @@
 <div class="row panel radius">
 <mt:setvarblock name="thumbnail"><mt:EntryAssets lastn="1"><mt:CroppedAsset label="Blog Feature"><img class="feature" src="<$mt:AssetURL$>" alt="<$mt:AssetLabel encode_html="1"$>" /><mt:else><mt:setvarblock name="w"><mt:AssetProperty property="image_width"></mt:setvarblock><mt:setvarblock name="h"><mt:AssetProperty property="image_height"></mt:setvarblock><img src="<mt:if name="w" gt="$h"><mt:AssetThumbnailURL width="230"$><mt:else><mt:AssetThumbnailURL height="230"$></mt:if>" alt="<$mt:AssetLabel encode_html="1"$>" class="th radius" /></mt:CroppedAsset></mt:EntryAssets></mt:setvarblock>
 <mt:if name="thumbnail">
-	<div class="small-5 columns">
+	<div class="large-5 columns">
 		<a href="<$mt:EntryPermalink$>"><$mt:var name="thumbnail"$></a>
 	</div>
-	<div class="small-7 columns">
+	<div class="large-7 columns">
 <mt:Else>
 	<div class="small-12 columns">	
 </mt:If>
