@@ -1545,7 +1545,7 @@ meta.foundation-mq-topbar {
     .slideshow-wrapper .orbit-container li {
       display: block; }
       .slideshow-wrapper .orbit-container li .orbit-caption {
-        display: block; }
+        display: inline-block; }
 
 .preloader {
   display: block;
