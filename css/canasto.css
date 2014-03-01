@@ -200,8 +200,9 @@ color:
 	padding-top: 30px;
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-.side-nav li.active > a:first-child {
+.side-nav li.active > a:first-child:not(.button) {
 	font-weight: 600;
+	color: #213221;
 }
 .panel ul,
 .panel ol {
