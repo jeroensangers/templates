@@ -90,6 +90,7 @@
 	RewriteRule ^organizateconeficacia\/ - [G,L]
 	RewriteRule ^productividad\.xml /feed/productividad.xml [R=permanent,L]
 	RewriteRule ^servicios\/curso\-presencial\-de\-productividad\-personal\/ - [G,L]
+	RewriteRule ^servicios\/webinar\-google\-secretos\/ http://www.witcamp.com/cursos/los-secretos-de-google [R=permanent,L]
 	RewriteRule ^site\/atom$ http://feeds.canasto.es/canasto [R=permanent,L]
 	RewriteRule ^site\/ - [G,L]
 	RewriteRule ^software\/(blackberry|internet|iphone|linux|osx|palmos|windows|windows\-mobile) - [G,L]
