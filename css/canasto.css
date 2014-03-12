@@ -21,7 +21,7 @@ Last Updated: <$mt:Date format="%Y.%m.%d"$>
 body {
 	background-color: #f3f5f6;
 	font-weight: 300;
-	font-family: m-1c, sans-serif;
+	font-family: open-sans, sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
@@ -41,7 +41,7 @@ a:focus {
 }
 strong,
 b {
-	font-weight: 700;
+	font-weight: 600;
 }
 blockquote,
 blockquote p {
@@ -136,7 +136,7 @@ a.symbol:before {
 		font-size: 200%;
 }
 .top-bar-section ul li > a {
-	font-weight: 700;
+	font-weight: 600;
 }
 .lead p {
 	font-size: 1.21875em;
@@ -170,7 +170,7 @@ h3.blog-15 {
 	padding-left: 2.5em;
 	background: url(/templates/img/link.png) no-repeat 16px top;
 	font-weight: 300;
-	font-family: m-1c, sans-serif;
+	font-family: open-sans, sans-serif;
 }
 .byline {
 	font-style: italic;
@@ -201,7 +201,7 @@ color:
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 .side-nav li.active > a:first-child:not(.button) {
-	font-weight: 700;
+	font-weight: 600;
 	color: #213221;
 }
 .panel ul,
