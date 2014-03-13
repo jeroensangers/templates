@@ -21,7 +21,7 @@ Last Updated: <$mt:Date format="%Y.%m.%d"$>
 body {
 	background-color: #f3f5f6;
 	font-weight: 300;
-	font-family: open-sans, sans-serif;
+	font-family: source-sans-pro, sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
@@ -170,7 +170,7 @@ h3.blog-15 {
 	padding-left: 2.5em;
 	background: url(/templates/img/link.png) no-repeat 16px top;
 	font-weight: 300;
-	font-family: open-sans, sans-serif;
+	font-family: source-sans-pro, sans-serif;
 }
 .byline {
 	font-style: italic;
