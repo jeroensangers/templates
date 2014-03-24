@@ -1688,7 +1688,7 @@ meta.foundation-mq-topbar {
   .slideshow-wrapper .orbit-container {
     background-color: transparent; }
     .slideshow-wrapper .orbit-container li {
-      display: block; }
+      display: inline-block; }
       .slideshow-wrapper .orbit-container li .orbit-caption {
         display: block; }
 
