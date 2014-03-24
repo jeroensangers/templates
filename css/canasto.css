@@ -109,6 +109,9 @@ footer blockquote cite {
 .top-bar {
 	margin-bottom: 1.875em;
 }
+.top-bar li.name img {
+	margin-bottom: 10px
+}
 .callout1 {
 	background: rgba(116,72,157,0.4);
 }
