@@ -1550,6 +1550,7 @@ function mtInitCommenter () {
 </mt:Ignore>
 function trackOutboundLink(link, category, action) {
 	try { 
+		ga('send', 'event', category, action);
 		_gaq.push(['_trackEvent', category , action]); 
 	} catch(err){}
 	setTimeout(function() {
