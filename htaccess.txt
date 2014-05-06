@@ -71,7 +71,7 @@
 </IfModule>
 
 <mt:Ignore># Special redirects</mt:Ignore>
-	RewriteRule ^pago https://spacebox.io/s/R9o1fxc36A [L]
+	RewriteRule ^pago https://plasso.co/spacebox@canasto.es [L]
 
 <mt:Ignore># Compress static data</mt:Ignore>
 <IfModule mod_deflate.c>
