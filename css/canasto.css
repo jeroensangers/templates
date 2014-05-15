@@ -21,7 +21,6 @@ Last Updated: <$mt:Date format="%Y.%m.%d"$>
 body {
 	background-color: #f3f5f6;
 	font-weight: 300;
-	font-family: source-sans-pro, sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
@@ -242,4 +241,14 @@ footer .bottom {
 }
 .bottom .socialmedia a:hover {
 	text-decoration: none;
+}
+[data-magellan-expedition], [data-magellan-expedition-clone] {
+    background: #f3f5f6;
+}
+.sub-nav dt a, .sub-nav dd a, .sub-nav li a {
+	color: #213221;
+	font-weight:600;
+}
+.sub-nav dt.active a, .sub-nav dd.active a, .sub-nav li.active a {
+	font-weight: 600;
 }
