@@ -121,6 +121,12 @@ footer blockquote cite {
 .callout3 {
 	background: rgba(38,85,181,0.4);
 }
+.callout1, .callout2, .callout3 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 .symbol,
 a.symbol:before {
 	font-family: 'Mono Social Icons Font';
