@@ -41,7 +41,6 @@
 
 <mt:Ignore># Old files are gone – nothing is permanent</mt:Ignore>
 	RewriteRule ^2007\/02\/gtd\-gmail/ /2007/02/gtdgmail/ [R=permanent,L]
-	RewriteRule ^acerca\-de\/ /acerca-de-el-canasto/ [R=permanent,L]
 	RewriteRule ^archivos\/ - [G,L]
 	RewriteRule ^assets\/2minutos\.png$ /assets/2minutos.jpg [R=permanent,L]
 	RewriteRule ^assets\/2minutos\-portable\.png$ /assets/2minutos.jpg [R=permanent,L]
