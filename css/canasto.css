@@ -18,9 +18,11 @@ Last Updated: <$mt:Date format="%Y.%m.%d"$>
 				 url('/templates/font/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
 		src: url('/templates/font/MonoSocialIconsFont-1.10.ttf') format('truetype');
 }
+html, body {
+	font-size: 18px;
+}
 body {
 	background-color: #f3f5f6;
-	font-size: 18px;
 	font-weight: 300;
 }
 h1, h2, h3, h4, h5, h6 {
