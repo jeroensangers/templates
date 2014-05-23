@@ -5,6 +5,19 @@
 </mt:if>
 <mt:SetVarBlock name="html_head">
 	<meta name="description" content="<$mt:EntryExcerpt$>" />
+<mt:Ignore><!-- Twitter Card --></mt:Ignore>
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@elcanasto">
+	<meta name="twitter:title" content="<$mt:Var name="title"$>">
+	<meta name="twitter:description" content="<$mt:EntryExcerpt$>">
+<mt:If tag="AuthorDataTwitter">
+	<meta name="twitter:creator" content="@<$mt:AuthorDataTwitter$>">
+<mt:Else>
+	<meta name="twitter:creator" content="@JeroenSangers">
+</mt:If>
+<mt:EntryAssets type="image" lastn="1">
+	<meta name="twitter:image:src" content="<$mt:AssetURL$>">
+</mt:EntryAssets>
 	<mt:EntryIfTagged>
 		<meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
 	</mt:EntryIfTagged>
