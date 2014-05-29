@@ -7,6 +7,7 @@ To be used in combination with Foundation
 Last Updated: <$mt:Date format="%Y.%m.%d"$>
 - - - - - - - - - - - - - - - - - - - - - */
 
+@import url("<$mt:Link template="Stylesheet - Bigfoot"$>");
 @font-face {
 	font-weight: normal;
 	font-style: normal;
@@ -254,4 +255,12 @@ footer .bottom {
 }
 .sub-nav dt.active a, .sub-nav dd.active a, .sub-nav li.active a {
 	font-weight: 600;
+}
+.footnotes {
+	border-top: 1px solid #acb911;
+	padding-top: 10px;
+	font-style: italic;
+}
+.footnotes li, .footnotes p {
+	font-size: 14px;
 }
