@@ -13,19 +13,9 @@
 <$mt:Include module="Header" /$>
 <div class="row">
 	<article class="large-8 columns lead">
-		<div class="slideshow-wrapper">
-			<div class="preloader"></div>
-			<ul data-orbit data-options="slide_number:false; pause_on_hover:false;">
-<mt:Assets type="image" tag="@slideshow">
-				<li>
+<mt:Assets type="image" tag="@slideshow" lastn=1>
 					<img src="<mt:AssetURL>" alt="<mt:AssetLabel escape="html">" />
-	<mt:IfNonEmpty tag="AssetDescription">
-					<div class="orbit-caption"><$mt:AssetDescription$></div>
-	</mt:IfNonEmpty>
-				</li>
 </mt:Assets>
-			</ul>
-		</div>
 <mt:Pages tag="@home" lastn="1">
 		<h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2>
 		<$mt:PageBody$>
