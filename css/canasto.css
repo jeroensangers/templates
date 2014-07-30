@@ -40,7 +40,7 @@ p.center {
 a,
 a:hover,
 a:focus {
-	color: #74489D;
+	color: #7411BB;
 }
 strong,
 b {
@@ -48,7 +48,7 @@ b {
 }
 blockquote,
 blockquote p {
-	color: #194BA0;
+	color: #2678C5;
 	font-style: italic;
 }
 q {
@@ -63,7 +63,7 @@ textarea {
 footer {
 	margin-top: 2em;
 	padding-top: 3em;
-	border-top: 1px solid #68831C;
+	border-top: 1px solid #666C15;
 	background-color: #acb911;
 }
 footer a,
@@ -110,13 +110,13 @@ footer blockquote cite {
 	margin-bottom: 10px
 }
 .callout1 {
-	background: rgba(116,72,157,0.4);
+	background: rgba(116,17,187,0.4);
 }
 .callout2 {
-	background: rgba(241,120,174,0.5);
+	background: rgba(255,136,129,0.5);
 }
 .callout3 {
-	background: rgba(38,85,181,0.4);
+	background: rgba(38,120,197,0.4);
 }
 .callout1, .callout2, .callout3 {
 	margin-top: 20px;
