@@ -70,6 +70,7 @@
 </IfModule>
 
 <mt:Ignore># Special redirects</mt:Ignore>
+	RewriteRule ^cita https://www.vcita.com/v/jeroen.sangers/online_scheduling [L]
 	RewriteRule ^pago https://plasso.co/spacebox@canasto.es [L]
 
 <mt:Ignore># Compress static data</mt:Ignore>
