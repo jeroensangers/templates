@@ -37,10 +37,12 @@ p {
 p.center {
 	text-align: center;
 }
-a,
+a {
+	color: #7411BB;
+}
 a:hover,
 a:focus {
-	color: #7411BB;
+	color: #8522CC
 }
 strong,
 b {
