@@ -258,9 +258,3 @@ footer .bottom {
 .footnotes li, .footnotes p {
 	font-size: 14px;
 }
-.panel.callout.test {
-	background-color: #acb911;
-}
-.panel.callout.test h3, .panel.callout.test p {
-	color: #ffffff;
-}
