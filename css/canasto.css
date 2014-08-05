@@ -128,7 +128,16 @@ footer blockquote cite {
 }
 .callout1 h2,
 .callout2 h2,
-.callout3 h2 {
+.callout3 h2,
+.callout1 p,
+.callout2 p,
+.callout3 p,
+.callout1 ul,
+.callout2 ul,
+.callout3 ul,
+.callout1 ol,
+.callout2 ol,
+.callout3 ol {
 	color: #ffffff;
 }
 .symbol,
