@@ -45,7 +45,8 @@ a:focus {
 	color: #8522CC
 }
 strong,
-b {
+b,
+.button {
 	font-weight: 600;
 }
 blockquote,
