@@ -147,7 +147,18 @@ footer blockquote cite {
 	background-color: #ff8881;
 }
 .subscription .row {
-	background: url(templates/img/newsletter.png) 30px center no-repeat;
+	background: url(/templates/img/newsletter.png) 30px center no-repeat;
+}
+.subscription h2 {
+	font-family: source-sans-pro, sans-serif;
+	font-size: 1.2rem;
+	color: #213221;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+.subscription p {
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
 }
 .symbol,
 a.symbol:before {
