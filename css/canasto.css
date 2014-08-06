@@ -140,19 +140,19 @@ footer blockquote cite {
 .callout3 ol {
 	color: #ffffff;
 }
-.subscription {
+.subscribe {
 	background-color: #acb911;
 	-moz-transition: all 0.1s ease-in-out;
 	-webkit-transition: all 0.1s ease-in-out;
 	-o-transition: all 0.1s ease-in-out;
 }
-.subscription:hover {
+.subscribe:hover {
 	background-color: #ff8881;
 }
-.subscription > .row {
+.subscribe > .row {
 	background: url(/templates/img/newsletter.png) 30px center no-repeat;
 }
-.subscription h2 {
+.subscribe h2 {
 	font-family: source-sans-pro, sans-serif;
 	font-size: 1.2rem;
 	color: #213221;
@@ -160,18 +160,18 @@ footer blockquote cite {
 	margin-top: 0.5rem;
 	margin-bottom: 0;
 }
-.subscription p {
+.subscribe p {
 	font-size: 0.9rem;
 	margin-bottom: 0.5rem;
 }
-.subscription form {
+.subscribe form {
 	margin: 0;
 }
-.subscription input {
+.subscribe input {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
-.subscription input[type="submit"] {
+.subscribe input[type="submit"] {
 	position: absolute;
 	width: 100px;
 	height: 100px;
@@ -184,8 +184,8 @@ footer blockquote cite {
 	-webkit-transition: all 0.1s ease-in-out;
 	-o-transition: all 0.1s ease-in-out;
 }
-.subscription input[type="submit"]:hover,
-.subscription:hover input[type="submit"] {
+.subscribe input[type="submit"]:hover,
+.subscribe:hover input[type="submit"] {
 	background: url(/templates/img/button-submit-hover.png) center no-repeat;
 }
 .symbol,
