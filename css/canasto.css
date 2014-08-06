@@ -143,6 +143,7 @@ footer blockquote cite {
 }
 .subscribe {
 	background-color: #acb911;
+	margin-bottom: 2rem;
 	-moz-transition: all 0.1s ease-in-out;
 	-webkit-transition: all 0.1s ease-in-out;
 	-o-transition: all 0.1s ease-in-out;
