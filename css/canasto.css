@@ -146,6 +146,9 @@ footer blockquote cite {
 .subscription:hover {
 	background-color: #ff8881;
 }
+.subscription .row {
+	background: url(templates/img/newsletter.png) 30px center no-repeat;
+}
 .symbol,
 a.symbol:before {
 	font-family: 'Mono Social Icons Font';
