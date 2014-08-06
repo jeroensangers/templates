@@ -1110,11 +1110,11 @@ button, .button {
   button:hover, button:focus, .button:hover, .button:focus {
     color: white; }
   button.secondary, .button.secondary {
-    background-color: #7411bb;
-    border-color: #5d0e96;
+    background-color: #93a1a1;
+    border-color: #738484;
     color: white; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-      background-color: #5d0e96; }
+      background-color: #738484; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       color: white; }
   button.success, .button.success {
@@ -1179,18 +1179,18 @@ button, .button {
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: #acb911; }
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
-      background-color: #7411bb;
-      border-color: #5d0e96;
+      background-color: #93a1a1;
+      border-color: #738484;
       color: white;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #5d0e96; }
+        background-color: #738484; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         color: white; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #7411bb; }
+        background-color: #93a1a1; }
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: #666c15;
       border-color: #525611;
@@ -1384,11 +1384,11 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
           color: white; }
       .top-bar-section ul li > a.button.secondary {
-        background-color: #7411bb;
-        border-color: #5d0e96;
+        background-color: #93a1a1;
+        border-color: #738484;
         color: white; }
         .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
-          background-color: #5d0e96; }
+          background-color: #738484; }
         .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
           color: white; }
       .top-bar-section ul li > a.button.success {
@@ -1419,11 +1419,11 @@ meta.foundation-mq-topbar {
       .top-bar-section ul li > button:hover, .top-bar-section ul li > button:focus {
         color: white; }
       .top-bar-section ul li > button.secondary {
-        background-color: #7411bb;
-        border-color: #5d0e96;
+        background-color: #93a1a1;
+        border-color: #738484;
         color: white; }
         .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
-          background-color: #5d0e96; }
+          background-color: #738484; }
         .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
           color: white; }
       .top-bar-section ul li > button.success {
@@ -1720,8 +1720,8 @@ meta.foundation-mq-topbar {
     border-color: #a11b0f;
     color: white; }
   .alert-box.secondary {
-    background-color: #7411bb;
-    border-color: #640fa1;
+    background-color: #93a1a1;
+    border-color: #7c8d8d;
     color: white; }
   .alert-box.warning {
     background-color: #f08a24;
@@ -1730,7 +1730,7 @@ meta.foundation-mq-topbar {
   .alert-box.info {
     background-color: #a0d3e8;
     border-color: #74bfdd;
-    color: #270640; }
+    color: #313838; }
   .alert-box.alert-close {
     opacity: 0; }
 
@@ -2143,10 +2143,10 @@ code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
   color: #333333;
-  background-color: #d7abf7;
+  background-color: #dfe3e3;
   border-width: 1px;
   border-style: solid;
-  border-color: #c585f4;
+  border-color: #c7cece;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
 /* Lists */
@@ -2423,7 +2423,7 @@ blockquote p {
     background-color: #666c15;
     color: white; }
   .label.secondary {
-    background-color: #7411bb;
+    background-color: #93a1a1;
     color: white; }
 
 table {
