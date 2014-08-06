@@ -112,13 +112,13 @@ footer blockquote cite {
 	margin-bottom: 10px
 }
 .callout1 {
-	background: #2678c5;
+	background-color: #2678c5;
 }
 .callout2 {
-	background: #7411bb;
+	background-color: #7411bb;
 }
 .callout3 {
-	background: #ff8881;
+	background-color: #ff8881;
 }
 .callout1, .callout2, .callout3 {
 	margin-top: 20px;
@@ -139,6 +139,12 @@ footer blockquote cite {
 .callout2 ol,
 .callout3 ol {
 	color: #ffffff;
+}
+.subscription {
+	background-color: #acb911;
+}
+.subscription:hover {
+	background-color: #ff8881;
 }
 .symbol,
 a.symbol:before {
