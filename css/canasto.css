@@ -184,7 +184,8 @@ footer blockquote cite {
 	-webkit-transition: all 0.1s ease-in-out;
 	-o-transition: all 0.1s ease-in-out;
 }
-.subscription input[type="submit"]:hover {
+.subscription input[type="submit"]:hover,
+.subscription:hover input[type="submit"] {
 	background: url(/templates/img/button-submit-hover.png) center no-repeat;
 }
 .symbol,
