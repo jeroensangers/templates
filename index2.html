@@ -46,29 +46,29 @@
 <article class="row">
 	<div class="small-12 columns">
 <mt:Pages tag="@home" lastn="1">
-		<mt:Ignore><h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2></mt:Ignore>
+		<mt:Ignore><h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2><!-- Reactivate after Google Analytics experiment --></mt:Ignore>
 		<h2><$mt:PageTitle smarty_pants="1"$></h2>
 		<$mt:PageBody$>
 </mt:Pages>
 	</div>
 </article>
-<mt:Ignore>
+<!-- 
 <div class="row">
-	<div class="large-4 columns callout1">
-		Cursos
+<mt:Pages tag="@offer" lastn="3">
+	<div class="large-4 columns callout<mt:Var name="__counter__">">
+	<mt:PageAssets type="image" lastn=1>
+		<img src="<mt:AssetURL>" alt="<mt:AssetLabel escape="html">" width="<mt:AssetProperty property="image_width">" height="<mt:AssetProperty property="image_height">" />
+	</mtPageAssets>
+		<$mt:PageBody$>
 	</div>
-	<div class="large-4 columns callout2">
-		Consultoría
-	</div>
-	<div class="large-4 columns callout3">
-		Vídeos
-	</div>
+</mt:Pages
 </div>
+<mt:Ignore>
 <div class="row">
 	<div class="small-12 columns">
 		Referencias
 	</div>
-</div>
+</div> -->
 </mt:Ignore>
 <section class="entries">
 	<div class="row">
