@@ -11,7 +11,7 @@
 	<meta property="twitter:account_id" content="4503599629610129" />
 </mt:SetVarBlock>
 <$mt:Include module="Header" /$>
-<h1 class="hide"><$mt:WebsiteName encode_html="1"$> &emdash; <$mt:WebsiteDescription$></h1>
+<h1 class="hide"><$mt:WebsiteName smarty_pants="1"$> &emdash; <$mt:WebsiteDescription smarty_pants="1"$></h1>
 <div class="row">
 	<div class="small-12 columns">
 		<mt:Assets type="image" tag="@banner" lastn=1>
@@ -59,6 +59,7 @@
 	<mt:PageAssets type="image" lastn=1>
 		<img src="<mt:AssetURL>" alt="<mt:AssetLabel escape="html">" width="<mt:AssetProperty property="image_width">" height="<mt:AssetProperty property="image_height">" />
 	</mtPageAssets>
+		<h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2>
 		<$mt:PageBody$>
 	</div>
 </mt:Pages
