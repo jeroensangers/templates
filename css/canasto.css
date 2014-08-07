@@ -149,7 +149,7 @@ footer blockquote cite {
 	-o-transition: all 0.1s ease-in-out;
 }
 .subscribe:hover {
-	background-color: #ff8881;
+	background-color: #2678c5;
 }
 .subscribe > .row {
 	background: url(/templates/img/newsletter.png) 30px center no-repeat;
