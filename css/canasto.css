@@ -119,7 +119,7 @@ footer blockquote cite {
 	background-color: #7411bb;
 }
 .callout3 {
-	background-color: #ff8881;
+	background-color: #bb1f11;
 }
 .callout1, .callout2, .callout3 {
 	margin-top: 20px;
@@ -140,6 +140,11 @@ footer blockquote cite {
 .callout2 ol,
 .callout3 ol {
 	color: #ffffff;
+}
+.offers .callout1,
+.offers .callout2,
+.offers .callout3 {
+	text-align: center;
 }
 .subscribe {
 	background-color: #acb911;
