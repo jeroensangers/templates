@@ -65,7 +65,30 @@
 		<$mt:PageBody$>
 	</div>
 </mt:Pages>
-</div> -->
+</div>
+ -->
+<!-- 
+<div class="row offers">
+<mt:Pages tag="@offer" lastn="3" sort_by="modified_on">
+	<div class="large-4 columns">
+		<ul class="pricing-table">
+			<li class=title">
+	<mt:PageAssets type="image" lastn=1>
+				<img src="<mt:AssetURL>" alt="<mt:AssetLabel escape="html">" width="<mt:AssetProperty property="image_width">" height="<mt:AssetProperty property="image_height">" />
+	</mtPageAssets>
+				<h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2>
+			</li>
+			<li class="description">
+				<$mt:PageBody$>
+			</li>
+			<li class="cta-button">
+				<a class="button radius" href="#">+ Info</a>
+			</li>
+		</ul>
+	</div>
+</mt:Pages>
+</div>
+ -->
 <mt:Ignore>
 <div class="row">
 	<div class="small-12 columns">
