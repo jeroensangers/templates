@@ -63,9 +63,11 @@
 	</mtPageAssets>
 				<h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2>
 			</li>
+		<mt:IfNonEmpty tag="PageBody>
 			<li class="description">
 				<$mt:PageBody$>
 			</li>
+		</mt:IfNonEmpty>
 			<li class="cta-button">
 				<a class="button radius" href="<$mt:PageMore$>">+ Info</a>
 			</li>
