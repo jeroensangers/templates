@@ -112,13 +112,16 @@ footer blockquote cite {
 .top-bar li.name img {
 	margin-bottom: 10px
 }
-.callout1 {
+.callout1,
+.pricing-table .title.callout1 {
 	background-color: #2678c5;
 }
-.callout2 {
+.callout2,
+.pricing-table .title.callout2 {
 	background-color: #7411bb;
 }
-.callout3 {
+.callout3,
+.pricing-table .title.callout3 {
 	background-color: #bb1f11;
 }
 .callout1, .callout2, .callout3 {
@@ -145,6 +148,8 @@ footer blockquote cite {
 .offers .callout2,
 .offers .callout3 {
 	text-align: center;
+	margin-top:0;
+	margin-bottom:0;
 }
 .subscribe {
 	background-color: #acb911;
