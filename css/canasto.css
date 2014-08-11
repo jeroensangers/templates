@@ -306,6 +306,11 @@ h3.blog-15 {
 .panel ol {
 	margin-left: 1.25em;
 }
+.attribution{
+	margin-bottom: 2em;
+	font-size: .9em;
+	font-style: italic;
+}
 ol.comment-list {
 	list-style: none;
 }
