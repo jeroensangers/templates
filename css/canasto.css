@@ -118,43 +118,33 @@ footer blockquote cite {
 .top-bar li.name img {
 	margin-bottom: 10px;
 }
-.callout1,
-.pricing-table .title.callout1 {
+.style1,
+.pricing-table .title.style1 {
 	background-color: #2678c5;
 }
-.callout2,
-.pricing-table .title.callout2 {
+.style2,
+.pricing-table .title.style2 {
 	background-color: #7411bb;
 }
-.callout3,
-.pricing-table .title.callout3 {
+.style3,
+.pricing-table .title.style3 {
 	background-color: #bb1f11;
 }
-.callout1,
-.callout2,
-.callout3 {
+.exclaim {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-.callout1 h2,
-.callout2 h2,
-.callout3 h2,
-.callout1 p,
-.callout2 p,
-.callout3 p,
-.callout1 ul,
-.callout2 ul,
-.callout3 ul,
-.callout1 ol,
-.callout2 ol,
-.callout3 ol {
+.exclaim h2,
+.exclaim p,
+.exclaim ul,
+.exclaim ol
+ {
 	color: #fff;
 }
-.offers .callout1,
-.offers .callout2,
-.offers .callout3 {
+.offers .exclaim,
+ {
 	margin-top: 0;
 	margin-bottom: 0;
 	text-align: center;

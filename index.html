@@ -46,7 +46,7 @@
 <article class="row">
 	<div class="small-12 columns">
 <mt:Pages tag="@home" lastn="1">
-		<mt:Ignore><h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2><!-- Reactivate after Google Analytics experiment --></mt:Ignore>
+		<h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2>
 		<h2><$mt:PageTitle smarty_pants="1"$></h2>
 		<$mt:PageBody$>
 </mt:Pages>
@@ -57,7 +57,7 @@
 <mt:Pages tag="@offer" lastn="3" sort_by="modified_on">
 	<div class="medium-4 columns">
 		<ul class="pricing-table">
-			<li class="title callout<mt:Var name="__counter__">">
+			<li class="title exclaim style<mt:Var name="__counter__">">
 	<mt:PageAssets type="image" lastn=1>
 				<img src="<mt:AssetURL>" alt="<mt:AssetLabel escape="html">" width="<mt:AssetProperty property="image_width">" height="<mt:AssetProperty property="image_height">" />
 	</mtPageAssets>
