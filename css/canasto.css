@@ -26,6 +26,7 @@ body {
 body {
 	font-weight: 300;
 	background-color: #f3f5f6;
+	border-top: 2px solid #acb911;
 }
 h1,
 h2,
@@ -317,6 +318,7 @@ footer .bottom {
 	padding-top: 1em;
 	color: #777;
 	background-color: #333;
+	border-bottom: 2px solid #acb911;
 }
 .bottom a {
 	color: #666;
