@@ -25,11 +25,6 @@
 	<mt:EntryPrevious><link rel="prev bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryPrevious>
 	<mt:EntryNext><link rel="next bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryNext>
 	<$mt:EntryTrackbackData comment_wrap="0"$>
-	<mt:If tag="AuthorDataGoogle">
-		<link rel="author" href="<mt:AuthorDataGoogle>" />
-	<mt:Else>
-		<link rel="author" href="https://plus.google.com/+JeroenSangers/" />
-	</mt:If>
 </mt:SetVarBlock>
 <mt:IfCategory>
 	<mt:SetVarBlock name="CatID"><mt:EntryPrimaryCategory><$mt:CategoryID$></mt:EntryPrimaryCategory></mt:SetVarBlock>
