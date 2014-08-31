@@ -11,10 +11,6 @@
 	<link rel="profile" href="http://microformats.org/profile/hatom" />
 	<$mt:CCLicenseRDF$>
 	<$mt:Var name="html_head"$>
-<mt:Ignore><!-- css --></mt:Ignore>
-	<link rel="stylesheet" href="<$mt:Link template="Stylesheet - Normalize"$>" type="text/css" />
-	<link rel="stylesheet" href="<$mt:Link template="Stylesheet - Foundation"$>" type="text/css" />
-	<link rel="stylesheet" href="<$mt:Link template="Stylesheet - El Canasto"$>" type="text/css" />
 <mt:Ignore><!-- rss --></mt:Ignore>
 	<link rel="alternate" type="application/atom+xml" title="Entradas recientes" href="<$mt:Link template="feed_recent"$>" />
 <mt:Ignore><!-- icons --></mt:Ignore>
@@ -26,12 +22,17 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://canasto.es/templates/img/favicon-72.png">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://canasto.es/templates/img/favicon-57.png">
 	<link rel="shortcut icon" sizes="32x32" href="http://canasto.es/templates/img/favicon-32.ico" type="image/x-icon" />
+<mt:Ignore><!-- css --></mt:Ignore>
+	<link rel="stylesheet" href="<$mt:Link template="Stylesheet - Normalize"$>" type="text/css" />
+	<link rel="stylesheet" href="<$mt:Link template="Stylesheet - Foundation"$>" type="text/css" />
+	<link rel="stylesheet" href="<$mt:Link template="Stylesheet - El Canasto"$>" type="text/css" />
 <mt:Ignore><!-- javascript --></mt:Ignore>
 	<script type="text/javascript" src="//use.edgefonts.net/source-sans-pro:n3,i3,n6,i6;bree-serif:n4.js"></script>
 	<script type="text/javascript" src="<$mt:Link template="JavaScript"$>"></script>
+	<script type="text/javascript" src="<$mt:Link template="JavaScript - jQuery"$>"></script>
+	<script type="text/javascript" src="<$mt:Link template="JavaScript - Foundation"$>"></script>
 	<script type="text/javascript" data-cfasync="true" src="<$mt:Link template="JavaScript - Modernizr"$>"></script>
-<mt:Ignore><!-- SumoMe newsletter subscription popup --></mt:Ignore>
-	<script src="//load.sumome.com/" data-sumo-site-id="4d705e9e088c76e0295aa8dc84b17286d30d406373f7cf2276ae3f2e5d688113" async></script>
+	<script type="text/javascript" src="<$mt:Link template="JavaScript - Bigfoot"$>"></script>
 <mt:Ignore><!-- MailChimp Goal tracking code --></mt:Ignore>
 	<script type="text/plain" class="cc-onconsent-analytics">
 		var $mcGoal = {'settings':{'uuid':'a38a1e6762ea6c14efb3f2f13','dc':'us1'}};

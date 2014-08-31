@@ -1,93 +1,54 @@
-<mt:SetVarBlock name="title"><$mt:WebsiteName encode_html="1"$> &emdash; <$mt:WebsiteDescription encode_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="title"><$mt:WebsiteName encode_html="1"$></mt:SetVarBlock>
 <mt:SetVarBlock name="html_head">
 	<meta name="description" content="<$mt:WebsiteDescription$>" />
-	<meta name="keywords" content="gtd, productividad, formación, cursos, consultoría, charlas, gestión del tiempo, project management, holacracy, holocracia, colaboración" />
+	<meta name="keywords" content="gtd, productividad, formación, cursos, consultoría, charlas, gestión del tiempo, project management" />
 	<link rel="canonical" href="<$mt:WebsiteURL$>" />
 <mt:MultiBlog include_blogs="3">
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<$mt:Link template="rsd"$>" />
 </mt:MultiBlog>
+	<link rel="author" href="https://plus.google.com/+JeroenSangers/" />
+	<link rel="publisher" href="https://plus.google.com/+CanastoEs/" />
 	<meta property="twitter:account_id" content="4503599629610129" />
+	<!-- Google Analytics Content Experiment code -->
+	<script>
+		function utmx_section(){}function utmx(){}(function(){var
+		k='1007859-2',d=document,l=d.location,c=d.cookie;
+		if(l.search.indexOf('utm_expid='+k)>0)return;
+		function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+		indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+		length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+		'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+		'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+		'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+		valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+		'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+	</script>
+	<script>utmx('url','A/B');</script>
+	<!-- End of Google Analytics Content Experiment code -->
 </mt:SetVarBlock>
 <$mt:Include module="Header" /$>
-<h1 class="hide"><$mt:WebsiteName smarty_pants="1"$> &emdash; <$mt:WebsiteDescription smarty_pants="1"$></h1>
 <div class="row">
-	<div class="small-12 columns">
-		<mt:Assets type="image" tag="@banner" lastn=1>
-			<img src="<mt:AssetURL>" alt="<mt:AssetLabel escape="html">" width="<mt:AssetProperty property="image_width">" height="<mt:AssetProperty property="image_height">" />
+	<article class="large-8 columns lead">
+<mt:Assets type="image" tag="@slideshow" lastn=1>
+					<img src="<mt:AssetURL>" alt="<mt:AssetLabel escape="html">" />
 </mt:Assets>
-
-	</div>
-</div>
-<div class="subscribe">
-	<div class="row">
-		<div class="large-6 columns">
-			<h2>¿Quieres ser más productivo y organizado?</h2>
-			<p>Suscríbete y te enseñaré cómo conseguir más resultados con menos esfuerzo</p>
-		</div>
-		<div class="large-6 columns">
-			<form data-abide action="http://canasto.us1.list-manage1.com/subscribe/post?u=a38a1e6762ea6c14efb3f2f13&amp;id=93dd9cca27" method="post" class="subscribe-form validate" onSubmit="ga('send', 'event', 'Forms', 'MailChimp subscribe');">
-				<div class="row">
-					<div class="medium-5 columns">
-						<input type="text" value="" name="FNAME" placeholder="Nombre (Sin apellidos)" />
-					</div>
-					<div class="medium-5 columns">
-						<input required type="email" value="" name="EMAIL" placeholder="Email" />
-					</div>
-					<div class="medium-2 columns">
-						<input type="submit" value name="subscribe" />
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-<article class="row">
-	<div class="small-12 columns">
 <mt:Pages tag="@home" lastn="1">
 		<h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2>
-		<h2><$mt:PageTitle smarty_pants="1"$></h2>
 		<$mt:PageBody$>
 </mt:Pages>
-		<hr />
-	</div>
-</article>
-<div class="row offers">
-<mt:Pages tag="@offer" lastn="3" sort_by="modified_on">
-	<div class="medium-4 columns">
-		<ul class="pricing-table">
-			<li class="title exclaim style<mt:Var name="__counter__">">
-	<mt:PageAssets type="image" lastn=1>
-				<img src="<mt:AssetURL>" alt="<mt:AssetLabel escape="html">" width="<mt:AssetProperty property="image_width">" height="<mt:AssetProperty property="image_height">" />
-	</mtPageAssets>
-				<h2<mt:PageIfTagged tag="@notitle"> class="hide"</mt:PageIfTagged>><$mt:PageTitle smarty_pants="1"$></h2>
-			</li>
-		<mt:IfNonEmpty tag="PageBody">
-			<li class="description">
-				<$mt:PageBody$>
-			</li>
-		</mt:IfNonEmpty>
-			<li class="cta-button">
-				<a class="button radius" href="<$mt:PageMore$>">+ Info</a>
-			</li>
-		</ul>
-	</div>
-</mt:Pages>
+	</article>
+	<aside class="large-4 columns">
+		<$mt:WidgetSet name="Main widgets"$>
+	</aside>
 </div>
-<mt:Ignore>
-<div class="row">
-	<div class="small-12 columns">
-		Referencias
-	</div>
-</div>
-</mt:Ignore>
 <section class="entries">
 	<div class="row">
 		<div class="small-12 columns">
 			<hr />
-			<h2>Estos son mis últimos artículos en el blog</h2>
+			<h2>Los últimos artículos en el blog</h2>
 <$mt:Var name="columns" value="6"$>
 <mt:Var name="count" value="0">
-<mt:Entries include_blogs="3" lastn="6">
+<mt:Entries include_blogs="3" lastn="10">
 	<mt:setvar name="count" op="add" value="1">
 	<mt:setvarblock name="odd"><mt:var name="count" op="mod" value="2"></mt:setvarblock>
 			<mt:if name="odd"><div class="row"></mt:if>
