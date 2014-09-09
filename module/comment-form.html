@@ -1,7 +1,7 @@
 <MTIfCommentsAccepted>
 	<h2 class="comments-open-header">¿Quieres dejar un comentario?</h2>
 	<div id="comment-greeting"></div>
-	<form data-abide method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments-form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+	<form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments-form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
 		<input type="hidden" name="static" value="1" />
 		<input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
 		<input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
@@ -13,15 +13,13 @@
 			<div id="comment-form-name" class="row">
 				<div class="small-12 columns">
 					<label for="comment-author">Nombre <small>obligatorio</small></label>
-					<input id="comment-author" name="author" type="text" value="" required onfocus="mtCommentFormOnFocus()" />
-					<small class="error">El campo Nombre es obligatorio.</small>
+					<input id="comment-author" name="author" type="text" value="" onfocus="mtCommentFormOnFocus()" />
 				</div>
 			</div>
 			<div class="row">
 				<div id="comment-form-email" class="large-6 columns">
 					<label for="comment-email">Email <small>obligatorio</small></label>
-					<input id="comment-email" name="email" type="email" value="" required onfocus="mtCommentFormOnFocus()" />
-					<small class="error">Es obligatorio especificar una dirección de e-mail. Esta dirección no será visible para los visitantes.</small>
+					<input id="comment-email" name="email" type="email" value="" onfocus="mtCommentFormOnFocus()" />
 				</div>
 				<div id="comment-form-url" class="large-6 columns">
 					<label for="comment-url">Página web</label>
@@ -53,8 +51,7 @@
 		</div>
 		<div id="comments-open-text" class="row">
 			<div class="small-12 columns">
-				<textarea id="comment-text" name="text" rows="15" required onfocus="mtCommentFormOnFocus()"></textarea>
-				<small class="error">¡No olvides escribir tu comentario!</small>
+				<textarea id="comment-text" name="text" rows="15" onfocus="mtCommentFormOnFocus()"></textarea>
 				<p>
 					<label for="comment-text">
 						Usa etiquetas HTML (<code>a href</code>,<code>b</code>,<code>i</code>,<code>br/</code>,<code>p</code>,<code>strong</code>,<code>em</code>,<code>ul</code>,<code>ol</code>,<code>li</code>,<code>blockquote</code>,<code>pre</code>) para dar estilo.<br />
