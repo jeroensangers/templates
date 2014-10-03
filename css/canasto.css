@@ -314,6 +314,9 @@ img.gravatar {
 .panel.callout .meta p a {
 	text-decoration: none;
 }
+ul.pricing-table {
+	background-color: #fff;
+}
 footer .bottom {
 	padding-top: 1em;
 	color: #777;
