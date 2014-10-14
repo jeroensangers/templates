@@ -38,11 +38,23 @@
 			<h1 class="entry-title"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></h1>
 			<p class="byline">Por <span itemscope itemtype="http://schema.org/Person" class="author vcard"><a class="url fn n" rel="author" itemprop="url" href="<$mt:EntryAuthorURL$>" title="<$mt:EntryAuthorDisplayName encode_html="1"$>"><pan itemprop="name"><$mt:EntryAuthorDisplayName$></span></a></span> <span class="text">el</span> <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
 			<div class="entry-content">
+				<mt:If tag="EntryDataFeaturedimage">
+					<mt:EntryDataFeaturedimageAsset>
+						<img src="<$mt:AssetURL$>" alt="<$mt:AssetLabel encode_html="1"$>" class="entryimage" width="<$mt:AssetProperty property="image_width"$>" heigth="<$mt:AssetProperty property="image_height"$>" />
+					</mt:EntryDataFeaturedimageAsset>
+				</mt:If>
 				<$mt:EntryBody$>
 <mt:If tag="EntryMore" convert_breaks="0">
 				<div id="more">
 					<$mt:EntryMore$>
 				</div>
+</mt:If>
+<mt:If tag="EntryDataFeaturedimage">
+	<mt:EntryDataFeaturedimageAsset>
+		<mt:If tag="ImageDataAutor">
+			Imagen &laquo;<a href="<$mt:ImageDataURL$>"><$mt:AssetLabel$></a>&raquo; cortesía de <$mt:ImageDataAutor$><br />
+		</mt:If>
+	</mt:EntryDataFeaturedimageAsset>
 </mt:If>
 <mt:EntryAssets type="image">
 	<mt:If tag="AssetDescription">

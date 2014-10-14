@@ -236,6 +236,11 @@ a.symbol:before {
 	display: block;
 	margin: 0 auto;
 }
+img.entryimage {
+	text-align: center;
+	display: block;
+	margin: 0 auto 20px;
+}
 div.aprendemas {
 	line-height: 1.125;
 	float: left;

@@ -1,5 +1,35 @@
 <div class="row panel radius">
-<mt:setvarblock name="thumbnail"><mt:EntryAssets lastn="1"><mt:CroppedAsset label="Blog Feature"><img class="feature" src="<$mt:AssetURL$>" alt="<$mt:AssetLabel encode_html="1"$>" /><mt:else><mt:setvarblock name="w"><mt:AssetProperty property="image_width"></mt:setvarblock><mt:setvarblock name="h"><mt:AssetProperty property="image_height"></mt:setvarblock><img src="<mt:if name="w" gt="$h"><mt:AssetThumbnailURL width="230"$><mt:else><mt:AssetThumbnailURL height="230"$></mt:if>" alt="<$mt:AssetLabel encode_html="1"$>" class="th radius" /></mt:CroppedAsset></mt:EntryAssets></mt:setvarblock>
+<mt:setvarblock name="thumbnail">
+	<mt:If tag="EntryDataFeaturedimage">
+		<mt:EntryDataFeaturedimageAsset>
+			<mt:CroppedAsset label="Blog Feature" blog_id="3">
+				<img class="th radius" src="<$mt:AssetURL$>" width="230" height="200" alt="<$mt:AssetLabel encode_html="1"$>" />
+			<mt:else>
+				<mt:setvarblock name="w">
+					<mt:AssetProperty property="image_width">
+				</mt:setvarblock>
+				<mt:setvarblock name="h">
+					<mt:AssetProperty property="image_height">
+				</mt:setvarblock>
+				<img width="100" height="100" src="<mt:if name="w" gt="$h"><mt:AssetThumbnailURL width="230" square="1"$><mt:else><mt:AssetThumbnailURL height="200" square="1"$></mt:if>" class="th radius" alt="<$mt:AssetLabel encode_html="1"$>" />
+			</mt:CroppedAsset>
+		</mt:EntryDataFeaturedimageAsset>
+	<mt:Else>
+		<mt:EntryAssets type="image" lastn="1">
+			<mt:CroppedAsset label="Blog Feature" blog_id="3">
+				<img class="th radius" src="<$mt:AssetURL$>" width="230" height="200" alt="<$mt:AssetLabel encode_html="1"$>" />
+			<mt:else>
+				<mt:setvarblock name="w">
+					<mt:AssetProperty property="image_width">
+				</mt:setvarblock>
+				<mt:setvarblock name="h">
+					<mt:AssetProperty property="image_height">
+				</mt:setvarblock>
+				<img width="100" height="100" src="<mt:if name="w" gt="$h"><mt:AssetThumbnailURL height="100" square="1"$><mt:else><mt:AssetThumbnailURL width="100" square="1"$></mt:if>" class="th radius" alt="<$mt:AssetLabel encode_html="1"$>" />
+			</mt:CroppedAsset>
+		</mt:EntryAssets>
+	</mt:If>
+</mt:setvarblock>
 <mt:if name="thumbnail">
 	<div class="large-5 columns">
 		<a href="<$mt:EntryPermalink$>"><$mt:var name="thumbnail"$></a>
