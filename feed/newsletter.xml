@@ -30,6 +30,11 @@
 		<category term="<$mt:TagName normalize="1" encode_xml="1"$>" label="<$mt:TagName encode_xml="1"$>" scheme="http://www.sixapart.com/ns/types#tag" />
 </mt:EntryTags></mt:EntryIfTagged>
 		<content type="html" xml:lang="<$mt:BlogLanguage ietf="1"$>" xml:base="<$mt:BlogURL encode_xml="1"$>">
+			<mt:If tag="EntryDataFeaturedimage">
+				<mt:EntryDataFeaturedimageAsset>
+					<![CDATA[<img src="<$mt:AssetURL$>" alt="<$mt:AssetLabel encode_html="1"$>" width="<$mt:AssetProperty property="image_width"$>" height="<$mt:AssetProperty property="image_height"$>" style="text-align: center;display: block;margin: 0 auto 20px;" />]]>
+				</mt:EntryDataFeaturedimageAsset>
+			</mt:If>
 			<$mt:EntryBody encode_xml="1"$>
 			<$mt:EntryMore encode_xml="1"$>
 			<mt:If tag="BlogID" eq="15"><![CDATA[<p style="font-style:italic;"><a href="<$mt:EntryPermalink encode_xml="1"$>">&infin; Lea el artículo en El Canasto</a></p>]]></mt:If>

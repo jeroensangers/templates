@@ -40,7 +40,7 @@
 			<div class="entry-content">
 				<mt:If tag="EntryDataFeaturedimage">
 					<mt:EntryDataFeaturedimageAsset>
-						<img src="<$mt:AssetURL$>" alt="<$mt:AssetLabel encode_html="1"$>" class="entryimage" width="<$mt:AssetProperty property="image_width"$>" heigth="<$mt:AssetProperty property="image_height"$>" />
+						<img src="<$mt:AssetURL$>" alt="<$mt:AssetLabel encode_html="1"$>" class="entryimage" width="<$mt:AssetProperty property="image_width"$>" height="<$mt:AssetProperty property="image_height"$>" />
 					</mt:EntryDataFeaturedimageAsset>
 				</mt:If>
 				<$mt:EntryBody$>
@@ -52,7 +52,7 @@
 <mt:If tag="EntryDataFeaturedimage">
 	<mt:EntryDataFeaturedimageAsset>
 		<mt:If tag="ImageDataAutor">
-			Imagen &laquo;<a href="<$mt:ImageDataURL$>"><$mt:AssetLabel$></a>&raquo; cortesía de <$mt:ImageDataAutor$><br />
+			<div class="attribution">Imagen &laquo;<a href="<$mt:ImageDataURL$>"><$mt:AssetLabel$></a>&raquo; cortesía de <$mt:ImageDataAutor$></div>
 		</mt:If>
 	</mt:EntryDataFeaturedimageAsset>
 </mt:If>
