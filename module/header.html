@@ -97,10 +97,16 @@
 				<li class="divider"></li>
 				<li<mt:If name="main_index"> class="active"</mt:If>><a href="<$mt:Link template="Main Index"$>">Inicio</a></li>
 				<li class="divider"></li>
-				<li<mt:If tag="PageID" eq="5255"> class="active"</mt:If>><a href="http://canasto.es/servicios/curso-in-company/">Curso In-Company</a></li>
+				<li class="has-dropdown">
+					<a href="#">Curso presencial</a>
+					<ul class="dropdown">
+						<li<mt:If tag="PageID" eq="5562"> class="active"</mt:If>><a href="http://canasto.es/servicios/curso-abierto/">Para ti</a></li>
+						<li<mt:If tag="PageID" eq="5255"> class="active"</mt:If>><a href="http://canasto.es/servicios/curso-in-company/">Con tus compañeros</a></li>
+					</ul>
+				</li>
 				<li class="divider"></li>
 				<li class="has-dropdown">
-					<a href="#">Cursos online</a>
+					<a href="#">Curso online</a>
 					<ul class="dropdown">
 						<li><a href="http://curso.canasto.net/">Curso completo</a></li>
 						<li<mt:If tag="PageID" eq="5256"> class="active"</mt:If>><a href="http://canasto.es/servicios/videocursos/">Píldoras</a></li>
