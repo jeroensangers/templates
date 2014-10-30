@@ -34,7 +34,7 @@
 	</mt:setvarblock>
 	<mt:if name="thumbnail"><a href="<$mt:EntryPermalink$>"><$mt:var name="thumbnail"$></a></mt:if>
 </mt:if>
-	<h3 class="blog-<$mt:BlogID$>"><a href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" rel="bookmark"><$mt:EntryTitle smarty_pants="1" remove_html="1"$></a></h3>
+	<h3 class="blog-<$mt:BlogID$>"><a href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" rel="bookmark"><$mt:EntryTitle smarty_pants="1" remove_html="1"$><mt:If tag="BlogID" eq="15">&nbsp;&RightTeeArrow;</mt:if></a></h3>
 <mt:If tag="BlogID" eq="32">
 	<p class="byline">Medio: <mt:If tag="EntryDataAddress"><a href="<$mt:EntryDataAddress$>"></mt:If><$mt:EntryDataMedium$><mt:If tag="EntryDataAddress"></a></mt:If> &middot; Fecha: <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x"$></abbr></p>
 </mt:if>
