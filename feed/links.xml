@@ -37,7 +37,7 @@
 			<$mt:EntryBody encode_xml="1"$>
 			<$mt:EntryMore encode_xml="1"$>
 			<mt:If tag="BlogID" eq="15">
-				<![CDATA[<p style="font-style:italic;">&infin; Lea el artículo original en <a href="<$mt:EntryLinkURL encode_xml="1"$>"><$mt:EntryLinkURL$></a></p>]]>
+				<![CDATA[<p style="font-style:italic;">Lea el artículo original en <a href="<$mt:EntryLinkURL encode_xml="1"$>"><$mt:EntryLinkURL$>&nbsp;&RightTeeArrow;</a></p>]]>
 			</mt:If>
 			<mt:If tag="BlogID" eq="32">
 				<![CDATA[<ul>

@@ -37,7 +37,7 @@
 			</mt:If>
 			<$mt:EntryBody encode_xml="1"$>
 			<$mt:EntryMore encode_xml="1"$>
-			<mt:If tag="BlogID" eq="15"><![CDATA[<p><a href="<$mt:EntryPermalink encode_xml="1"$>">∞ Lea el artículo en El Canasto</a></p>]]></mt:If>
+			<mt:If tag="BlogID" eq="15"><![CDATA[<p><a href="<$mt:EntryPermalink encode_xml="1"$>">Lea el artículo en El Canasto&nbsp;&RightTeeArrow;</a></p>]]></mt:If>
 			<mt:If tag="EntryDataFeaturedimage">
 				<mt:EntryDataFeaturedimageAsset>
 					<mt:If tag="ImageDataAutor">
