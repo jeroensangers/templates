@@ -28,7 +28,7 @@
 		<content type="html" xml:lang="<$mt:BlogLanguage ietf="1"$>" xml:base="<$mt:BlogURL encode_xml="1"$>">
 			<mt:If tag="EntryDataFeaturedimage">
 				<mt:EntryDataFeaturedimageAsset>
-					<![CDATA[<img src="<$mt:AssetURL$>" alt="<$mt:AssetLabel encode_html="1"$>" width="<$mt:AssetProperty property="image_width"$>" height="<$mt:AssetProperty property="image_height"$>" style="text-align: center;display: block;margin: 0 auto 20px;" />]]>
+					<![CDATA[<img src="<$mt:AssetThumbnailURL width="600"$>" alt="<$mt:AssetLabel encode_html="1"$>" width="600" style="text-align: center;display: block;margin: 0 auto 20px;" />]]>
 				</mt:EntryDataFeaturedimageAsset>
 			</mt:If>
 			<$mt:EntryBody encode_xml="1"$>
