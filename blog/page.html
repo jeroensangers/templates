@@ -6,7 +6,17 @@
 	</mt:PageIfTagged>
 	<link rel="canonical" href="<$mt:PagePermalink$>" />
 </mt:SetVarBlock>
+<mt:SetVarBlock name="CommentURL"><$mt:PagePermalink$></mt:SetVarBlock>
 <$mt:Include module="Header" parent="1"$>
+<mt:Ignore><!-- Facebook comments SDK --></mt:Ignore>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=117771895047419&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <article class="page">
 	<div class="row">
 		<div class="small-12 columns">
