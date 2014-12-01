@@ -6,20 +6,44 @@
 <mt:SetVarBlock name="html_head">
 	<meta name="description" content="<$mt:EntryExcerpt$>" />
 <mt:Ignore><!-- facebook Comments --></mt:Ignore>
-	<meta property="fb:app_id" content="117771895047419"/>
-<mt:Ignore><!-- Twitter Card --></mt:Ignore>
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@elcanasto">
-	<meta name="twitter:title" content="<$mt:Var name="title"$>">
-	<meta name="twitter:description" content="<$mt:EntryExcerpt$>">
-<mt:If tag="AuthorDataTwitter">
-	<meta name="twitter:creator" content="@<$mt:AuthorDataTwitter$>">
+	<meta property="fb:app_id" content="117771895047419" />
+	<meta property="og:url" content="<$mt:EntryPermalink$>" />
+	<meta property="og:title" content="<$mt:EntryTitle smarty_pants="1" remove_html="1"$>" />
+	<meta property="og:description" content="<$mt:EntryExcerpt smarty_pants="1" remove_html="1"$>" />
+<mt:If tag="EntryDataFeaturedimage">
+	<mt:EntryDataFeaturedimageAsset>
+		<meta property="og:image:url" content="<$mt:AssetURL$>" />
+		<meta property="og:image:type" content="<$mt:AssetMimeType$>" />
+		<meta property="og:image:width" content="<$mt:AssetProperty property="image_width"$>" />
+		<meta property="og:image:height" content="<$mt:AssetProperty property="image_height"$>" />
+	</mt:EntryDataFeaturedimageAsset>
 <mt:Else>
-	<meta name="twitter:creator" content="@JeroenSangers">
+	<mt:EntryAssets type="image" lastn="1">
+		<meta name="og:image:url" content="<$mt:AssetURL$>" />
+		<meta property="og:image:type" content="<$mt:AssetMimeType$>" />
+		<meta property="og:image:width" content="<$mt:AssetProperty property="image_width"$>" />
+		<meta property="og:image:height" content="<$mt:AssetProperty property="image_height"$>" />
+	</mt:EntryAssets>
+</mt:If tag="EntryDataFeaturedimage">
+<mt:Ignore><!-- Twitter Card --></mt:Ignore>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@elcanasto" />
+	<meta name="twitter:title" content="<$mt:Var name="title"$>" />
+	<meta name="twitter:description" content="<$mt:EntryExcerpt smarty_pants="1" remove_html="1"$>" />
+<mt:If tag="AuthorDataTwitter">
+	<meta name="twitter:creator" content="@<$mt:AuthorDataTwitter$>" />
+<mt:Else>
+	<meta name="twitter:creator" content="@JeroenSangers" />
 </mt:If>
-<mt:EntryAssets type="image" lastn="1">
-	<meta name="twitter:image:src" content="<$mt:AssetURL$>">
-</mt:EntryAssets>
+<mt:If tag="EntryDataFeaturedimage">
+	<mt:EntryDataFeaturedimageAsset>
+		<meta name="twitter:image:src" content="<$mt:AssetURL$>" />
+	</mt:EntryDataFeaturedimageAsset>
+<mt:Else>
+	<mt:EntryAssets type="image" lastn="1">
+		<meta name="twitter:image:src" content="<$mt:AssetURL$>" />
+	</mt:EntryAssets>
+</mt:If tag="EntryDataFeaturedimage">
 	<mt:EntryIfTagged>
 		<meta name="keywords" content="<mt:EntryTags glue=", "><$mt:TagName$></mt:EntryTags>" />
 	</mt:EntryIfTagged>
