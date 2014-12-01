@@ -12,14 +12,14 @@
 	<meta property="og:description" content="<$mt:EntryExcerpt smarty_pants="1" remove_html="1"$>" />
 <mt:If tag="EntryDataFeaturedimage">
 	<mt:EntryDataFeaturedimageAsset>
-		<meta property="og:image:url" content="<$mt:AssetURL$>" />
+		<meta property="og:image" content="<$mt:AssetURL$>" />
 		<meta property="og:image:type" content="<$mt:AssetMimeType$>" />
 		<meta property="og:image:width" content="<$mt:AssetProperty property="image_width"$>" />
 		<meta property="og:image:height" content="<$mt:AssetProperty property="image_height"$>" />
 	</mt:EntryDataFeaturedimageAsset>
 <mt:Else>
 	<mt:EntryAssets type="image" lastn="1">
-		<meta name="og:image:url" content="<$mt:AssetURL$>" />
+		<meta name="og:image" content="<$mt:AssetURL$>" />
 		<meta property="og:image:type" content="<$mt:AssetMimeType$>" />
 		<meta property="og:image:width" content="<$mt:AssetProperty property="image_width"$>" />
 		<meta property="og:image:height" content="<$mt:AssetProperty property="image_height"$>" />
