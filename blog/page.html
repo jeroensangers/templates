@@ -6,7 +6,16 @@
 	</mt:PageIfTagged>
 	<link rel="canonical" href="<$mt:PagePermalink$>" />
 	<mt:Ignore><!-- facebook Comments --></mt:Ignore>
-	<meta property="fb:app_id" content="117771895047419"/>
+	<meta property="fb:app_id" content="117771895047419" />
+	<meta property="og:url" content="<$mt:PagePermalink$>" />
+	<meta property="og:title" content="<$mt:PageTitle smarty_pants="1" remove_html="1"$>" />
+	<meta property="og:description" content="<$mt:PageExcerpt smarty_pants="1" remove_html="1"$>" />
+	<mt:PageAssets type="image" lastn="1">
+		<meta name="og:image" content="<$mt:AssetURL$>" />
+		<meta property="og:image:type" content="<$mt:AssetMimeType$>" />
+		<meta property="og:image:width" content="<$mt:AssetProperty property="image_width"$>" />
+		<meta property="og:image:height" content="<$mt:AssetProperty property="image_height"$>" />
+	</mt:PageAssets>
 </mt:SetVarBlock>
 <mt:SetVarBlock name="CommentURL"><$mt:PagePermalink$></mt:SetVarBlock>
 <$mt:Include module="Header" parent="1"$>
