@@ -35,5 +35,13 @@
 		</div>
 	</div>
 </article>
-<$mt:Include module="Commenting"$>
+<mt:IfCommentsActive>
+<section class="comments row">
+	<mt:IfCommentsAccepted>
+		<div class="small-12 columns">
+			<div class="fb-comments" data-href="<$mt:Var name="CommentURL"$>" data-numposts="50" data-width="100%"></div>
+		</div>
+	</mt:IfCommentsAccepted>
+</section>
+</mt:IfCommentsActive>
 <$mt:Include module="Footer"$>
