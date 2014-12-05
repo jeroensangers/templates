@@ -5,8 +5,7 @@
 		<meta name="keywords" content="canasto, <mt:PageTags glue=", "><$mt:TagName$></mt:PageTags>" />
 	</mt:PageIfTagged>
 	<link rel="canonical" href="<$mt:PagePermalink$>" />
-	<mt:Ignore><!-- facebook Comments --></mt:Ignore>
-	<meta property="fb:app_id" content="117771895047419" />
+	<mt:Ignore><!-- OpenGraph --></mt:Ignore>
 	<meta property="og:url" content="<$mt:PagePermalink$>" />
 	<meta property="og:title" content="<$mt:PageTitle smarty_pants="1" remove_html="1"$>" />
 	<meta property="og:description" content="<$mt:PageExcerpt smarty_pants="1" remove_html="1"$>" />
@@ -17,17 +16,7 @@
 		<meta property="og:image:height" content="<$mt:AssetProperty property="image_height"$>" />
 	</mt:PageAssets>
 </mt:SetVarBlock>
-<mt:SetVarBlock name="CommentURL"><$mt:PagePermalink$></mt:SetVarBlock>
 <$mt:Include module="Header" parent="1"$>
-<mt:Ignore><!-- Facebook comments SDK --></mt:Ignore>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=117771895047419&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <article class="page">
 	<div class="row">
 		<div class="small-12 columns">

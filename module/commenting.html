@@ -1,10 +1,10 @@
 <mt:IfCommentsActive>
 <section class="comments row">
 	<div class="small-12 columns">
-		<h2><fb:comments-count href=<$mt:EntryPermalink$>></fb:comments-count> comentarios en &#8220;<$mt:EntryTitle encode_html="1"$>&#8221;</h2>
-	<mt:IfCommentsAccepted>
-		<div class="fb-comments" data-href="<$mt:Var name="CommentURL"$>" data-numposts="50" data-width="100%"></div>
-	</mt:IfCommentsAccepted>
+		<h2><$mt:EntryCommentCount singular="1 comentario" plural="# comentarios" none="No hay comentarios"$> en &#8220;<$mt:EntryTitle encode_html="1"$>&#8221;</h2>
+	<mt:If name="comment_preview">
+		<$mt:Include module="Comment Form" parent="1"$>
+	</mt:If>
 	<mt:Comments>
 		<mt:CommentsHeader>
 			<ol class="comment-list">
@@ -27,6 +27,9 @@
 			</ol>
 		</mt:CommentsFooter>
 	</mt:Comments>
+	<mt:Unless name="comment_preview">
+		<$mt:Include module="Comment Form" parent="1"$>
+	</mt:Unless>
 	</div>
 </section>
 </mt:IfCommentsActive>
