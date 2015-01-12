@@ -71,6 +71,7 @@
 
 <mt:Ignore># Special redirects</mt:Ignore>
 	RewriteRule ^cita https://www.vcita.com/v/jeroen.sangers/online_scheduling [L]
+	RewriteRule ^encuesta https://canasto.wufoo.com/forms/me65yt218b7mxs/ [L]
 	RewriteRule ^pago https://plasso.co/spacebox@canasto.es [L]
 
 <mt:Ignore># Compress static data</mt:Ignore>
