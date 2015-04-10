@@ -323,6 +323,9 @@ img.gravatar {
 ul.pricing-table {
 	background-color: #fff;
 }
+td.si {
+	background-color: #acb911;
+}
 footer .bottom {
 	padding-top: 1em;
 	color: #777;
