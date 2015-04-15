@@ -70,7 +70,8 @@
 </IfModule>
 
 <mt:Ignore># Special redirects</mt:Ignore>
-	RewriteRule ^cita https://www.vcita.com/v/jeroen.sangers/online_scheduling [L]
+	RewriteRule ^cita http://www.vcita.com/v/jeroen.sangers/online_scheduling?service_id=bvt3fny0p2miq3yo&staff_id=a7f26c31 [L]
+	RewriteRule ^sesion https://www.vcita.com/v/jeroen.sangers/online_scheduling [L]
 	RewriteRule ^curso http://curso.canasto.es/catalog/2185 [L]
 	RewriteRule ^encuesta https://canasto.wufoo.com/forms/me65yt218b7mxs/ [L]
 	RewriteRule ^pago https://plasso.co/spacebox@canasto.es [L]
