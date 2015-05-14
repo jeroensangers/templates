@@ -25,7 +25,7 @@ body {
 }
 body {
 	font-weight: 300;
-	background-color: #f3f5f6;
+	background-color: #ffffff;
 	border-top: 2px solid #acb911;
 }
 h1,
@@ -350,7 +350,7 @@ footer .bottom {
 }
 [data-magellan-expedition],
 [data-magellan-expedition-clone] {
-	background: #f3f5f6;
+	background: #ffffff;
 }
 .sub-nav dt a,
 .sub-nav dd a,
