@@ -1,3 +1,0 @@
-<mt:Entries include_blogs="3,15" lastn="999999">
-<$mt:EntryPermalink$> -> <$mt:EntryPermalink$> 302
-</mt:Entries>
